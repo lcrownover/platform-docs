@@ -1,4 +1,4 @@
 .PHONY: serve
 
 serve:
-	uv run mkdocs serve
+	uv run mkdocs serve --livereload

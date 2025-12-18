@@ -195,7 +195,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../tools/homebrew/" class="md-tabs__link">
+        <a href="../tools/" class="md-tabs__link">
           
   
   
@@ -362,10 +362,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#why-use-git" class="md-nav__link">
+  <a href="#why-you-should-care" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Why Use Git?
+        Why You Should Care
       
     </span>
   </a>
@@ -373,10 +373,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-this-module-works" class="md-nav__link">
+  <a href="#lessons" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How This Module Works
+        Lessons
       
     </span>
   </a>
@@ -384,10 +384,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-youll-be-able-to-do-after-this-module" class="md-nav__link">
+  <a href="#tips-for-success" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What You'll Be Able to Do After This Module
+        Tips for Success
       
     </span>
   </a>
@@ -635,6 +635,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../tools/homebrew/" class="md-nav__link">
         
   
@@ -671,6 +699,34 @@
     
   
     Windows Terminal (Windows)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/wsl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WSL (Windows)
   
 
     
@@ -774,10 +830,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#why-use-git" class="md-nav__link">
+  <a href="#why-you-should-care" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Why Use Git?
+        Why You Should Care
       
     </span>
   </a>
@@ -785,10 +841,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-this-module-works" class="md-nav__link">
+  <a href="#lessons" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How This Module Works
+        Lessons
       
     </span>
   </a>
@@ -796,10 +852,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-youll-be-able-to-do-after-this-module" class="md-nav__link">
+  <a href="#tips-for-success" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What You'll Be Able to Do After This Module
+        Tips for Success
       
     </span>
   </a>
@@ -824,28 +880,30 @@
 
 
 <h1 id="git-101">Git 101<a class="headerlink" href="#git-101" title="Permanent link">&para;</a></h1>
-<p>Git is a distributed version control system that records changes to files over time. It groups changes into commits you can compare, restore, and merge so parallel work stays orderly.</p>
-<h2 id="why-use-git">Why Use Git?<a class="headerlink" href="#why-use-git" title="Permanent link">&para;</a></h2>
+<p>You've probably been there: a config file that worked yesterday is broken today, and nobody knows what changed. Or you're afraid to touch a script because there's no way to undo it. Or you're emailing files back and forth with <code>-v2-final-FINAL.txt</code> in the name.</p>
+<p>Git solves these problems. It tracks every change you make, who made it, and why—so you can experiment freely, collaborate without stepping on each other, and always get back to a known-good state.</p>
+<h2 id="why-you-should-care">Why You Should Care<a class="headerlink" href="#why-you-should-care" title="Permanent link">&para;</a></h2>
+<p>If you manage configs, scripts, documentation, or infrastructure-as-code, Git gives you:</p>
 <ul>
-<li><strong>Reliable history</strong>: Create checkpoints instead of copying folders or renaming files.</li>
-<li><strong>Parallel work</strong>: Branch to try ideas without blocking teammates; merge with a traceable story.</li>
-<li><strong>Audit-friendly</strong>: Authors, timestamps, and messages make incident timelines and reviews clear.</li>
-<li><strong>Automation-ready</strong>: Works with CI/CD, code review systems, and deployment pipelines.</li>
+<li><strong>A real undo button.</strong> Made a bad change? Roll back to any previous version in seconds.</li>
+<li><strong>Fearless experimentation.</strong> Try risky changes on a branch. If it works, merge it. If not, delete it. Your main copy stays safe.</li>
+<li><strong>Accountability without blame.</strong> When something breaks at 2 AM, <code>git log</code> and <code>git blame</code> tell you exactly what changed and when—so you can fix it instead of guessing.</li>
+<li><strong>Collaboration that scales.</strong> Multiple people can work on the same files without overwriting each other's work.</li>
 </ul>
-<h2 id="how-this-module-works">How This Module Works<a class="headerlink" href="#how-this-module-works" title="Permanent link">&para;</a></h2>
+<h2 id="lessons">Lessons<a class="headerlink" href="#lessons" title="Permanent link">&para;</a></h2>
+<p>Work through these in order:</p>
+<ol>
+<li><strong>Local Foundations</strong> — Set up Git, create a repo, make your first commits</li>
+<li><strong>Understanding History</strong> — Read logs, compare changes, ignore files you don't want tracked</li>
+<li><strong>Branching and Merging</strong> — Work on isolated changes and combine them safely</li>
+<li><strong>Working with Remotes</strong> — Sync with shared repositories (push, pull, clone)</li>
+<li><strong>Recovery and Confidence</strong> — Fix mistakes and get unstuck</li>
+</ol>
+<h2 id="tips-for-success">Tips for Success<a class="headerlink" href="#tips-for-success" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Complete lessons in order: <strong>Prerequisites</strong> → Local Foundations → Understanding History → Branching and Merging → Working with Remotes → Recovery and Confidence.</li>
-<li>Use a scratch repository so you can experiment freely and reset as needed.</li>
-<li>Run <code>git status</code> before and after changes to keep a clean working tree; don't be afraid to delete and re-create your sandbox if you get stuck.</li>
-</ul>
-<h2 id="what-youll-be-able-to-do-after-this-module">What You'll Be Able to Do After This Module<a class="headerlink" href="#what-youll-be-able-to-do-after-this-module" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Initialize or clone repositories, set identity, and keep your working tree tidy.</li>
-<li>Stage, commit, and write intent-focused messages.</li>
-<li>Inspect diffs and history to understand who changed what and why.</li>
-<li>Branch, merge, and resolve small conflicts with confidence.</li>
-<li>Push, pull, and fetch from a remote using safe defaults.</li>
-<li>Recover from common mistakes without panic.</li>
+<li><strong>Use a scratch repo.</strong> Create a throwaway folder to experiment in. Break things on purpose. Delete it and start over when you get stuck—that's the fastest way to learn.</li>
+<li><strong>Run <code>git status</code> constantly.</strong> Before and after every operation. It tells you exactly what Git sees, and it's the quickest way to stay oriented.</li>
+<li><strong>Don't memorize—understand.</strong> Git has a lot of commands, but they all revolve around a few core concepts. Once those click, the commands make sense.</li>
 </ul>
 
 
@@ -879,6 +937,19 @@
     Made with
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
       Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="/ai-disclaimer/" target="_blank" rel="noopener" title="AI Disclaimer" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.5 15.5c0 1.11-.89 2-2 2s-2-.89-2-2 .9-2 2-2 2 .9 2 2m-9-2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.89 2-2-.89-2-2-2M23 15v3c0 .55-.45 1-1 1h-1v1c0 1.11-.89 2-2 2H5a2 2 0 0 1-2-2v-1H2c-.55 0-1-.45-1-1v-3c0-.55.45-1 1-1h1c0-3.87 3.13-7 7-7h1V5.73c-.6-.34-1-.99-1-1.73 0-1.1.9-2 2-2s2 .9 2 2c0 .74-.4 1.39-1 1.73V7h1c3.87 0 7 3.13 7 7h1c.55 0 1 .45 1 1m-2 1h-2v-2c0-2.76-2.24-5-5-5h-4c-2.76 0-5 2.24-5 5v2H3v1h2v3h14v-3h2z"/></svg>
     </a>
   
 </div>

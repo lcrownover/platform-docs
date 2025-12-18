@@ -11,25 +11,25 @@
       
       
       
-        <link rel="prev" href="../lesson-03-branching-and-merging/">
+        <link rel="prev" href="../git-101/lesson-05-recovery-and-confidence/">
       
       
-        <link rel="next" href="../lesson-05-recovery-and-confidence/">
+        <link rel="next" href="homebrew/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>Working with Remotes - Platform Training</title>
+        <title>Overview - Platform Training</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
       
 
@@ -48,7 +48,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#working-with-remotes" class="md-skip">
+        <a href="#tools" class="md-skip">
           Skip to content
         </a>
       
@@ -80,7 +80,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Platform Training" class="md-header__button md-logo" aria-label="Platform Training" data-md-component="logo">
+    <a href=".." title="Platform Training" class="md-header__button md-logo" aria-label="Platform Training" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Working with Remotes
+              Overview
             
           </span>
         </div>
@@ -171,13 +171,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../git-101/" class="md-tabs__link">
           
   
   
@@ -193,11 +191,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../tools/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
   
@@ -231,7 +231,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Platform Training" class="md-nav__button md-logo" aria-label="Platform Training" data-md-component="logo">
+    <a href=".." title="Platform Training" class="md-nav__button md-logo" aria-label="Platform Training" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -246,29 +246,24 @@
       
   
   
-    
   
   
-  
     
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
         
           
-          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
             
   
   
@@ -286,7 +281,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -304,7 +299,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../git-101/" class="md-nav__link">
         
   
   
@@ -332,7 +327,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../prerequisites/" class="md-nav__link">
+      <a href="../git-101/prerequisites/" class="md-nav__link">
         
   
   
@@ -360,7 +355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lesson-01-local-foundations/" class="md-nav__link">
+      <a href="../git-101/lesson-01-local-foundations/" class="md-nav__link">
         
   
   
@@ -388,7 +383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lesson-02-understanding-history/" class="md-nav__link">
+      <a href="../git-101/lesson-02-understanding-history/" class="md-nav__link">
         
   
   
@@ -416,7 +411,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lesson-03-branching-and-merging/" class="md-nav__link">
+      <a href="../git-101/lesson-03-branching-and-merging/" class="md-nav__link">
         
   
   
@@ -441,37 +436,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Working with Remotes
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../git-101/lesson-04-working-with-remotes/" class="md-nav__link">
         
   
   
@@ -487,92 +455,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-youll-learn" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What You'll Learn
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-a-remote" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What Is a Remote?
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cloning-a-repository" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cloning a Repository
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#push-pull-and-fetch" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Push, Pull, and Fetch
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#safe-habits-for-shared-repositories" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Safe Habits for Shared Repositories
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exercises" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Exercises
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -585,7 +467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lesson-05-recovery-and-confidence/" class="md-nav__link">
+      <a href="../git-101/lesson-05-recovery-and-confidence/" class="md-nav__link">
         
   
   
@@ -617,24 +499,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -652,7 +539,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -667,10 +554,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../tools/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -686,6 +600,37 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#available-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Available Tools
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -698,7 +643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/homebrew/" class="md-nav__link">
+      <a href="homebrew/" class="md-nav__link">
         
   
   
@@ -726,7 +671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/windows-terminal/" class="md-nav__link">
+      <a href="windows-terminal/" class="md-nav__link">
         
   
   
@@ -754,7 +699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/wsl/" class="md-nav__link">
+      <a href="wsl/" class="md-nav__link">
         
   
   
@@ -782,7 +727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/vscode/" class="md-nav__link">
+      <a href="vscode/" class="md-nav__link">
         
   
   
@@ -810,7 +755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/git/" class="md-nav__link">
+      <a href="git/" class="md-nav__link">
         
   
   
@@ -865,65 +810,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-youll-learn" class="md-nav__link">
+  <a href="#available-tools" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What You'll Learn
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-a-remote" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What Is a Remote?
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cloning-a-repository" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cloning a Repository
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#push-pull-and-fetch" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Push, Pull, and Fetch
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#safe-habits-for-shared-repositories" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Safe Habits for Shared Repositories
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exercises" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Exercises
+        Available Tools
       
     </span>
   </a>
@@ -947,24 +837,46 @@
 
 
 
-<h1 id="working-with-remotes">Working with Remotes<a class="headerlink" href="#working-with-remotes" title="Permanent link">&para;</a></h1>
-<p>Goal: Sync your work with a shared repository.</p>
-<h2 id="what-youll-learn">What You'll Learn<a class="headerlink" href="#what-youll-learn" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Clone existing repositories</li>
-<li>Push your changes and pull others' changes</li>
-<li>Safe daily habits for working with remotes</li>
-</ul>
-<h2 id="what-is-a-remote">What Is a Remote?<a class="headerlink" href="#what-is-a-remote" title="Permanent link">&para;</a></h2>
-<p>TODO</p>
-<h2 id="cloning-a-repository">Cloning a Repository<a class="headerlink" href="#cloning-a-repository" title="Permanent link">&para;</a></h2>
-<p>TODO</p>
-<h2 id="push-pull-and-fetch">Push, Pull, and Fetch<a class="headerlink" href="#push-pull-and-fetch" title="Permanent link">&para;</a></h2>
-<p>TODO</p>
-<h2 id="safe-habits-for-shared-repositories">Safe Habits for Shared Repositories<a class="headerlink" href="#safe-habits-for-shared-repositories" title="Permanent link">&para;</a></h2>
-<p>TODO</p>
-<h2 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">&para;</a></h2>
-<p>TODO</p>
+<h1 id="tools">Tools<a class="headerlink" href="#tools" title="Permanent link">&para;</a></h1>
+<p>Reference guides for installing and configuring the tools used across our training modules.</p>
+<p>Each guide covers installation, basic setup, and tips for getting the most out of the tool. You don't need to install everything upfront—check the prerequisites for each module to see what's required.</p>
+<h2 id="available-tools">Available Tools<a class="headerlink" href="#available-tools" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Platform</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="homebrew/">Homebrew</a></td>
+<td>macOS</td>
+<td>Package manager for installing CLI tools</td>
+</tr>
+<tr>
+<td><a href="windows-terminal/">Windows Terminal</a></td>
+<td>Windows</td>
+<td>Modern terminal with tabs, profiles, and WSL integration</td>
+</tr>
+<tr>
+<td><a href="wsl/">WSL</a></td>
+<td>Windows</td>
+<td>Run Linux on Windows—recommended for development</td>
+</tr>
+<tr>
+<td><a href="vscode/">Visual Studio Code</a></td>
+<td>All</td>
+<td>Code editor with Git integration and remote development</td>
+</tr>
+<tr>
+<td><a href="git/">Git</a></td>
+<td>All</td>
+<td>Version control system</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -1027,10 +939,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "content.code.copy", "content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "content.code.copy", "content.action.edit"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

@@ -195,7 +195,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../homebrew/" class="md-tabs__link">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -555,6 +555,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../homebrew/" class="md-nav__link">
         
   
@@ -591,6 +619,34 @@
     
   
     Windows Terminal (Windows)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wsl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WSL (Windows)
   
 
     
@@ -699,27 +755,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#installation-instructions" class="md-nav__link">
+  <a href="#installation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Installation Instructions
+        Installation
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Installation Instructions">
+    <nav class="md-nav" aria-label="Installation">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#windows" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Windows
-      
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#macos" class="md-nav__link">
@@ -733,10 +778,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#linux-debianubuntu" class="md-nav__link">
+  <a href="#linux-wsl" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Linux (Debian/Ubuntu)
+        Linux / WSL
       
     </span>
   </a>
@@ -749,10 +794,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configure-git-for-your-machine" class="md-nav__link">
+  <a href="#verify-installation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Configure Git for your machine
+        Verify Installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initial-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Initial Configuration
       
     </span>
   </a>
@@ -802,27 +858,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#installation-instructions" class="md-nav__link">
+  <a href="#installation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Installation Instructions
+        Installation
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Installation Instructions">
+    <nav class="md-nav" aria-label="Installation">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#windows" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Windows
-      
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#macos" class="md-nav__link">
@@ -836,10 +881,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#linux-debianubuntu" class="md-nav__link">
+  <a href="#linux-wsl" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Linux (Debian/Ubuntu)
+        Linux / WSL
       
     </span>
   </a>
@@ -852,10 +897,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configure-git-for-your-machine" class="md-nav__link">
+  <a href="#verify-installation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Configure Git for your machine
+        Verify Installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initial-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Initial Configuration
       
     </span>
   </a>
@@ -880,44 +936,38 @@
 
 
 <h1 id="git">Git<a class="headerlink" href="#git" title="Permanent link">&para;</a></h1>
-<p>Git is a distributed version control system that tracks changes to files over time, allowing you to save checkpoints (commits), work in parallel (branches), and safely combine work (merges).
-It makes collaboration and change management reliable:</p>
-<ul>
-<li>Provides complete history for auditing and rollback</li>
-<li>Facilitates code review with content diffs</li>
-<li>Enables a low-risk way to experiment without breaking the main codebase</li>
-</ul>
-<h2 id="installation-instructions">Installation Instructions<a class="headerlink" href="#installation-instructions" title="Permanent link">&para;</a></h2>
-<h3 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h3>
-<p>Manual installation using <a href="https://git-scm.com/install/windows">binaries from the official site</a></p>
-<p>The default settings in the installer should work just fine.</p>
-<p>or</p>
-<p>Install using WinGet:</p>
-<pre><code class="language-powershell">winget install --id Git.Git -e --source winget
-</code></pre>
+<p>Git is a version control system that tracks changes to files over time. You save checkpoints (commits), work on isolated changes (branches), and combine work together (merges). It's the foundation for modern infrastructure-as-code, config management, and collaborative workflows.</p>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <h3 id="macos">macOS<a class="headerlink" href="#macos" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Command Line Tools (built-in, but less up to date):</li>
-</ul>
+<p><strong>Option 1: Xcode Command Line Tools</strong> (quick, but may be outdated)</p>
 <pre><code class="language-bash">xcode-select --install
 </code></pre>
-<ul>
-<li>Homebrew (preferred for current releases):</li>
-</ul>
+<p><strong>Option 2: Homebrew</strong> (recommended—stays current)</p>
 <pre><code class="language-bash">brew install git
 </code></pre>
-<h3 id="linux-debianubuntu">Linux (Debian/Ubuntu)<a class="headerlink" href="#linux-debianubuntu" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Install from apt:</li>
-</ul>
-<p><code>bash
-  sudo apt update
-  sudo apt install -y git</code></p>
-<h2 id="configure-git-for-your-machine">Configure Git for your machine<a class="headerlink" href="#configure-git-for-your-machine" title="Permanent link">&para;</a></h2>
-<p>There are some settings you should configure prior to using it. You only need to set these once!</p>
-<pre><code class="language-bash">git config --global user.name &quot;Your Name&quot;          # the name that shows up in your commit history
-git config --global user.email &quot;you@uoregon.edu&quot;   # your email
-git config --global pull.rebase true               # prefer rebase over merge when pulling
+<h3 id="linux-wsl">Linux / WSL<a class="headerlink" href="#linux-wsl" title="Permanent link">&para;</a></h3>
+<pre><code class="language-bash">sudo apt update &amp;&amp; sudo apt install -y git
+</code></pre>
+<div class="admonition note">
+<p class="admonition-title">Windows users</p>
+<p>Install Git inside <a href="../wsl/">WSL</a>, not on Windows itself. This keeps your tooling consistent with the Linux environments you'll deploy to.</p>
+</div>
+<h2 id="verify-installation">Verify Installation<a class="headerlink" href="#verify-installation" title="Permanent link">&para;</a></h2>
+<pre><code class="language-bash">git --version
+</code></pre>
+<p>You should see something like <code>git version 2.x.x</code>.</p>
+<h2 id="initial-configuration">Initial Configuration<a class="headerlink" href="#initial-configuration" title="Permanent link">&para;</a></h2>
+<p>Set these once per machine. They identify you in every commit you make.</p>
+<pre><code class="language-bash">git config --global user.name &quot;Your Name&quot;
+git config --global user.email &quot;you@uoregon.edu&quot;
+</code></pre>
+<p>Use your real name and work email—this is attribution, not authentication. When someone runs <code>git log</code> or <code>git blame</code>, your name is what they'll see.</p>
+<p><strong>Recommended settings:</strong></p>
+<pre><code class="language-bash">git config --global init.defaultBranch main    # new repos start with 'main' instead of 'master'
+git config --global pull.rebase true           # cleaner history when pulling changes
+</code></pre>
+<p>Verify your config:</p>
+<pre><code class="language-bash">git config --global --list
 </code></pre>
 
 
@@ -951,6 +1001,19 @@ git config --global pull.rebase true               # prefer rebase over merge wh
     Made with
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
       Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="/ai-disclaimer/" target="_blank" rel="noopener" title="AI Disclaimer" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.5 15.5c0 1.11-.89 2-2 2s-2-.89-2-2 .9-2 2-2 2 .9 2 2m-9-2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.89 2-2-.89-2-2-2M23 15v3c0 .55-.45 1-1 1h-1v1c0 1.11-.89 2-2 2H5a2 2 0 0 1-2-2v-1H2c-.55 0-1-.45-1-1v-3c0-.55.45-1 1-1h1c0-3.87 3.13-7 7-7h1V5.73c-.6-.34-1-.99-1-1.73 0-1.1.9-2 2-2s2 .9 2 2c0 .74-.4 1.39-1 1.73V7h1c3.87 0 7 3.13 7 7h1c.55 0 1 .45 1 1m-2 1h-2v-2c0-2.76-2.24-5-5-5h-4c-2.76 0-5 2.24-5 5v2H3v1h2v3h14v-3h2z"/></svg>
     </a>
   
 </div>

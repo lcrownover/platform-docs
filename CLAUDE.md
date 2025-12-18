@@ -49,6 +49,10 @@ uv run mkdocs build --strict         # production build (run before PRs)
 - Title-case headings
 - Imperative commit messages: `Add Puppet 101 setup page`
 
+## Hands Off
+
+Do not read, edit, or modify `docs/ai-disclaimer.md`. That page is intentionally human-written.
+
 ## Before Committing
 
 Always run `uv run mkdocs build --strict` before PRs—it fails on broken links and warnings.

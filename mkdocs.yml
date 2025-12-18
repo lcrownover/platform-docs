@@ -12,6 +12,10 @@ markdown_extensions:
       permalink: true
   - tables
   - footnotes
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 nav:
   - Git 101:
       - Overview: git-101/index.md
@@ -22,7 +26,14 @@ nav:
       - Working with Remotes: git-101/lesson-04-working-with-remotes.md
       - Recovery and Confidence: git-101/lesson-05-recovery-and-confidence.md
   - Tools:
+      - Overview: tools/index.md
       - Homebrew (macOS): tools/homebrew.md
       - Windows Terminal (Windows): tools/windows-terminal.md
+      - WSL (Windows): tools/wsl.md
       - Visual Studio Code: tools/vscode.md
       - Git: tools/git.md
+extra:
+  social:
+    - icon: material/robot-outline
+      link: /ai-disclaimer/
+      name: AI Disclaimer

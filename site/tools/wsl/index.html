@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../lesson-03-branching-and-merging/">
+        <link rel="prev" href="../windows-terminal/">
       
       
-        <link rel="next" href="../lesson-05-recovery-and-confidence/">
+        <link rel="next" href="../vscode/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>Working with Remotes - Platform Training</title>
+        <title>WSL (Windows) - Platform Training</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#working-with-remotes" class="md-skip">
+        <a href="#windows-subsystem-for-linux-wsl" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Working with Remotes
+              WSL (Windows)
             
           </span>
         </div>
@@ -171,13 +171,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../git-101/" class="md-tabs__link">
           
   
   
@@ -193,11 +191,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../tools/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -246,6 +246,259 @@
       
   
   
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git 101
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Git 101
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git-101/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git-101/prerequisites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prerequisites
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git-101/lesson-01-local-foundations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Local Foundations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git-101/lesson-02-understanding-history/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Understanding History
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git-101/lesson-03-branching-and-merging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Branching and Merging
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git-101/lesson-04-working-with-remotes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Working with Remotes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git-101/lesson-05-recovery-and-confidence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recovery and Confidence
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -265,17 +518,17 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
   <span class="md-ellipsis">
     
   
-    Git 101
+    Tools
   
 
     
@@ -286,12 +539,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_1">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Git 101
+    Tools
   
 
           </label>
@@ -332,14 +585,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../prerequisites/" class="md-nav__link">
+      <a href="../homebrew/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Prerequisites
+    Homebrew (macOS)
   
 
     
@@ -360,70 +613,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../lesson-01-local-foundations/" class="md-nav__link">
+      <a href="../windows-terminal/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Local Foundations
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../lesson-02-understanding-history/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Understanding History
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../lesson-03-branching-and-merging/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Branching and Merging
+    Windows Terminal (Windows)
   
 
     
@@ -460,7 +657,7 @@
   <span class="md-ellipsis">
     
   
-    Working with Remotes
+    WSL (Windows)
   
 
     
@@ -478,7 +675,7 @@
   <span class="md-ellipsis">
     
   
-    Working with Remotes
+    WSL (Windows)
   
 
     
@@ -504,10 +701,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-youll-learn" class="md-nav__link">
+  <a href="#why-use-wsl-for-development" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What You'll Learn
+        Why Use WSL for Development?
       
     </span>
   </a>
@@ -515,10 +712,121 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-is-a-remote" class="md-nav__link">
+  <a href="#installation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What Is a Remote?
+        Installation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-wsl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install WSL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verify Installation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#update-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Update Packages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-common-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install Common Tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-windows-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Access Windows Files
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-linux-files-from-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Access Linux Files from Windows
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-wsl-with-vs-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using WSL with VS Code
       
     </span>
   </a>
@@ -526,43 +834,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cloning-a-repository" class="md-nav__link">
+  <a href="#tips" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Cloning a Repository
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#push-pull-and-fetch" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Push, Pull, and Fetch
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#safe-habits-for-shared-repositories" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Safe Habits for Shared Repositories
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exercises" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Exercises
+        Tips
       
     </span>
   </a>
@@ -585,204 +860,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lesson-05-recovery-and-confidence/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Recovery and Confidence
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Tools
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Tools
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tools/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Overview
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tools/homebrew/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Homebrew (macOS)
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tools/windows-terminal/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Windows Terminal (Windows)
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tools/wsl/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    WSL (Windows)
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tools/vscode/" class="md-nav__link">
+      <a href="../vscode/" class="md-nav__link">
         
   
   
@@ -810,7 +888,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/git/" class="md-nav__link">
+      <a href="../git/" class="md-nav__link">
         
   
   
@@ -865,10 +943,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-youll-learn" class="md-nav__link">
+  <a href="#why-use-wsl-for-development" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What You'll Learn
+        Why Use WSL for Development?
       
     </span>
   </a>
@@ -876,10 +954,121 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-is-a-remote" class="md-nav__link">
+  <a href="#installation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What Is a Remote?
+        Installation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-wsl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install WSL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verify Installation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#update-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Update Packages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-common-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install Common Tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-windows-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Access Windows Files
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-linux-files-from-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Access Linux Files from Windows
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-wsl-with-vs-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using WSL with VS Code
       
     </span>
   </a>
@@ -887,43 +1076,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cloning-a-repository" class="md-nav__link">
+  <a href="#tips" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Cloning a Repository
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#push-pull-and-fetch" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Push, Pull, and Fetch
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#safe-habits-for-shared-repositories" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Safe Habits for Shared Repositories
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exercises" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Exercises
+        Tips
       
     </span>
   </a>
@@ -947,24 +1103,71 @@
 
 
 
-<h1 id="working-with-remotes">Working with Remotes<a class="headerlink" href="#working-with-remotes" title="Permanent link">&para;</a></h1>
-<p>Goal: Sync your work with a shared repository.</p>
-<h2 id="what-youll-learn">What You'll Learn<a class="headerlink" href="#what-youll-learn" title="Permanent link">&para;</a></h2>
+<h1 id="windows-subsystem-for-linux-wsl">Windows Subsystem for Linux (WSL)<a class="headerlink" href="#windows-subsystem-for-linux-wsl" title="Permanent link">&para;</a></h1>
+<p>WSL lets you run a full Linux environment directly on Windows—no virtual machine, no dual-boot. You get a real Linux shell, real Linux tools, and real Linux package managers, all integrated with your Windows filesystem.</p>
+<h2 id="why-use-wsl-for-development">Why Use WSL for Development?<a class="headerlink" href="#why-use-wsl-for-development" title="Permanent link">&para;</a></h2>
+<p>Most servers, containers, and CI/CD pipelines run Linux. When you develop on Windows but deploy to Linux, you're constantly fighting small differences: path separators, line endings, case sensitivity, shell syntax, missing tools.</p>
+<p>WSL eliminates this friction:</p>
 <ul>
-<li>Clone existing repositories</li>
-<li>Push your changes and pull others' changes</li>
-<li>Safe daily habits for working with remotes</li>
+<li><strong>Same tools as production.</strong> Use the same shell, package manager, and utilities you'll find on your servers. No more "works on my machine" because your machine <em>is</em> Linux.</li>
+<li><strong>Native performance.</strong> WSL 2 runs a real Linux kernel. File operations, compilation, and container workloads run at near-native speed.</li>
+<li><strong>Seamless integration.</strong> Access Windows files from Linux (<code>/mnt/c/</code>), run Linux commands from PowerShell, and use VS Code's Remote-WSL extension to edit Linux files with full IDE support.</li>
+<li><strong>Better tooling support.</strong> Many development tools (Docker, Kubernetes, Terraform, Ansible, Puppet) are Linux-first. Documentation, tutorials, and Stack Overflow answers assume Linux. Stop translating—just use Linux.</li>
 </ul>
-<h2 id="what-is-a-remote">What Is a Remote?<a class="headerlink" href="#what-is-a-remote" title="Permanent link">&para;</a></h2>
-<p>TODO</p>
-<h2 id="cloning-a-repository">Cloning a Repository<a class="headerlink" href="#cloning-a-repository" title="Permanent link">&para;</a></h2>
-<p>TODO</p>
-<h2 id="push-pull-and-fetch">Push, Pull, and Fetch<a class="headerlink" href="#push-pull-and-fetch" title="Permanent link">&para;</a></h2>
-<p>TODO</p>
-<h2 id="safe-habits-for-shared-repositories">Safe Habits for Shared Repositories<a class="headerlink" href="#safe-habits-for-shared-repositories" title="Permanent link">&para;</a></h2>
-<p>TODO</p>
-<h2 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">&para;</a></h2>
-<p>TODO</p>
+<p>If you're doing infrastructure work, writing scripts, or working with containers, WSL is the path of least resistance on Windows.</p>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<h3 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Windows 10 version 2004+ (Build 19041+) or Windows 11</li>
+<li>Virtualization enabled in BIOS (usually on by default)</li>
+</ul>
+<h3 id="install-wsl">Install WSL<a class="headerlink" href="#install-wsl" title="Permanent link">&para;</a></h3>
+<p>Open PowerShell as Administrator and run:</p>
+<pre><code class="language-powershell">wsl --install
+</code></pre>
+<p>This installs WSL 2 with Ubuntu as the default distribution. Restart when prompted.</p>
+<p>After restart, Ubuntu will launch automatically to complete setup. Create a username and password—this is your Linux user, separate from your Windows account.</p>
+<h3 id="verify-installation">Verify Installation<a class="headerlink" href="#verify-installation" title="Permanent link">&para;</a></h3>
+<p>Open a new PowerShell window:</p>
+<pre><code class="language-powershell">wsl --version
+</code></pre>
+<p>You should see WSL version 2.x.x and a kernel version.</p>
+<p>Launch your Linux environment:</p>
+<pre><code class="language-powershell">wsl
+</code></pre>
+<p>You're now in a bash shell. Run <code>uname -a</code> to confirm you're in Linux.</p>
+<h2 id="basic-configuration">Basic Configuration<a class="headerlink" href="#basic-configuration" title="Permanent link">&para;</a></h2>
+<h3 id="update-packages">Update Packages<a class="headerlink" href="#update-packages" title="Permanent link">&para;</a></h3>
+<p>First thing after install—update your package list:</p>
+<pre><code class="language-bash">sudo apt update &amp;&amp; sudo apt upgrade -y
+</code></pre>
+<h3 id="install-common-tools">Install Common Tools<a class="headerlink" href="#install-common-tools" title="Permanent link">&para;</a></h3>
+<pre><code class="language-bash">sudo apt install -y git curl wget unzip
+</code></pre>
+<h3 id="access-windows-files">Access Windows Files<a class="headerlink" href="#access-windows-files" title="Permanent link">&para;</a></h3>
+<p>Your Windows drives are mounted under <code>/mnt/</code>:</p>
+<pre><code class="language-bash">cd /mnt/c/Users/YourName/Documents
+ls
+</code></pre>
+<h3 id="access-linux-files-from-windows">Access Linux Files from Windows<a class="headerlink" href="#access-linux-files-from-windows" title="Permanent link">&para;</a></h3>
+<p>Your Linux home directory is accessible from Windows Explorer:</p>
+<pre><code>\\wsl$\Ubuntu\home\yourusername
+</code></pre>
+<p>Or open Explorer from the Linux terminal:</p>
+<pre><code class="language-bash">explorer.exe .
+</code></pre>
+<h2 id="using-wsl-with-vs-code">Using WSL with VS Code<a class="headerlink" href="#using-wsl-with-vs-code" title="Permanent link">&para;</a></h2>
+<p>Install the <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl">Remote - WSL</a> extension in VS Code.</p>
+<p>Then from your Linux terminal, open any folder in VS Code:</p>
+<pre><code class="language-bash">code .
+</code></pre>
+<p>VS Code connects to WSL and runs extensions inside Linux. You get full IntelliSense, debugging, and terminal access—all running in your Linux environment.</p>
+<h2 id="tips">Tips<a class="headerlink" href="#tips" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Keep projects in Linux filesystem.</strong> Store code in <code>~/projects</code>, not <code>/mnt/c/</code>. File operations are significantly faster on the Linux filesystem.</li>
+<li><strong>Use Windows Terminal.</strong> It handles WSL, PowerShell, and CMD in tabs with proper Unicode support. See <a href="../windows-terminal/">Windows Terminal</a>.</li>
+<li><strong>One distro is usually enough.</strong> Ubuntu is the default and has the best support. You <em>can</em> install multiple distros, but you probably don't need to.</li>
+</ul>
 
 
 
