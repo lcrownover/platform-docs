@@ -1,0 +1,24 @@
+site_name: Platform Training
+site_description: Training modules for platform-engineering topics at University of Oregon
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - content.code.copy
+    - content.action.edit
+watch:
+  - docs
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - tables
+  - footnotes
+nav:
+  - Git 101:
+      - Overview: git-101/index.md
+      - Prerequisites: git-101/prerequisites.md
+      - Getting Started with Repos and Commits: git-101/lesson-01-first-repo.md
+      - Viewing History and Ignoring Noise: git-101/lesson-02-history-and-ignores.md
+      - Branching, Merging, and Resolving Conflicts: git-101/lesson-03-branching-and-merging.md
+      - Remotes and Daily Safety Habits: git-101/lesson-04-remotes-and-safety.md
