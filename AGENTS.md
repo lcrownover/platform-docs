@@ -7,9 +7,8 @@ Welcome to the platform-engineering training docs. These notes keep contribution
 - `mkdocs.yml` defines navigation; keep modules ordered: Puppet 101 (no Git yet) → Git 101 → Puppet 201.
 - Place pages in `docs/` under module folders: `docs/puppet-101/`, `docs/git-101/`, `docs/puppet-201/`. Use `index.md` for section landing pages.
 - Each module needs a “Prerequisites” page covering required tools for macOS and Windows plus install steps (e.g., Puppet agent, Git CLI, VS Code, terminal basics). Keep commands verified for both platforms.
-- Design each lesson so an instructor-led group of 20–30 can finish within ~2 hours; self-paced should be faster.
 - Store shared assets in `docs/assets/` (images, diagrams, downloadable code). Reference with relative paths.
-- Keep pages focused and short; link to follow-up sections rather than duplicating content.
+- Keep pages clear and well-structured; long-form explanations are fine when they add useful context, rationale, or examples.
 
 ## Build, Preview, and Release Commands
 
@@ -22,9 +21,9 @@ Welcome to the platform-engineering training docs. These notes keep contribution
 
 ## Content Style & Naming Conventions
 
-- Write in a concise, encouraging training tone; spell out prerequisites at the top of each page.
+- Write in an encouraging training tone; spell out prerequisites at the top of each page.
 - Use kebab-case filenames (`getting-started.md`); title-case headings; keep one H1 per page.
-- Prefer task-first sections: “Do X”, then “Why it matters”. Include terminal examples with fenced code blocks and language hints (` ```bash `, ` ```yaml `).
+- Prefer task-first sections: “Do X”, then “Why it matters.” Include terminal examples with fenced code blocks and language hints (` ```bash `, ` ```yaml `). Expand explanations when it helps readers understand tradeoffs or rationale.
 - Leverage mkdocs-material features (admonitions like `!!! note`, tabs, callouts) for clarity; keep screenshots lightweight and captioned.
 
 ## Testing & Review Guidelines

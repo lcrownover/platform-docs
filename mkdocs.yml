@@ -1,13 +1,11 @@
+---
 site_name: Platform Training
-site_description: Training modules for platform-engineering topics at University of Oregon
+site_description: Training modules for platform-engineering topics at University of
+  Oregon
 theme:
   name: material
-  features:
-    - navigation.tabs
-    - content.code.copy
-    - content.action.edit
-watch:
-  - docs
+  features: [navigation.tabs, content.code.copy, content.action.edit]
+watch: [docs]
 markdown_extensions:
   - admonition
   - toc:
@@ -22,3 +20,8 @@ nav:
       - Viewing History and Ignoring Noise: git-101/lesson-02-history-and-ignores.md
       - Branching, Merging, and Resolving Conflicts: git-101/lesson-03-branching-and-merging.md
       - Remotes and Daily Safety Habits: git-101/lesson-04-remotes-and-safety.md
+  - Tools:
+      - Homebrew (macOS): tools/homebrew.md
+      - Windows Terminal (Windows): tools/windows-terminal.md
+      - Visual Studio Code: tools/vscode.md
+      - Git: tools/git.md

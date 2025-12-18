@@ -1,24 +1,20 @@
 # Git 101
 
-Welcome! This training gets you comfortable with everyday Git tasks for platform-engineering work. Designed for IT pros new to Git.
+Git is a distributed version control system that records changes to files in a project over time. It organizes those changes into commits, which form a history that can be navigated, compared, and restored. It also supports branching and merging so multiple lines of development can exist and be integrated.
 
-## Learning Outcomes
-- Understand working tree, staging, and commits.
-- Configure Git identity and defaults.
-- Create/clone repos, add/ignore files, and make clean commits.
-- Inspect history, branch/merge, resolve simple conflicts.
-- Push/pull with a remote and use safety checks.
+## Why Use Git?
 
-## How to Use This Module
-- Complete the **Prerequisites** page first; install Git and a code editor.
-- Work through lessons in order; each lesson ends with a short hands-on exercise.
-- Use the commands shown on both macOS and Windows terminals (adjust paths if needed).
+- **Change history**: Create checkpoints you can return to instead of duplicating files.
+- **Parallel work**: Use branches to try ideas without blocking teammates; merge when ready with a documented trail.
+- **Accountability**: Authors, timestamps, and commit messages make audits and incident timelines straightforward.
+- **Integration**: Fits with CI/CD, code reviews, and deployment pipelines.
 
-## Lesson Map
-- Getting started: repo setup, config, and commits.
-- History and ignores: inspect changes and keep noise out.
-- Branching and merging: create branches and resolve a simple conflict.
-- Remotes and safety: sync with a remote and use safe daily commands.
+## What You’ll Be Able to Do After This Module
 
-## Need Help?
-Bring questions to the instructor-led session or note them as you self-pace; we will review common blockers at the start of each lesson.
+- Initialize and clone repositories, set identity, and keep a clean working tree.
+- Stage, commit, and write messages that explain intent.
+- Inspect diffs and history to understand who changed what and why.
+- Branch, merge, and resolve small conflicts.
+- Push and pull with a remote using safe defaults.
+
+Start with **Prerequisites** to install Git and a terminal, then continue to the hands-on lessons. Keep a scratch repository handy so you can experiment without affecting real projects.
