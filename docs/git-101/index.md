@@ -1,20 +1,25 @@
 # Git 101
 
-Git is a distributed version control system that records changes to files in a project over time. It organizes those changes into commits, which form a history that can be navigated, compared, and restored. It also supports branching and merging so multiple lines of development can exist and be integrated.
+Git is a distributed version control system that records changes to files over time. It groups changes into commits you can compare, restore, and merge so parallel work stays orderly.
 
 ## Why Use Git?
 
-- **Change history**: Create checkpoints you can return to instead of duplicating files.
-- **Parallel work**: Use branches to try ideas without blocking teammates; merge when ready with a documented trail.
-- **Accountability**: Authors, timestamps, and commit messages make audits and incident timelines straightforward.
-- **Integration**: Fits with CI/CD, code reviews, and deployment pipelines.
+- **Reliable history**: Create checkpoints instead of copying folders or renaming files.
+- **Parallel work**: Branch to try ideas without blocking teammates; merge with a traceable story.
+- **Audit-friendly**: Authors, timestamps, and messages make incident timelines and reviews clear.
+- **Automation-ready**: Works with CI/CD, code review systems, and deployment pipelines.
 
-## What You’ll Be Able to Do After This Module
+## How This Module Works
 
-- Initialize and clone repositories, set identity, and keep a clean working tree.
-- Stage, commit, and write messages that explain intent.
+- Complete lessons in order: **Prerequisites** → Local Foundations → Understanding History → Branching and Merging → Working with Remotes → Recovery and Confidence.
+- Use a scratch repository so you can experiment freely and reset as needed.
+- Run `git status` before and after changes to keep a clean working tree; don't be afraid to delete and re-create your sandbox if you get stuck.
+
+## What You'll Be Able to Do After This Module
+
+- Initialize or clone repositories, set identity, and keep your working tree tidy.
+- Stage, commit, and write intent-focused messages.
 - Inspect diffs and history to understand who changed what and why.
-- Branch, merge, and resolve small conflicts.
-- Push and pull with a remote using safe defaults.
-
-Start with **Prerequisites** to install Git and a terminal, then continue to the hands-on lessons. Keep a scratch repository handy so you can experiment without affecting real projects.
+- Branch, merge, and resolve small conflicts with confidence.
+- Push, pull, and fetch from a remote using safe defaults.
+- Recover from common mistakes without panic.
