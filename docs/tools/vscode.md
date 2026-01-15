@@ -67,12 +67,9 @@ These are a couple of settings I always encourage new users to configure.
 
 To access your settings, press `Ctrl+Shift+P` on Windows/Linux or `Cmd+Shift+P` on macOS, type "Settings", and select "Preferences: Open Settings (UI)".
 
-- Enable format on save:
-  - search "format on save"
-- Disable folder compaction:
-  - search "compact folders"
-- Disable file preview:
-  - search "workbench editor preview"
+- Enable format on save
+- Disable "compact folders"
+- Disable "workbench editor preview"
 
 ### Extensions
 

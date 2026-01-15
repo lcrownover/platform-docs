@@ -18,14 +18,14 @@ Respect eachother's time. Friends don't let friends publish AI slop.
 
 **Use AI as a tool, don't defer to it**.
 
-## Okay, I get it, sheesh, get on with it
+## Why are you yelling at me?
 
 As you can see from the above rant, I am not Claude, ChatGPT, or Gemini.
 I don't have perfect pacing or formatting, my words come out rambly and informal.
 
-**This is good. This is the sign of someone who has created content with care and intent.**
+**This is good. This is human. This is the sign of someone who has created content with care and intent.**
 
-This is evidence that the author was passionate enough to spent more time than expected trying to communicate this information in a relatable and captivating way.
+This is evidence that the author was passionate enough to spend more time than expected trying to communicate this information in a relatable and captivating way.
 
 ## The actual reason for this page
 

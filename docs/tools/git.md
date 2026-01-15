@@ -6,19 +6,13 @@ Git is a version control system that tracks changes to files over time. You save
 
 ### macOS
 
-**Option 1: Xcode Command Line Tools** (quick, but may be outdated)
-
-```bash
-xcode-select --install
-```
-
-**Option 2: Homebrew** (recommended—stays current)
+**Homebrew** (recommended)
 
 ```bash
 brew install git
 ```
 
-### Linux / WSL
+### Linux (Ubuntu) / WSL
 
 ```bash
 sudo apt update && sudo apt install -y git
@@ -44,13 +38,12 @@ git config --global user.name "Your Name"
 git config --global user.email "you@uoregon.edu"
 ```
 
-Use your real name and work email—this is attribution, not authentication. When someone runs `git log` or `git blame`, your name is what they'll see.
+Use your real name and work email. When someone runs `git log` or `git blame`, your name/email is what they'll see.
 
 **Recommended settings:**
 
 ```bash
-git config --global init.defaultBranch main    # new repos start with 'main' instead of 'master'
-git config --global pull.rebase true           # cleaner history when pulling changes
+git config --global pull.rebase true    # cleaner history when pulling changes
 ```
 
 Verify your config:

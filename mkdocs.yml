@@ -17,14 +17,26 @@ markdown_extensions:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 nav:
-  - Git 101:
-      - Overview: git-101/index.md
-      - Prerequisites: git-101/prerequisites.md
-      - Local Foundations: git-101/lesson-01-local-foundations.md
-      - Understanding History: git-101/lesson-02-understanding-history.md
-      - Branching and Merging: git-101/lesson-03-branching-and-merging.md
-      - Working with Remotes: git-101/lesson-04-working-with-remotes.md
-      - Recovery and Confidence: git-101/lesson-05-recovery-and-confidence.md
+  - Lessons:
+      - Overview: index.md
+      - Git 101:
+          - Overview: git-101/index.md
+          - Prerequisites: git-101/prerequisites.md
+          - Local Foundations: git-101/lesson-01-local-foundations.md
+          - Understanding History: git-101/lesson-02-understanding-history.md
+          - Branching and Merging: git-101/lesson-03-branching-and-merging.md
+          - Working with Remotes: git-101/lesson-04-working-with-remotes.md
+          - Recovery and Confidence: git-101/lesson-05-recovery-and-confidence.md
+      - Puppet 101:
+          - Overview: puppet-101/index.md
+          - Prerequisites: puppet-101/prerequisites.md
+      - Puppet 201:
+          - Overview: puppet-201/index.md
+          - Prerequisites: puppet-201/prerequisites.md
+  - Concepts:
+      - Overview: concepts/index.md
+      - Infrastructure as Code: concepts/infrastructure-as-code.md
+      - Version Control: concepts/version-control.md
   - Tools:
       - Overview: tools/index.md
       - Homebrew (macOS): tools/homebrew.md

@@ -36,19 +36,7 @@ If you're using [WSL](wsl.md) for development, make it your default so new tabs 
 
 New tabs and windows now open in WSL by default. You can still open PowerShell or CMD tabs from the dropdown menu.
 
-## Recommended Settings
-
-Open Settings (`Ctrl+,`) and consider these tweaks:
-
-| Setting | Where | Recommendation |
-|---------|-------|----------------|
-| Default profile | Startup | Ubuntu (WSL) if you use Linux primarily |
-| Copy on select | Interaction | Enable—highlight text to copy, right-click to paste |
-| Font | Profiles → Defaults → Appearance | Cascadia Code or Cascadia Mono (built-in, ligature support) |
-| Color scheme | Profiles → Defaults → Appearance | One Half Dark is readable; pick what works for you |
-
 ## Tips
 
 - **Split panes:** `Alt+Shift+D` splits the current tab. Useful for running a command while watching logs.
-- **New tab with specific profile:** `Ctrl+Shift+1` opens your default, `Ctrl+Shift+2` opens the second profile, etc.
 - **Zoom:** `Ctrl+=` and `Ctrl+-` adjust font size on the fly.
