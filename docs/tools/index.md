@@ -13,3 +13,4 @@ Each guide covers installation, basic setup, and tips for getting the most out o
 | [WSL](wsl.md) | Windows | Run Linux on Windows—recommended for development |
 | [Visual Studio Code](vscode.md) | All | Code editor with Git integration and remote development |
 | [Git](git.md) | All | Version control system |
+| [Puppet Development Kit (PDK)](pdk.md) | All | Build and test Puppet modules |

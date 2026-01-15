@@ -14,6 +14,8 @@
         <link rel="prev" href="../vscode/">
       
       
+        <link rel="next" href="../pdk/">
+      
       
         
       
@@ -1253,10 +1255,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#linux-wsl" class="md-nav__link">
+  <a href="#linux-ubuntu-wsl" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Linux / WSL
+        Linux (Ubuntu) / WSL
       
     </span>
   </a>
@@ -1294,6 +1296,34 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pdk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Puppet Development Kit (PDK)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -1356,10 +1386,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#linux-wsl" class="md-nav__link">
+  <a href="#linux-ubuntu-wsl" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Linux / WSL
+        Linux (Ubuntu) / WSL
       
     </span>
   </a>
@@ -1414,13 +1444,10 @@
 <p>Git is a version control system that tracks changes to files over time. You save checkpoints (commits), work on isolated changes (branches), and combine work together (merges). It's the foundation for modern infrastructure-as-code, config management, and collaborative workflows.</p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <h3 id="macos">macOS<a class="headerlink" href="#macos" title="Permanent link">&para;</a></h3>
-<p><strong>Option 1: Xcode Command Line Tools</strong> (quick, but may be outdated)</p>
-<pre><code class="language-bash">xcode-select --install
-</code></pre>
-<p><strong>Option 2: Homebrew</strong> (recommended—stays current)</p>
+<p><strong>Homebrew</strong> (recommended)</p>
 <pre><code class="language-bash">brew install git
 </code></pre>
-<h3 id="linux-wsl">Linux / WSL<a class="headerlink" href="#linux-wsl" title="Permanent link">&para;</a></h3>
+<h3 id="linux-ubuntu-wsl">Linux (Ubuntu) / WSL<a class="headerlink" href="#linux-ubuntu-wsl" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">sudo apt update &amp;&amp; sudo apt install -y git
 </code></pre>
 <div class="admonition note">
@@ -1436,10 +1463,9 @@
 <pre><code class="language-bash">git config --global user.name &quot;Your Name&quot;
 git config --global user.email &quot;you@uoregon.edu&quot;
 </code></pre>
-<p>Use your real name and work email—this is attribution, not authentication. When someone runs <code>git log</code> or <code>git blame</code>, your name is what they'll see.</p>
+<p>Use your real name and work email. When someone runs <code>git log</code> or <code>git blame</code>, your name/email is what they'll see.</p>
 <p><strong>Recommended settings:</strong></p>
-<pre><code class="language-bash">git config --global init.defaultBranch main    # new repos start with 'main' instead of 'master'
-git config --global pull.rebase true           # cleaner history when pulling changes
+<pre><code class="language-bash">git config --global pull.rebase true    # cleaner history when pulling changes
 </code></pre>
 <p>Verify your config:</p>
 <pre><code class="language-bash">git config --global --list

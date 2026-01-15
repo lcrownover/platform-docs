@@ -1,7 +1,7 @@
 ---
-site_name: Platform Training
-site_description: Training modules for platform-engineering topics at University of
-  Oregon
+site_name: Platform Engineering
+site_description: Training modules and guides for platform engineering topics at University
+  of Oregon
 theme:
   name: material
   features: [navigation.tabs, content.code.copy, content.action.edit]
@@ -17,7 +17,7 @@ markdown_extensions:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 nav:
-  - Lessons:
+  - Modules:
       - Overview: index.md
       - Git 101:
           - Overview: git-101/index.md
@@ -44,6 +44,7 @@ nav:
       - WSL (Windows): tools/wsl.md
       - Visual Studio Code: tools/vscode.md
       - Git: tools/git.md
+      - Puppet Development Kit (PDK): tools/pdk.md
 extra:
   social:
     - icon: material/robot-outline
