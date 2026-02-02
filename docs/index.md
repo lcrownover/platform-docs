@@ -1,22 +1,22 @@
-# Training Modules
+# Platform Engineering
 
-Self-paced training for platform engineering tools and practices. Each module includes hands-on exercises you can complete on your own machine.
+Welcome to the University of Oregon's platform engineering reference site. Here you'll find self-paced modules, tool guides, and reference material for the tools and practices that power our infrastructure.
 
-## Available Modules
+## Getting Started
 
-| Module | Description | Prerequisites |
-|--------|-------------|---------------|
-| [Git 101](git-101/index.md) | Version control fundamentals—commits, branches, merges, remotes | None |
-| [Puppet 101](puppet-101/index.md) | Puppet fundamentals | None |
-| [Puppet 201](puppet-201/index.md) | Advanced Puppet topics | Puppet 101, Git 101 |
+**New here?** Start with [Modules](modules/index.md) and work through them in order. Each module includes hands-on exercises designed to run on your own machine.
 
-## How to Use These Modules
+**Need to set up your environment?** The [Tools](tools/index.md) section has installation guides for Git, PDK, VS Code, and platform-specific setup like Homebrew (macOS) and WSL (Windows).
 
-1. **Check prerequisites.** Each module lists required tools and prior modules. Install what you need before starting.
-2. **Work through sections in order.** Concepts build on each other.
-3. **Use a scratch environment.** Create throwaway repos and VMs so you can experiment freely.
-4. **Break things on purpose.** The best way to learn recovery is to need it.
+## What's Here
 
-## Tools Reference
+| Section | What You'll Find |
+|---------|------------------|
+| [Modules](modules/index.md) | Structured training: Git fundamentals, Puppet basics, advanced Puppet topics |
+| [Tools](tools/index.md) | Installation and configuration guides for development tools |
+| [Concepts](concepts/index.md) | Background on infrastructure-as-code, version control, and related ideas |
+| [Lab Guides](lab-guides/index.md) | Step-by-step instructions for hands-on exercises |
 
-Not sure how to install something? Check the [Tools](tools/index.md) section for installation guides and configuration tips.
+## Questions?
+
+Reach out to the platform engineering team if you get stuck or have suggestions for improving these materials.

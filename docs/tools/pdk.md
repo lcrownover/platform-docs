@@ -6,6 +6,8 @@ PDK is Puppet's official toolkit for developing and testing Puppet modules. It p
 
 You need a Puppet Forge account to download PDK. The download requires accepting Puppet's EULA, which is tied to your Forge account. You may also use this account later to publish modules and generate API keys.
 
+[Click here for the official instructions](https://help.puppet.com/core//current/Content/PuppetCore/access_core_for_test_dev.htm), or proceed below for the abridged version.
+
 ### Creating an Account
 
 1. Go to [forge.puppet.com](https://forge.puppet.com/)
@@ -23,7 +25,7 @@ An API key lets you authenticate with the Forge from the command line which is r
 4. Click **Create a new key**
 5. Give the key a descriptive name (e.g., "workstation-pdk")
 6. Select a validity. I recommend 365 days if this is your primary key.
-6. Copy the key immediately, you won't be able to see it again!
+7. Copy the key immediately, you won't be able to see it again!
 
 Store the key securely. You'll use it when downloading the PDK or publishing modules.
 
@@ -31,7 +33,7 @@ Store the key securely. You'll use it when downloading the PDK or publishing mod
 
 Browse to the PDK downloads page: [https://forge.puppet.com/resources/pdk](https://forge.puppet.com/resources/pdk)
 
-For each platform, you'll be prompted for authentication to the site. 
+For each platform, you'll be prompted for authentication to the site.
 
 **The Username will be `forge-key` and the password is the API key you previously generated.**
 
