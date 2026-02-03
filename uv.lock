@@ -296,7 +296,7 @@ wheels = [
 ]
 
 [[package]]
-name = "platform-training"
+name = "platform-docs"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
