@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../02-understanding-history/">
+        <link rel="prev" href="../06-recovery-and-confidence/">
       
       
-        <link rel="next" href="../04-working-with-remotes/">
+        <link rel="next" href="../../puppet/00-index/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>Branching and Merging - Platform Engineering</title>
+        <title>Branching Strategies - Platform Engineering</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#branching-and-merging" class="md-skip">
+        <a href="#branching-strategies" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Branching and Merging
+              Branching Strategies
             
           </span>
         </div>
@@ -533,37 +533,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Branching and Merging
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../03-branching-and-merging/" class="md-nav__link">
         
   
   
@@ -579,270 +552,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#why-branches-exist" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Why Branches Exist
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-and-switching-branches" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Creating and Switching Branches
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Creating and Switching Branches">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#see-your-current-branch" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        See your current branch
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#create-a-new-branch" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Create a new branch
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#switch-to-the-new-branch" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Switch to the new branch
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#make-changes-on-the-branch" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Make changes on the branch
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-shortcut-git-switch" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The shortcut: git switch
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#merging-branches" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Merging Branches
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Merging Branches">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#fast-forward-merge" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Fast-forward merge
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#three-way-merge" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Three-way merge
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete-merged-branches" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Delete merged branches
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#handling-merge-conflicts" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Handling Merge Conflicts
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Handling Merge Conflicts">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#create-a-conflict" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Create a conflict
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#understand-the-conflict-markers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Understand the conflict markers
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#resolve-the-conflict" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Resolve the conflict
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#check-status-during-conflicts" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Check status during conflicts
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#when-to-branch" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        When to Branch
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="When to Branch">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#when-committing-directly-to-main-is-acceptable" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        When committing directly to main is acceptable
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#branch-naming-conventions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Branch naming conventions
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exercises" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Exercises
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -936,10 +645,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../07-branching-strategies/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Branching Strategies
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -955,6 +691,303 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-strategies-matter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Strategies Matter
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Git Flow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Git Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-branches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The branches
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How it works
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-git-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to use Git Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-avoid-git-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to avoid Git Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GitHub Flow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GitHub Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-branches_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The branches
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How it works
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-key-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The key principles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-github-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to use GitHub Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-avoid-github-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to avoid GitHub Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trunk-based-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trunk-Based Development
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Trunk-Based Development">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-philosophy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The philosophy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How it works
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature flags
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-trunk-based-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to use Trunk-Based Development
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-avoid-trunk-based-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to avoid Trunk-Based Development
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-a-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choosing a Strategy
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Choosing a Strategy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#start-with-these-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Start with these questions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary comparison
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-most-teams-should-start-with" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What most teams should start with
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercises
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1793,10 +1826,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#why-branches-exist" class="md-nav__link">
+  <a href="#why-strategies-matter" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Why Branches Exist
+        Why Strategies Matter
       
     </span>
   </a>
@@ -1804,22 +1837,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#creating-and-switching-branches" class="md-nav__link">
+  <a href="#git-flow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Creating and Switching Branches
+        Git Flow
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Creating and Switching Branches">
+    <nav class="md-nav" aria-label="Git Flow">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#see-your-current-branch" class="md-nav__link">
+  <a href="#the-branches" class="md-nav__link">
     <span class="md-ellipsis">
       
-        See your current branch
+        The branches
       
     </span>
   </a>
@@ -1827,10 +1860,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#create-a-new-branch" class="md-nav__link">
+  <a href="#how-it-works" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Create a new branch
+        How it works
       
     </span>
   </a>
@@ -1838,10 +1871,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#switch-to-the-new-branch" class="md-nav__link">
+  <a href="#when-to-use-git-flow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Switch to the new branch
+        When to use Git Flow
       
     </span>
   </a>
@@ -1849,21 +1882,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#make-changes-on-the-branch" class="md-nav__link">
+  <a href="#when-to-avoid-git-flow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Make changes on the branch
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-shortcut-git-switch" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The shortcut: git switch
+        When to avoid Git Flow
       
     </span>
   </a>
@@ -1876,22 +1898,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#merging-branches" class="md-nav__link">
+  <a href="#github-flow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Merging Branches
+        GitHub Flow
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Merging Branches">
+    <nav class="md-nav" aria-label="GitHub Flow">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#fast-forward-merge" class="md-nav__link">
+  <a href="#the-branches_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fast-forward merge
+        The branches
       
     </span>
   </a>
@@ -1899,10 +1921,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#three-way-merge" class="md-nav__link">
+  <a href="#how-it-works_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Three-way merge
+        How it works
       
     </span>
   </a>
@@ -1910,10 +1932,32 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#delete-merged-branches" class="md-nav__link">
+  <a href="#the-key-principles" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Delete merged branches
+        The key principles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-github-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to use GitHub Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-avoid-github-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to avoid GitHub Flow
       
     </span>
   </a>
@@ -1926,22 +1970,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#handling-merge-conflicts" class="md-nav__link">
+  <a href="#trunk-based-development" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Handling Merge Conflicts
+        Trunk-Based Development
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Handling Merge Conflicts">
+    <nav class="md-nav" aria-label="Trunk-Based Development">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#create-a-conflict" class="md-nav__link">
+  <a href="#the-philosophy" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Create a conflict
+        The philosophy
       
     </span>
   </a>
@@ -1949,10 +1993,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#understand-the-conflict-markers" class="md-nav__link">
+  <a href="#how-it-works_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Understand the conflict markers
+        How it works
       
     </span>
   </a>
@@ -1960,10 +2004,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#resolve-the-conflict" class="md-nav__link">
+  <a href="#feature-flags" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Resolve the conflict
+        Feature flags
       
     </span>
   </a>
@@ -1971,10 +2015,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#check-status-during-conflicts" class="md-nav__link">
+  <a href="#when-to-use-trunk-based-development" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Check status during conflicts
+        When to use Trunk-Based Development
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-avoid-trunk-based-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to avoid Trunk-Based Development
       
     </span>
   </a>
@@ -1987,22 +2042,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#when-to-branch" class="md-nav__link">
+  <a href="#choosing-a-strategy" class="md-nav__link">
     <span class="md-ellipsis">
       
-        When to Branch
+        Choosing a Strategy
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="When to Branch">
+    <nav class="md-nav" aria-label="Choosing a Strategy">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#when-committing-directly-to-main-is-acceptable" class="md-nav__link">
+  <a href="#start-with-these-questions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        When committing directly to main is acceptable
+        Start with these questions
       
     </span>
   </a>
@@ -2010,10 +2065,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#branch-naming-conventions" class="md-nav__link">
+  <a href="#summary-comparison" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Branch naming conventions
+        Summary comparison
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-most-teams-should-start-with" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What most teams should start with
       
     </span>
   </a>
@@ -2053,258 +2119,306 @@
 
 
 
-<h1 id="branching-and-merging">Branching and Merging<a class="headerlink" href="#branching-and-merging" title="Permanent link">&para;</a></h1>
-<p>By the end of this section, you'll understand how to work on isolated changes without affecting your main code, and how to combine those changes back together when they're ready.</p>
-<h2 id="why-branches-exist">Why Branches Exist<a class="headerlink" href="#why-branches-exist" title="Permanent link">&para;</a></h2>
-<p>So far, all your commits have been on a single line of history. That works fine when you're the only person working on something simple. But what happens when you want to:</p>
-<ul>
-<li>Try a risky change without breaking what already works?</li>
-<li>Work on two different features at the same time?</li>
-<li>Let multiple people work on the same codebase without stepping on each other?</li>
-</ul>
-<p>Branches solve all of these. A branch is just a pointer to a commit, and you can have as many as you want. When you create a new branch, you're saying "I want to start a separate line of work from this point." Your main branch stays safe while you experiment.</p>
-<p>Think of it like making a copy of a document before editing it. Except Git does this efficiently (it doesn't actually copy all the files), and it gives you powerful tools to merge your changes back later.</p>
-<h2 id="creating-and-switching-branches">Creating and Switching Branches<a class="headerlink" href="#creating-and-switching-branches" title="Permanent link">&para;</a></h2>
-<h3 id="see-your-current-branch">See your current branch<a class="headerlink" href="#see-your-current-branch" title="Permanent link">&para;</a></h3>
-<p>You've actually been on a branch this whole time. Check which one:</p>
-<pre><code class="language-bash">git branch
-</code></pre>
-<pre><code>* main
-</code></pre>
-<p>The <code>*</code> marks your current branch. Right now, <code>main</code> is probably your only branch.</p>
-<h3 id="create-a-new-branch">Create a new branch<a class="headerlink" href="#create-a-new-branch" title="Permanent link">&para;</a></h3>
-<p>Let's create a branch to add a new feature to your notes:</p>
-<pre><code class="language-bash">git branch add-backup-notes
-</code></pre>
-<p>Now list branches again:</p>
-<pre><code class="language-bash">git branch
-</code></pre>
-<pre><code>  add-backup-notes
-* main
-</code></pre>
-<p>You've created the branch, but you're still on <code>main</code> (note the <code>*</code>).</p>
-<h3 id="switch-to-the-new-branch">Switch to the new branch<a class="headerlink" href="#switch-to-the-new-branch" title="Permanent link">&para;</a></h3>
-<pre><code class="language-bash">git checkout add-backup-notes
-</code></pre>
-<pre><code>Switched to branch 'add-backup-notes'
-</code></pre>
-<p>Now <code>git branch</code> shows:</p>
-<pre><code>* add-backup-notes
-  main
-</code></pre>
+<h1 id="branching-strategies">Branching Strategies<a class="headerlink" href="#branching-strategies" title="Permanent link">&para;</a></h1>
+<p>By the end of this section, you'll understand three common approaches to organizing branches on a team, their tradeoffs, and how to recognize which one you're working with.</p>
 <div class="admonition tip">
-<p class="admonition-title">Create and switch in one command</p>
-<p><code>git checkout -b branch-name</code> creates a new branch and switches to it immediately. This is what you'll use most of the time.</p>
+<p class="admonition-title">TL;DR: Start with GitHub Flow</p>
+<p>If you're not sure which strategy to use, <strong>GitHub Flow</strong> is the safe default. Create a branch for each change, open a pull request, merge to <code>main</code> after review. It's simple, works for most teams, and you can always adopt something more complex later if needed.</p>
 </div>
-<h3 id="make-changes-on-the-branch">Make changes on the branch<a class="headerlink" href="#make-changes-on-the-branch" title="Permanent link">&para;</a></h3>
-<p>Now any commits you make will only affect this branch. Let's add some content:</p>
-<pre><code class="language-bash">echo &quot;## Backup Procedures&quot; &gt;&gt; notes.md
-echo &quot;Daily: rsync to backup server&quot; &gt;&gt; notes.md
-git add notes.md
-git commit -m &quot;Add backup procedures section&quot;
-</code></pre>
-<p>Check your history:</p>
-<pre><code class="language-bash">git log --oneline
-</code></pre>
-<p>You'll see your new commit at the top. But here's the key insight: this commit only exists on <code>add-backup-notes</code>. Switch back to <code>main</code> and look:</p>
-<pre><code class="language-bash">git checkout main
-git log --oneline
-</code></pre>
-<p>Your "Add backup procedures section" commit isn't there. Check the file:</p>
-<pre><code class="language-bash">cat notes.md
-</code></pre>
-<p>The backup procedures aren't there either. They're safely isolated on your feature branch.</p>
-<h3 id="the-shortcut-git-switch">The shortcut: git switch<a class="headerlink" href="#the-shortcut-git-switch" title="Permanent link">&para;</a></h3>
-<p>Git added <code>git switch</code> as a clearer alternative to <code>git checkout</code> for branch operations:</p>
-<pre><code class="language-bash">git switch add-backup-notes    # switch to existing branch
-git switch -c new-branch       # create and switch (like checkout -b)
-</code></pre>
-<p>Both <code>checkout</code> and <code>switch</code> work. Use whichever you prefer, but know that <code>checkout</code> does other things too (like restoring files), while <code>switch</code> is only for branches.</p>
-<h2 id="merging-branches">Merging Branches<a class="headerlink" href="#merging-branches" title="Permanent link">&para;</a></h2>
-<p>Once your feature is ready, you'll want to merge it back into <code>main</code>.</p>
-<h3 id="fast-forward-merge">Fast-forward merge<a class="headerlink" href="#fast-forward-merge" title="Permanent link">&para;</a></h3>
-<p>The simplest case is when <code>main</code> hasn't changed since you branched. Git can just move <code>main</code> forward to include your new commits.</p>
-<p>Make sure you're on <code>main</code>:</p>
-<pre><code class="language-bash">git checkout main
-</code></pre>
-<p>Now merge your feature branch:</p>
-<pre><code class="language-bash">git merge add-backup-notes
-</code></pre>
-<pre><code>Updating a1b2c3d..f5e6d7c
-Fast-forward
- notes.md | 2 ++
- 1 file changed, 2 insertions(+)
-</code></pre>
-<p>"Fast-forward" means Git just moved the <code>main</code> pointer forward. No merge commit needed.</p>
-<p>Check your log:</p>
-<pre><code class="language-bash">git log --oneline
-</code></pre>
-<p>Your backup procedures commit is now part of <code>main</code>.</p>
-<h3 id="three-way-merge">Three-way merge<a class="headerlink" href="#three-way-merge" title="Permanent link">&para;</a></h3>
-<p>Fast-forward only works when the target branch hasn't changed. When both branches have new commits, Git performs a three-way merge and creates a merge commit.</p>
-<p>Let's set up that scenario. First, create and switch to a new branch:</p>
-<pre><code class="language-bash">git checkout -b add-monitoring-notes
-echo &quot;## Monitoring&quot; &gt;&gt; notes.md
-echo &quot;Check Nagios dashboard hourly&quot; &gt;&gt; notes.md
-git add notes.md
-git commit -m &quot;Add monitoring section&quot;
-</code></pre>
-<p>Now switch back to <code>main</code> and make a different change:</p>
-<pre><code class="language-bash">git checkout main
-echo &quot;## Contact Info&quot; &gt;&gt; notes.md
-echo &quot;On-call: ops@example.com&quot; &gt;&gt; notes.md
-git add notes.md
-git commit -m &quot;Add contact info section&quot;
-</code></pre>
-<p>Now <code>main</code> and <code>add-monitoring-notes</code> have diverged (both have commits the other doesn't). Merge the feature branch:</p>
-<pre><code class="language-bash">git merge add-monitoring-notes
-</code></pre>
-<p>Git opens your editor to write a merge commit message. The default message (usually "Merge branch 'add-monitoring-notes'") is fine. Save and close.</p>
-<p>Check the graph view:</p>
-<pre><code class="language-bash">git log --oneline --graph
-</code></pre>
-<pre><code>*   8c9d0e1 Merge branch 'add-monitoring-notes'
-|\
-| * 4a5b6c7 Add monitoring section
-* | 7d8e9f0 Add contact info section
-|/
-* f5e6d7c Add backup procedures section
-* ...
-</code></pre>
-<p>You can see where the branches diverged and came back together.</p>
-<h3 id="delete-merged-branches">Delete merged branches<a class="headerlink" href="#delete-merged-branches" title="Permanent link">&para;</a></h3>
-<p>After merging, you don't need the feature branch anymore:</p>
-<pre><code class="language-bash">git branch -d add-backup-notes
-git branch -d add-monitoring-notes
-</code></pre>
-<p>The <code>-d</code> flag only works if the branch has been merged. This prevents you from accidentally deleting unmerged work. (Use <code>-D</code> to force-delete an unmerged branch, but be careful.)</p>
-<h2 id="handling-merge-conflicts">Handling Merge Conflicts<a class="headerlink" href="#handling-merge-conflicts" title="Permanent link">&para;</a></h2>
-<p>Merge conflicts happen when both branches changed the same part of the same file. Git can't automatically decide which version to keep, so it asks you to resolve it manually.</p>
-<h3 id="create-a-conflict">Create a conflict<a class="headerlink" href="#create-a-conflict" title="Permanent link">&para;</a></h3>
-<p>Let's intentionally create one. Start a new branch:</p>
-<pre><code class="language-bash">git checkout -b update-contact
-</code></pre>
-<p>Edit the contact info (change it to something different):</p>
-<pre><code class="language-bash"># Using sed to replace the email
-sed -i '' 's/ops@example.com/oncall@example.com/' notes.md
-git add notes.md
-git commit -m &quot;Update contact email to oncall address&quot;
-</code></pre>
-<p>Now switch to <code>main</code> and make a conflicting change to the same line:</p>
-<pre><code class="language-bash">git checkout main
-sed -i '' 's/ops@example.com/support@example.com/' notes.md
-git add notes.md
-git commit -m &quot;Update contact email to support address&quot;
-</code></pre>
-<p>Both branches changed the same line differently. Try to merge:</p>
-<pre><code class="language-bash">git merge update-contact
-</code></pre>
-<pre><code>Auto-merging notes.md
-CONFLICT (content): Merge conflict in notes.md
-Automatic merge failed; fix conflicts and then commit the result.
-</code></pre>
-<h3 id="understand-the-conflict-markers">Understand the conflict markers<a class="headerlink" href="#understand-the-conflict-markers" title="Permanent link">&para;</a></h3>
-<p>Open <code>notes.md</code>. You'll see something like:</p>
-<pre><code>## Contact Info
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-On-call: support@example.com
-=======
-On-call: oncall@example.com
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; update-contact
-</code></pre>
-<p>The markers show:</p>
+<h2 id="why-strategies-matter">Why Strategies Matter<a class="headerlink" href="#why-strategies-matter" title="Permanent link">&para;</a></h2>
+<p>When you're working alone, you can branch however you want. On a team, everyone needs to follow the same conventions or chaos ensues. A branching strategy answers questions like:</p>
 <ul>
-<li><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> to <code>=======</code>: The version on your current branch (main)</li>
-<li><code>=======</code> to <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; update-contact</code>: The version on the branch you're merging</li>
+<li>Where does new feature work happen?</li>
+<li>How do changes get to production?</li>
+<li>How do we handle urgent fixes?</li>
+<li>What branches exist and what are they for?</li>
 </ul>
-<h3 id="resolve-the-conflict">Resolve the conflict<a class="headerlink" href="#resolve-the-conflict" title="Permanent link">&para;</a></h3>
-<p>Edit the file to keep the version you want (or combine them). Remove the conflict markers entirely. For example, if you decide <code>oncall@example.com</code> is correct:</p>
-<pre><code>## Contact Info
-On-call: oncall@example.com
-</code></pre>
-<p>Or maybe you want both:</p>
-<pre><code>## Contact Info
-On-call: oncall@example.com
-Support: support@example.com
-</code></pre>
-<p>After editing, stage and commit:</p>
-<pre><code class="language-bash">git add notes.md
-git commit -m &quot;Merge update-contact, keep oncall email&quot;
-</code></pre>
-<p>The merge is complete.</p>
-<h3 id="check-status-during-conflicts">Check status during conflicts<a class="headerlink" href="#check-status-during-conflicts" title="Permanent link">&para;</a></h3>
-<p>If you get lost during a conflict, <code>git status</code> tells you exactly what's happening:</p>
-<pre><code class="language-bash">git status
-</code></pre>
-<pre><code>On branch main
-You have unmerged paths.
-  (fix conflicts and run &quot;git commit&quot;)
-  (use &quot;git merge --abort&quot; to abort the merge)
-
-Unmerged paths:
-  (use &quot;git add &lt;file&gt;...&quot; to mark resolution)
-    both modified:   notes.md
-</code></pre>
-<div class="admonition tip">
-<p class="admonition-title">Abort if needed</p>
-<p>If you get into a messy conflict and want to start over, run <code>git merge --abort</code>. This cancels the merge and returns your branch to its pre-merge state.</p>
-</div>
-<h2 id="when-to-branch">When to Branch<a class="headerlink" href="#when-to-branch" title="Permanent link">&para;</a></h2>
-<p><strong>Branch by default.</strong> In professional workflows, <code>main</code> represents stable, reviewed code. Committing directly to it should be the exception, not the rule.</p>
-<p>Creating a branch takes seconds. Even for small changes, the habit of branching pays off because it builds muscle memory for when it really matters. More importantly, branches enable code review through pull requests, where teammates can catch issues before they reach <code>main</code>.</p>
-<h3 id="when-committing-directly-to-main-is-acceptable">When committing directly to main is acceptable<a class="headerlink" href="#when-committing-directly-to-main-is-acceptable" title="Permanent link">&para;</a></h3>
+<p>There's no single "right" strategy. The best choice depends on your team size, release cadence, and how you deploy.</p>
+<h2 id="git-flow">Git Flow<a class="headerlink" href="#git-flow" title="Permanent link">&para;</a></h2>
+<p>Git Flow is a structured model designed for projects with scheduled releases (like versioned software with v1.0, v2.0, etc.).</p>
+<h3 id="the-branches">The branches<a class="headerlink" href="#the-branches" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>Scenario</th>
-<th>Why it's okay</th>
+<th>Branch</th>
+<th>Purpose</th>
+<th>Lifespan</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Fixing a typo you just introduced</td>
-<td>You're immediately correcting your own recent mistake</td>
+<td><code>main</code></td>
+<td>Production-ready code, tagged with version numbers</td>
+<td>Permanent</td>
 </tr>
 <tr>
-<td>True emergencies when you're the only responder</td>
-<td>Speed matters, but document what you did afterward</td>
+<td><code>develop</code></td>
+<td>Integration branch for features, always deployable to staging</td>
+<td>Permanent</td>
+</tr>
+<tr>
+<td><code>feature/*</code></td>
+<td>New features, branched from <code>develop</code></td>
+<td>Temporary</td>
+</tr>
+<tr>
+<td><code>release/*</code></td>
+<td>Preparing a release, branched from <code>develop</code></td>
+<td>Temporary</td>
+</tr>
+<tr>
+<td><code>hotfix/*</code></td>
+<td>Emergency fixes for production, branched from <code>main</code></td>
+<td>Temporary</td>
 </tr>
 </tbody>
 </table>
-<p>For personal projects with no collaborators, the stakes are lower, but branching is still good practice.</p>
-<div class="admonition note">
-<p class="admonition-title">Team policies vary</p>
-<p>Many teams protect <code>main</code> entirely, requiring all changes to go through pull requests. Even if your team doesn't enforce this, treating <code>main</code> as protected builds good habits. For more on how teams structure their branching workflows, see <a href="../07-branching-strategies/">Branching Strategies</a>.</p>
-</div>
-<h3 id="branch-naming-conventions">Branch naming conventions<a class="headerlink" href="#branch-naming-conventions" title="Permanent link">&para;</a></h3>
-<p>Good branch names describe what you're working on:</p>
-<pre><code>add-ssl-rotation
-fix-backup-timeout
-update-nginx-config
+<h3 id="how-it-works">How it works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h3>
+<pre><code>main     ─────●─────────────────●─────────────●───────
+              │                 ↑             ↑
+              │           merge │       merge │
+              │                 │             │
+hotfix   ─────┼─────────────────┼─────●───────┘
+              │                 │     │
+develop  ─────●─────●─────●─────●─────●─────●─────────
+              │     ↑     ↑     ↑           ↑
+              │     │     │     │           │
+feature  ─────┴─────┴─────┴─────┘           │
+                                            │
+release  ───────────────────────────────────┘
 </code></pre>
-<p>Some teams use prefixes to categorize work:</p>
-<pre><code>feature/add-ssl-rotation
-bugfix/backup-timeout
-hotfix/critical-security-patch
-</code></pre>
-<p>Pick a convention and stick with it. The name should tell someone what to expect without reading the code.</p>
-<h2 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">&para;</a></h2>
-<p>These exercises use your sandbox repository.</p>
 <ol>
 <li>
-<p><strong>Create and merge a branch:</strong> Create a branch called <code>add-troubleshooting</code>, add a "Troubleshooting" section to <code>notes.md</code> with a few tips, commit it, switch to <code>main</code>, and merge. Verify the content appears on <code>main</code>.</p>
+<p><strong>Feature development</strong>: Create <code>feature/add-login</code> from <code>develop</code>. Work on it. Merge back to <code>develop</code> when done.</p>
 </li>
 <li>
-<p><strong>Practice the graph view:</strong> After the merge, run <code>git log --oneline --graph --all</code>. Identify where your branch was created and where it merged back.</p>
+<p><strong>Release preparation</strong>: When <code>develop</code> has enough features for a release, create <code>release/1.2.0</code> from <code>develop</code>. Only bug fixes go into the release branch. When ready, merge to both <code>main</code> (and tag it) and back to <code>develop</code>.</p>
 </li>
 <li>
-<p><strong>Create a conflict on purpose:</strong> Create two branches from <code>main</code>. On each branch, edit the same line of the same file differently. Merge one branch to <code>main</code> successfully, then try to merge the second. Resolve the conflict.</p>
+<p><strong>Hotfixes</strong>: Critical bug in production? Create <code>hotfix/fix-crash</code> from <code>main</code>, fix it, merge to both <code>main</code> (tag it) and <code>develop</code>.</p>
+</li>
+</ol>
+<h3 id="when-to-use-git-flow">When to use Git Flow<a class="headerlink" href="#when-to-use-git-flow" title="Permanent link">&para;</a></h3>
+<p>Git Flow works well when:</p>
+<ul>
+<li>You ship versioned releases on a schedule (monthly, quarterly)</li>
+<li>You need to maintain multiple versions simultaneously</li>
+<li>You have a QA phase before releases</li>
+<li>You're building installable software (desktop apps, libraries, firmware)</li>
+</ul>
+<h3 id="when-to-avoid-git-flow">When to avoid Git Flow<a class="headerlink" href="#when-to-avoid-git-flow" title="Permanent link">&para;</a></h3>
+<p>Git Flow adds overhead that isn't worth it when:</p>
+<ul>
+<li>You deploy continuously (multiple times per day)</li>
+<li>You only maintain one production version</li>
+<li>Your team is small and moves fast</li>
+<li>You're building a web service with rolling deployments</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Git Flow's history</p>
+<p>Git Flow was introduced in 2010 and became very popular. It solved real problems for its time. However, as continuous deployment became common, many teams found it too heavyweight. The creator himself has noted it's not ideal for web applications with continuous delivery.</p>
+</div>
+<h2 id="github-flow">GitHub Flow<a class="headerlink" href="#github-flow" title="Permanent link">&para;</a></h2>
+<p>GitHub Flow is a simpler model designed for continuous deployment. If you deploy frequently and only maintain one production version, this is probably what you want.</p>
+<h3 id="the-branches_1">The branches<a class="headerlink" href="#the-branches_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Branch</th>
+<th>Purpose</th>
+<th>Lifespan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>main</code></td>
+<td>Always deployable, represents production</td>
+<td>Permanent</td>
+</tr>
+<tr>
+<td><code>feature-name</code></td>
+<td>Any new work, branched from <code>main</code></td>
+<td>Temporary</td>
+</tr>
+</tbody>
+</table>
+<p>That's it. Two types of branches.</p>
+<h3 id="how-it-works_1">How it works<a class="headerlink" href="#how-it-works_1" title="Permanent link">&para;</a></h3>
+<pre><code>main     ─────●─────●─────●─────●─────●─────●─────────
+              │     ↑     │     ↑     │     ↑
+              │     │     │     │     │     │
+feature  ─────┴─────┘     └─────┘     └─────┘
+           (add-login)  (fix-bug)  (update-api)
+</code></pre>
+<ol>
+<li><strong>Create a branch</strong> from <code>main</code> with a descriptive name</li>
+<li><strong>Make commits</strong> on your branch</li>
+<li><strong>Open a pull request</strong> when ready for review</li>
+<li><strong>Discuss and review</strong> the changes</li>
+<li><strong>Deploy from the branch</strong> to verify in production (optional but recommended)</li>
+<li><strong>Merge to main</strong> after approval</li>
+</ol>
+<h3 id="the-key-principles">The key principles<a class="headerlink" href="#the-key-principles" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong><code>main</code> is always deployable.</strong> Never merge broken code.</li>
+<li><strong>Branch names describe the work.</strong> No prefixes required, but use them if your team likes them.</li>
+<li><strong>Pull requests are mandatory.</strong> All changes go through review.</li>
+<li><strong>Deploy frequently.</strong> Ideally, merge and deploy multiple times per day.</li>
+</ul>
+<h3 id="when-to-use-github-flow">When to use GitHub Flow<a class="headerlink" href="#when-to-use-github-flow" title="Permanent link">&para;</a></h3>
+<p>GitHub Flow works well when:</p>
+<ul>
+<li>You deploy continuously (daily or more)</li>
+<li>You only have one production version</li>
+<li>You have good automated testing</li>
+<li>Your team does code review via pull requests</li>
+<li>You're building web services or SaaS products</li>
+</ul>
+<h3 id="when-to-avoid-github-flow">When to avoid GitHub Flow<a class="headerlink" href="#when-to-avoid-github-flow" title="Permanent link">&para;</a></h3>
+<p>GitHub Flow may not fit when:</p>
+<ul>
+<li>You need to maintain multiple release versions</li>
+<li>You have long QA cycles before releases</li>
+<li>You can't deploy frequently due to external constraints</li>
+</ul>
+<h2 id="trunk-based-development">Trunk-Based Development<a class="headerlink" href="#trunk-based-development" title="Permanent link">&para;</a></h2>
+<p>Trunk-Based Development (TBD) takes simplicity further: everyone commits to <code>main</code> (the "trunk") with very short-lived branches or no branches at all.</p>
+<h3 id="the-philosophy">The philosophy<a class="headerlink" href="#the-philosophy" title="Permanent link">&para;</a></h3>
+<p>The core idea: integration pain increases exponentially with branch lifetime. A branch that lives for a day is easy to merge. A branch that lives for a month is a nightmare. So keep branches as short as possible, or eliminate them entirely.</p>
+<h3 id="how-it-works_2">How it works<a class="headerlink" href="#how-it-works_2" title="Permanent link">&para;</a></h3>
+<p><strong>With short-lived branches:</strong></p>
+<pre><code>main     ─────●─────●─────●─────●─────●─────●─────────
+              │     ↑     │     ↑     │     ↑
+              └─────┘     └─────┘     └─────┘
+            (1-2 days)  (few hours)  (1 day)
+</code></pre>
+<p>Branches live for hours or a day or two at most. Developers integrate to <code>main</code> at least daily.</p>
+<p><strong>Without branches:</strong></p>
+<pre><code>main     ─────●─────●─────●─────●─────●─────●─────────
+              │     │     │     │     │     │
+            (dev1) (dev2) (dev1) (dev1) (dev2) (dev1)
+</code></pre>
+<p>Developers commit directly to <code>main</code> multiple times per day. This requires excellent testing and often feature flags.</p>
+<h3 id="feature-flags">Feature flags<a class="headerlink" href="#feature-flags" title="Permanent link">&para;</a></h3>
+<p>How do you work on a feature that takes a week if you're committing to <code>main</code> daily? Feature flags.</p>
+<pre><code class="language-python">if feature_enabled(&quot;new_checkout_flow&quot;):
+    show_new_checkout()
+else:
+    show_old_checkout()
+</code></pre>
+<p>You commit incomplete code behind a flag. The flag is off in production, so users don't see it. When the feature is complete and tested, you turn on the flag. If something breaks, turn it off instantly without a deploy.</p>
+<h3 id="when-to-use-trunk-based-development">When to use Trunk-Based Development<a class="headerlink" href="#when-to-use-trunk-based-development" title="Permanent link">&para;</a></h3>
+<p>TBD works well when:</p>
+<ul>
+<li>You have excellent automated testing</li>
+<li>You can deploy multiple times per day</li>
+<li>Your team is experienced with continuous integration</li>
+<li>You're willing to invest in feature flag infrastructure</li>
+<li>You want to minimize merge conflicts</li>
+</ul>
+<h3 id="when-to-avoid-trunk-based-development">When to avoid Trunk-Based Development<a class="headerlink" href="#when-to-avoid-trunk-based-development" title="Permanent link">&para;</a></h3>
+<p>TBD may not fit when:</p>
+<ul>
+<li>Your testing is unreliable or slow</li>
+<li>You can't deploy frequently</li>
+<li>Your team is less experienced with Git</li>
+<li>You need code review before changes hit <code>main</code> (though some TBD teams do post-commit review)</li>
+</ul>
+<h2 id="choosing-a-strategy">Choosing a Strategy<a class="headerlink" href="#choosing-a-strategy" title="Permanent link">&para;</a></h2>
+<p>Here's a decision framework:</p>
+<h3 id="start-with-these-questions">Start with these questions<a class="headerlink" href="#start-with-these-questions" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>How often do you deploy?</strong></li>
+<li>Weekly or less → Git Flow might fit</li>
+<li>Daily → GitHub Flow</li>
+<li>
+<p>Multiple times daily → GitHub Flow or Trunk-Based</p>
 </li>
 <li>
-<p><strong>Explore branch cleanup:</strong> Run <code>git branch</code> to see all your branches. Delete any that have been merged using <code>git branch -d</code>.</p>
+<p><strong>How many versions do you maintain?</strong></p>
+</li>
+<li>Multiple concurrent versions → Git Flow</li>
+<li>
+<p>Just one (latest) → GitHub Flow or Trunk-Based</p>
 </li>
 <li>
-<p><strong>Try git switch:</strong> If you've been using <code>git checkout</code>, try the equivalent commands with <code>git switch</code>. Switch between branches and create a new one with <code>git switch -c</code>.</p>
+<p><strong>What's your team's Git experience?</strong></p>
+</li>
+<li>Mixed or learning → GitHub Flow (simpler)</li>
+<li>
+<p>Experienced → Any, including Trunk-Based</p>
+</li>
+<li>
+<p><strong>How good is your automated testing?</strong></p>
+</li>
+<li>Comprehensive and fast → Trunk-Based is viable</li>
+<li>Gaps or slow → GitHub Flow with PR reviews as a safety net</li>
+</ol>
+<h3 id="summary-comparison">Summary comparison<a class="headerlink" href="#summary-comparison" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Git Flow</th>
+<th>GitHub Flow</th>
+<th>Trunk-Based</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Complexity</td>
+<td>High</td>
+<td>Low</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>Branch lifespan</td>
+<td>Days to weeks</td>
+<td>Hours to days</td>
+<td>Hours</td>
+</tr>
+<tr>
+<td>Release style</td>
+<td>Scheduled versions</td>
+<td>Continuous</td>
+<td>Continuous</td>
+</tr>
+<tr>
+<td>Best for</td>
+<td>Versioned software</td>
+<td>Web services</td>
+<td>High-velocity teams</td>
+</tr>
+<tr>
+<td>Merge conflicts</td>
+<td>Common</td>
+<td>Occasional</td>
+<td>Rare</td>
+</tr>
+<tr>
+<td>Requires</td>
+<td>Release planning</td>
+<td>PR reviews</td>
+<td>Excellent CI/CD</td>
+</tr>
+</tbody>
+</table>
+<h3 id="what-most-teams-should-start-with">What most teams should start with<a class="headerlink" href="#what-most-teams-should-start-with" title="Permanent link">&para;</a></h3>
+<p>If you're unsure, <strong>start with GitHub Flow</strong>. It's simple enough to learn quickly, structured enough to maintain quality through pull requests, and flexible enough to adapt as your needs change.</p>
+<p>You can always add complexity later. It's much harder to simplify an overcomplicated workflow.</p>
+<h2 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Identify the strategy:</strong> Look at a few open-source projects on GitHub. Examine their branches, pull requests, and tags. Can you tell which strategy they use?</p>
+</li>
+<li>
+<p><strong>Evaluate your projects:</strong> Think about a project you work on. Which strategy would fit best based on how often you deploy and how you release?</p>
+</li>
+<li>
+<p><strong>Try GitHub Flow:</strong> In your sandbox repository, practice the GitHub Flow cycle: create a branch, make commits, then imagine opening a PR (or actually open one if you push to a remote).</p>
+</li>
+<li>
+<p><strong>Explore feature flags:</strong> Research feature flag services (LaunchDarkly, Unleash, or simple environment variables). Consider how you'd use them to enable trunk-based development.</p>
 </li>
 </ol>
 

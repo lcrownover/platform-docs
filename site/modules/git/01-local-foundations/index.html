@@ -684,6 +684,67 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ignoring-files-with-gitignore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ignoring Files with .gitignore
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ignoring Files with .gitignore">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-gitignore-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create a .gitignore file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common patterns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-to-ignore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What to ignore
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-gitignore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Global gitignore
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#exercises" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -794,7 +855,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../05-recovery-and-confidence/" class="md-nav__link">
+      <a href="../05-collaboration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Collaboration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-recovery-and-confidence/" class="md-nav__link">
         
   
   
@@ -802,6 +891,34 @@
     
   
     Recovery and Confidence
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-branching-strategies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Branching Strategies
   
 
     
@@ -1792,6 +1909,67 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ignoring-files-with-gitignore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ignoring Files with .gitignore
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ignoring Files with .gitignore">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-gitignore-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create a .gitignore file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common patterns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-to-ignore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What to ignore
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-gitignore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Global gitignore
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#exercises" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1820,9 +1998,9 @@
 
 
 <h1 id="local-foundations">Local Foundations<a class="headerlink" href="#local-foundations" title="Permanent link">&para;</a></h1>
-<p>By the end of this section, you'll have Git configured, a repository created, and your first commits under your belt.</p>
+<p>By the end of this section, you'll have Git configured, a repository created, your first commits under your belt, and a <code>.gitignore</code> keeping unwanted files out of version control.</p>
 <h2 id="configure-your-identity">Configure Your Identity<a class="headerlink" href="#configure-your-identity" title="Permanent link">&para;</a></h2>
-<p>Before you make any commits, Git needs to know who you are. This information appears in every commit you make—it's how your team knows who changed what.</p>
+<p>Before you make any commits, Git needs to know who you are. This information appears in every commit you make (it's how your team knows who changed what).</p>
 <p>If you haven't already, complete the <a href="../../../tools/git/#initial-configuration">Initial Configuration</a> steps in the Git tool guide. This sets your name and email globally so you don't have to configure it for each repository.</p>
 <div class="admonition note">
 <p class="admonition-title">Global vs Local Config</p>
@@ -1837,13 +2015,15 @@ cd ~/scratch/git-sandbox
 <pre><code class="language-bash">git init
 </code></pre>
 <p>You'll see: <code>Initialized empty Git repository in .../git-sandbox/.git/</code></p>
-<p>That <code>.git</code> folder is where Git stores everything—all your history, branches, and metadata. You'll never need to touch it directly, but knowing it exists helps demystify what Git is doing.</p>
+<p>That <code>.git</code> folder is where Git stores everything (your history, branches, and metadata). You might never need to touch it directly, but knowing it exists helps demystify what Git is doing.</p>
 <p>Run your first status check:</p>
 <pre><code class="language-bash">git status
 </code></pre>
 <p>You'll see something like:</p>
 <pre><code>On branch main
+
 No commits yet
+
 nothing to commit (create/copy some files and use &quot;git add&quot; to track)
 </code></pre>
 <p>This tells you three things:</p>
@@ -1855,23 +2035,31 @@ nothing to commit (create/copy some files and use &quot;git add&quot; to track)
 <h2 id="the-stage-and-commit-workflow">The Stage and Commit Workflow<a class="headerlink" href="#the-stage-and-commit-workflow" title="Permanent link">&para;</a></h2>
 <p>Here's where Git differs from simple backup systems. Git doesn't automatically track every file or save every change. You explicitly tell it what to record. This happens in two steps:</p>
 <ol>
-<li><strong>Stage</strong> — Select which changes you want to include in your next commit</li>
-<li><strong>Commit</strong> — Save those staged changes as a permanent snapshot</li>
+<li><strong>Stage</strong>: Select which changes you want to include in your next commit</li>
+<li><strong>Commit</strong>: Save those staged changes as a permanent snapshot</li>
 </ol>
-<p>Think of it like packing a box before shipping it. You don't throw everything in at once—you choose what goes in the box (staging), then seal and label it (commit).</p>
+<p>Think of it like packing a box before shipping it. You don't throw everything in at once. You choose what goes in the box (staging), then seal and label it (commit).</p>
 <h3 id="create-a-file-and-check-status">Create a file and check status<a class="headerlink" href="#create-a-file-and-check-status" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">echo &quot;# Server Notes&quot; &gt; notes.md
 git status
 </code></pre>
 <p>Git now shows <code>notes.md</code> as an "untracked file." Git sees it exists but isn't tracking changes to it yet.</p>
+<pre><code class="language-bash">Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+    notes.md
+</code></pre>
 <h3 id="stage-the-file">Stage the file<a class="headerlink" href="#stage-the-file" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">git add notes.md
 git status
 </code></pre>
-<p>Now <code>notes.md</code> appears under "Changes to be committed." It's staged—ready to be included in your next commit.</p>
+<p>Now <code>notes.md</code> appears under "Changes to be committed." It's staged, ready to be included in your next commit.</p>
+<pre><code class="language-bash">Changes to be committed:
+  (use &quot;git rm --cached &lt;file&gt;...&quot; to unstage)
+    new file:   notes.md
+</code></pre>
 <div class="admonition tip">
 <p class="admonition-title">Stage multiple files at once</p>
-<p><code>git add .</code> stages all changes in the current directory. Useful, but be careful—make sure you're not staging files you don't want (like secrets or build artifacts). Always run <code>git status</code> first.</p>
+<p><code>git add .</code> stages all changes in the current directory. Useful, but be careful: make sure you're not staging files you don't want (like secrets or build artifacts). Always run <code>git status</code> first.</p>
 </div>
 <h3 id="commit-the-staged-changes">Commit the staged changes<a class="headerlink" href="#commit-the-staged-changes" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">git commit -m &quot;Add server notes file&quot;
@@ -1881,7 +2069,7 @@ git status
  1 file changed, 1 insertion(+)
  create mode 100644 notes.md
 </code></pre>
-<p>The string <code>a1b2c3d</code> is an abbreviated commit hash—a unique identifier for this exact snapshot. Every commit gets one.</p>
+<p>The string <code>a1b2c3d</code> is an abbreviated commit hash (a unique identifier for this exact snapshot). Every commit gets one.</p>
 <h3 id="the-full-cycle">The full cycle<a class="headerlink" href="#the-full-cycle" title="Permanent link">&para;</a></h3>
 <p>Let's do it again to reinforce the pattern. Edit the file:</p>
 <pre><code class="language-bash">echo &quot;Reboot procedure: sudo reboot&quot; &gt;&gt; notes.md
@@ -1893,14 +2081,14 @@ git status
 <p>See exactly what changed:</p>
 <pre><code class="language-bash">git diff
 </code></pre>
-<p>This shows the lines added (prefixed with <code>+</code>) and removed (prefixed with <code>-</code>). Get comfortable with <code>git diff</code>—it's your preview before committing.</p>
+<p>This shows the lines added (prefixed with <code>+</code>) and removed (prefixed with <code>-</code>). Get comfortable with <code>git diff</code>. It's your preview before committing.</p>
 <p>Stage and commit:</p>
 <pre><code class="language-bash">git add notes.md
 git commit -m &quot;Add reboot procedure to server notes&quot;
 </code></pre>
 <h3 id="why-two-steps">Why two steps?<a class="headerlink" href="#why-two-steps" title="Permanent link">&para;</a></h3>
 <p>The staging area lets you craft clean, logical commits even when your working directory is messy. You might have three files changed, but only two are related to the same task. Stage those two, commit them, then stage and commit the third separately.</p>
-<p>Clean commits make history easier to read and problems easier to diagnose. When something breaks, you want to find "Add SSL config" in your history—not "Various changes and fixes."</p>
+<p>Clean commits make history easier to read and problems easier to diagnose. When something breaks, you want to find "Add SSL config" in your history, not "Various changes and fixes."</p>
 <h2 id="writing-good-commit-messages">Writing Good Commit Messages<a class="headerlink" href="#writing-good-commit-messages" title="Permanent link">&para;</a></h2>
 <p>Commit messages are for your future self and your teammates. Write them like you'll be the one debugging this at 2 AM six months from now.</p>
 <h3 id="use-imperative-mood">Use imperative mood<a class="headerlink" href="#use-imperative-mood" title="Permanent link">&para;</a></h3>
@@ -1944,12 +2132,102 @@ git commit -m &quot;Add reboot procedure to server notes&quot;
 </tbody>
 </table>
 <h3 id="keep-the-first-line-short">Keep the first line short<a class="headerlink" href="#keep-the-first-line-short" title="Permanent link">&para;</a></h3>
-<p>The first line should be under 50 characters—this is what appears in logs, GitHub, and most Git tools. If you need more detail, add a blank line and then a longer description:</p>
+<p>The first line should be under 50 characters (this is what appears in logs, GitHub, and most Git tools). If you need more detail, add a blank line and then a longer description:</p>
 <pre><code class="language-bash">git commit -m &quot;Add retry logic to LDAP connection
 
 Previous implementation failed silently on network timeouts.
 Now retries 3 times with exponential backoff before failing.&quot;
 </code></pre>
+<h2 id="ignoring-files-with-gitignore">Ignoring Files with .gitignore<a class="headerlink" href="#ignoring-files-with-gitignore" title="Permanent link">&para;</a></h2>
+<p>Not everything belongs in version control. Secrets, build artifacts, editor configs, and OS clutter should stay out of your repository. In real projects, you'll want to set this up before your first commit, but for learning, it helps to understand staging and commits first.</p>
+<h3 id="create-a-gitignore-file">Create a .gitignore file<a class="headerlink" href="#create-a-gitignore-file" title="Permanent link">&para;</a></h3>
+<p>In your repository root, create a file named <code>.gitignore</code>:</p>
+<pre><code class="language-bash">echo &quot;*.log&quot; &gt; .gitignore
+echo &quot;.DS_Store&quot; &gt;&gt; .gitignore
+echo &quot;*.tmp&quot; &gt;&gt; .gitignore
+</code></pre>
+<p>Now create a file that matches one of these patterns:</p>
+<pre><code class="language-bash">echo &quot;debug output&quot; &gt; debug.log
+git status
+</code></pre>
+<p>Git doesn't show <code>debug.log</code> as untracked. It's ignored.</p>
+<p>But <code>.gitignore</code> itself <em>should</em> be committed (it's part of your project's configuration):</p>
+<pre><code class="language-bash">git add .gitignore
+git commit -m &quot;Add gitignore for logs and temp files&quot;
+</code></pre>
+<h3 id="common-patterns">Common patterns<a class="headerlink" href="#common-patterns" title="Permanent link">&para;</a></h3>
+<p><code>.gitignore</code> uses glob patterns:</p>
+<pre><code class="language-gitignore"># Ignore all .log files
+*.log
+
+# Ignore the entire build directory
+build/
+
+# Ignore .env files (secrets!)
+.env
+.env.local
+
+# Ignore OS clutter
+.DS_Store
+Thumbs.db
+
+# Ignore editor/IDE directories
+.idea/
+.vscode/
+*.swp
+
+# Ignore a specific file
+config/secrets.yaml
+
+# But don't ignore this specific file (override previous pattern)
+!config/example-secrets.yaml
+</code></pre>
+<p>The <code>!</code> prefix negates a pattern (useful when you want to ignore a directory but keep one file inside it).</p>
+<h3 id="what-to-ignore">What to ignore<a class="headerlink" href="#what-to-ignore" title="Permanent link">&para;</a></h3>
+<p>For infrastructure and ops work, you'll commonly ignore:</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Secrets</td>
+<td><code>.env</code>, <code>*.pem</code>, <code>*credentials*</code>, <code>secrets.yaml</code></td>
+</tr>
+<tr>
+<td>Logs</td>
+<td><code>*.log</code>, <code>logs/</code></td>
+</tr>
+<tr>
+<td>Build output</td>
+<td><code>build/</code>, <code>dist/</code>, <code>*.pyc</code>, <code>__pycache__/</code></td>
+</tr>
+<tr>
+<td>OS files</td>
+<td><code>.DS_Store</code>, <code>Thumbs.db</code></td>
+</tr>
+<tr>
+<td>Editor files</td>
+<td><code>.idea/</code>, <code>.vscode/</code>, <code>*.swp</code></td>
+</tr>
+<tr>
+<td>Dependencies</td>
+<td><code>node_modules/</code>, <code>.venv/</code>, <code>vendor/</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Secrets already committed</p>
+<p><code>.gitignore</code> only prevents <em>future</em> tracking. If you've already committed a secret, it's in your history forever (until you rewrite history, which is advanced and messy). Always set up <code>.gitignore</code> early, and double-check before your first commit.</p>
+</div>
+<h3 id="global-gitignore">Global gitignore<a class="headerlink" href="#global-gitignore" title="Permanent link">&para;</a></h3>
+<p>Some ignores apply to every repository on your machine (like <code>.DS_Store</code> on macOS or editor swap files). Instead of adding these to every project, set a global ignore file:</p>
+<pre><code class="language-bash">git config --global core.excludesfile ~/.gitignore_global
+</code></pre>
+<p>Then create <code>~/.gitignore_global</code> with your personal ignores. These apply everywhere without cluttering project-specific <code>.gitignore</code> files.</p>
 <h2 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
@@ -1957,6 +2235,9 @@ Now retries 3 times with exponential backoff before failing.&quot;
 </li>
 <li>
 <p><strong>Selective staging:</strong> Modify two files, but only stage and commit one. Verify the other file still shows as modified after the commit.</p>
+</li>
+<li>
+<p><strong>Set up gitignore:</strong> Create a <code>.gitignore</code> that ignores <code>*.log</code> files and any file named <code>secrets.txt</code>. Test it by creating files that match these patterns and verifying they don't appear in <code>git status</code>.</p>
 </li>
 <li>
 <p><strong>View your history:</strong> Run <code>git log</code> to see your commits. Try <code>git log --oneline</code> for a compact view. We'll dig deeper into history in the next section.</p>

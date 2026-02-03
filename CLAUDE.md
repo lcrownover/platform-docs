@@ -45,6 +45,7 @@ uv run mkdocs build --strict         # production build (run before PRs)
 - Include terminal examples that readers can copy and run
 - Explain tradeoffs and edge cases that working IT staff actually encounter
 - Avoid filler text and generic advice—be specific and practical
+- Don't use emdashes, instead use parenthesis to surround the inner explaination
 
 **Naming**:
 

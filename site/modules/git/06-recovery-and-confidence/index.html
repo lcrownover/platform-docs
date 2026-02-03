@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../02-understanding-history/">
+        <link rel="prev" href="../05-collaboration/">
       
       
-        <link rel="next" href="../04-working-with-remotes/">
+        <link rel="next" href="../07-branching-strategies/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>Branching and Merging - Platform Engineering</title>
+        <title>Recovery and Confidence - Platform Engineering</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#branching-and-merging" class="md-skip">
+        <a href="#recovery-and-confidence" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Branching and Merging
+              Recovery and Confidence
             
           </span>
         </div>
@@ -533,37 +533,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Branching and Merging
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../03-branching-and-merging/" class="md-nav__link">
         
   
   
@@ -579,270 +552,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#why-branches-exist" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Why Branches Exist
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-and-switching-branches" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Creating and Switching Branches
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Creating and Switching Branches">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#see-your-current-branch" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        See your current branch
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#create-a-new-branch" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Create a new branch
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#switch-to-the-new-branch" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Switch to the new branch
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#make-changes-on-the-branch" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Make changes on the branch
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-shortcut-git-switch" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The shortcut: git switch
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#merging-branches" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Merging Branches
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Merging Branches">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#fast-forward-merge" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Fast-forward merge
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#three-way-merge" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Three-way merge
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete-merged-branches" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Delete merged branches
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#handling-merge-conflicts" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Handling Merge Conflicts
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Handling Merge Conflicts">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#create-a-conflict" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Create a conflict
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#understand-the-conflict-markers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Understand the conflict markers
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#resolve-the-conflict" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Resolve the conflict
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#check-status-during-conflicts" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Check status during conflicts
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#when-to-branch" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        When to Branch
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="When to Branch">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#when-committing-directly-to-main-is-acceptable" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        When committing directly to main is acceptable
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#branch-naming-conventions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Branch naming conventions
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exercises" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Exercises
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -908,10 +617,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../06-recovery-and-confidence/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recovery and Confidence
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -927,6 +663,386 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-safety-net-mindset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Safety Net Mindset
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#undoing-uncommitted-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Undoing Uncommitted Changes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Undoing Uncommitted Changes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discard-changes-to-a-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Discard changes to a file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unstage-a-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unstage a file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-old-way-git-checkout-and-git-reset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The old way: git checkout and git reset
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stashing-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stashing Changes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stashing Changes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#save-your-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Save your work
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#see-whats-stashed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        See what's stashed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-your-changes-back" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get your changes back
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stash-with-a-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stash with a message
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#amending-recent-commits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Amending Recent Commits
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Amending Recent Commits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fix-the-commit-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fix the commit message
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-forgotten-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add forgotten files
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-more-changes-to-the-last-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add more changes to the last commit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fix-an-older-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fix an older commit
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resetting-commits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resetting Commits
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resetting Commits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#soft-reset-undo-commit-keep-changes-staged" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Soft reset: undo commit, keep changes staged
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mixed-reset-default-undo-commit-keep-changes-unstaged" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mixed reset (default): undo commit, keep changes unstaged
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hard-reset-undo-commit-discard-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hard reset: undo commit, discard changes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reset-multiple-commits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reset multiple commits
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-i-messed-up-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common "I Messed Up" Scenarios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common &#34;I Messed Up&#34; Scenarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#i-committed-to-the-wrong-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "I committed to the wrong branch"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-need-to-undo-a-commit-thats-already-pushed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "I need to undo a commit that's already pushed"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-accidentally-deleted-a-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "I accidentally deleted a branch"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-did-a-hard-reset-and-lost-commits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "I did a hard reset and lost commits"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#im-in-a-merge-conflict-and-want-to-start-over" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "I'm in a merge conflict and want to start over"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-have-uncommitted-changes-and-cant-switch-branches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "I have uncommitted changes and can't switch branches"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#everything-is-broken-and-i-want-to-start-fresh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Everything is broken and I want to start fresh"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-confidence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Building Confidence
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercises
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1793,10 +1909,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#why-branches-exist" class="md-nav__link">
+  <a href="#the-safety-net-mindset" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Why Branches Exist
+        The Safety Net Mindset
       
     </span>
   </a>
@@ -1804,22 +1920,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#creating-and-switching-branches" class="md-nav__link">
+  <a href="#undoing-uncommitted-changes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Creating and Switching Branches
+        Undoing Uncommitted Changes
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Creating and Switching Branches">
+    <nav class="md-nav" aria-label="Undoing Uncommitted Changes">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#see-your-current-branch" class="md-nav__link">
+  <a href="#discard-changes-to-a-file" class="md-nav__link">
     <span class="md-ellipsis">
       
-        See your current branch
+        Discard changes to a file
       
     </span>
   </a>
@@ -1827,10 +1943,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#create-a-new-branch" class="md-nav__link">
+  <a href="#unstage-a-file" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Create a new branch
+        Unstage a file
       
     </span>
   </a>
@@ -1838,32 +1954,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#switch-to-the-new-branch" class="md-nav__link">
+  <a href="#the-old-way-git-checkout-and-git-reset" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Switch to the new branch
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#make-changes-on-the-branch" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Make changes on the branch
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-shortcut-git-switch" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The shortcut: git switch
+        The old way: git checkout and git reset
       
     </span>
   </a>
@@ -1876,22 +1970,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#merging-branches" class="md-nav__link">
+  <a href="#stashing-changes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Merging Branches
+        Stashing Changes
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Merging Branches">
+    <nav class="md-nav" aria-label="Stashing Changes">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#fast-forward-merge" class="md-nav__link">
+  <a href="#save-your-work" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fast-forward merge
+        Save your work
       
     </span>
   </a>
@@ -1899,10 +1993,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#three-way-merge" class="md-nav__link">
+  <a href="#see-whats-stashed" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Three-way merge
+        See what's stashed
       
     </span>
   </a>
@@ -1910,10 +2004,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#delete-merged-branches" class="md-nav__link">
+  <a href="#get-your-changes-back" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Delete merged branches
+        Get your changes back
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stash-with-a-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stash with a message
       
     </span>
   </a>
@@ -1926,22 +2031,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#handling-merge-conflicts" class="md-nav__link">
+  <a href="#amending-recent-commits" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Handling Merge Conflicts
+        Amending Recent Commits
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Handling Merge Conflicts">
+    <nav class="md-nav" aria-label="Amending Recent Commits">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#create-a-conflict" class="md-nav__link">
+  <a href="#fix-the-commit-message" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Create a conflict
+        Fix the commit message
       
     </span>
   </a>
@@ -1949,10 +2054,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#understand-the-conflict-markers" class="md-nav__link">
+  <a href="#add-forgotten-files" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Understand the conflict markers
+        Add forgotten files
       
     </span>
   </a>
@@ -1960,10 +2065,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#resolve-the-conflict" class="md-nav__link">
+  <a href="#add-more-changes-to-the-last-commit" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Resolve the conflict
+        Add more changes to the last commit
       
     </span>
   </a>
@@ -1971,10 +2076,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#check-status-during-conflicts" class="md-nav__link">
+  <a href="#fix-an-older-commit" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Check status during conflicts
+        Fix an older commit
       
     </span>
   </a>
@@ -1987,22 +2092,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#when-to-branch" class="md-nav__link">
+  <a href="#resetting-commits" class="md-nav__link">
     <span class="md-ellipsis">
       
-        When to Branch
+        Resetting Commits
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="When to Branch">
+    <nav class="md-nav" aria-label="Resetting Commits">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#when-committing-directly-to-main-is-acceptable" class="md-nav__link">
+  <a href="#soft-reset-undo-commit-keep-changes-staged" class="md-nav__link">
     <span class="md-ellipsis">
       
-        When committing directly to main is acceptable
+        Soft reset: undo commit, keep changes staged
       
     </span>
   </a>
@@ -2010,10 +2115,32 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#branch-naming-conventions" class="md-nav__link">
+  <a href="#mixed-reset-default-undo-commit-keep-changes-unstaged" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Branch naming conventions
+        Mixed reset (default): undo commit, keep changes unstaged
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hard-reset-undo-commit-discard-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hard reset: undo commit, discard changes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reset-multiple-commits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reset multiple commits
       
     </span>
   </a>
@@ -2022,6 +2149,111 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-i-messed-up-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common "I Messed Up" Scenarios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common &#34;I Messed Up&#34; Scenarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#i-committed-to-the-wrong-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "I committed to the wrong branch"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-need-to-undo-a-commit-thats-already-pushed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "I need to undo a commit that's already pushed"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-accidentally-deleted-a-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "I accidentally deleted a branch"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-did-a-hard-reset-and-lost-commits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "I did a hard reset and lost commits"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#im-in-a-merge-conflict-and-want-to-start-over" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "I'm in a merge conflict and want to start over"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-have-uncommitted-changes-and-cant-switch-branches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "I have uncommitted changes and can't switch branches"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#everything-is-broken-and-i-want-to-start-fresh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Everything is broken and I want to start fresh"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-confidence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Building Confidence
+      
+    </span>
+  </a>
   
 </li>
       
@@ -2053,258 +2285,238 @@
 
 
 
-<h1 id="branching-and-merging">Branching and Merging<a class="headerlink" href="#branching-and-merging" title="Permanent link">&para;</a></h1>
-<p>By the end of this section, you'll understand how to work on isolated changes without affecting your main code, and how to combine those changes back together when they're ready.</p>
-<h2 id="why-branches-exist">Why Branches Exist<a class="headerlink" href="#why-branches-exist" title="Permanent link">&para;</a></h2>
-<p>So far, all your commits have been on a single line of history. That works fine when you're the only person working on something simple. But what happens when you want to:</p>
-<ul>
-<li>Try a risky change without breaking what already works?</li>
-<li>Work on two different features at the same time?</li>
-<li>Let multiple people work on the same codebase without stepping on each other?</li>
-</ul>
-<p>Branches solve all of these. A branch is just a pointer to a commit, and you can have as many as you want. When you create a new branch, you're saying "I want to start a separate line of work from this point." Your main branch stays safe while you experiment.</p>
-<p>Think of it like making a copy of a document before editing it. Except Git does this efficiently (it doesn't actually copy all the files), and it gives you powerful tools to merge your changes back later.</p>
-<h2 id="creating-and-switching-branches">Creating and Switching Branches<a class="headerlink" href="#creating-and-switching-branches" title="Permanent link">&para;</a></h2>
-<h3 id="see-your-current-branch">See your current branch<a class="headerlink" href="#see-your-current-branch" title="Permanent link">&para;</a></h3>
-<p>You've actually been on a branch this whole time. Check which one:</p>
-<pre><code class="language-bash">git branch
+<h1 id="recovery-and-confidence">Recovery and Confidence<a class="headerlink" href="#recovery-and-confidence" title="Permanent link">&para;</a></h1>
+<p>By the end of this section, you'll know how to undo mistakes at every stage of the Git workflow. More importantly, you'll have the confidence to experiment knowing you can always get back to a good state.</p>
+<h2 id="the-safety-net-mindset">The Safety Net Mindset<a class="headerlink" href="#the-safety-net-mindset" title="Permanent link">&para;</a></h2>
+<p>Git is designed to be recoverable. Almost nothing you do is permanent until you push to a shared remote, and even then there are options. The commands in this section are your safety net.</p>
+<p>Before we dive in, remember: <code>git status</code> is your friend. When something goes wrong, run it first. Git usually tells you exactly what's happening and suggests how to fix it.</p>
+<h2 id="undoing-uncommitted-changes">Undoing Uncommitted Changes<a class="headerlink" href="#undoing-uncommitted-changes" title="Permanent link">&para;</a></h2>
+<p>These commands help when you've made changes to files but haven't committed yet.</p>
+<h3 id="discard-changes-to-a-file">Discard changes to a file<a class="headerlink" href="#discard-changes-to-a-file" title="Permanent link">&para;</a></h3>
+<p>You edited a file and want to throw away those changes, restoring it to the last committed version:</p>
+<pre><code class="language-bash">git restore notes.md
 </code></pre>
-<pre><code>* main
-</code></pre>
-<p>The <code>*</code> marks your current branch. Right now, <code>main</code> is probably your only branch.</p>
-<h3 id="create-a-new-branch">Create a new branch<a class="headerlink" href="#create-a-new-branch" title="Permanent link">&para;</a></h3>
-<p>Let's create a branch to add a new feature to your notes:</p>
-<pre><code class="language-bash">git branch add-backup-notes
-</code></pre>
-<p>Now list branches again:</p>
-<pre><code class="language-bash">git branch
-</code></pre>
-<pre><code>  add-backup-notes
-* main
-</code></pre>
-<p>You've created the branch, but you're still on <code>main</code> (note the <code>*</code>).</p>
-<h3 id="switch-to-the-new-branch">Switch to the new branch<a class="headerlink" href="#switch-to-the-new-branch" title="Permanent link">&para;</a></h3>
-<pre><code class="language-bash">git checkout add-backup-notes
-</code></pre>
-<pre><code>Switched to branch 'add-backup-notes'
-</code></pre>
-<p>Now <code>git branch</code> shows:</p>
-<pre><code>* add-backup-notes
-  main
-</code></pre>
-<div class="admonition tip">
-<p class="admonition-title">Create and switch in one command</p>
-<p><code>git checkout -b branch-name</code> creates a new branch and switches to it immediately. This is what you'll use most of the time.</p>
+<p>The file reverts to how it looked in your last commit. Your changes are gone (there's no undo for this, so be sure).</p>
+<div class="admonition warning">
+<p class="admonition-title">Destructive command</p>
+<p><code>git restore</code> permanently discards uncommitted changes. If you're unsure, stash your changes first (covered below) so you can get them back if needed.</p>
 </div>
-<h3 id="make-changes-on-the-branch">Make changes on the branch<a class="headerlink" href="#make-changes-on-the-branch" title="Permanent link">&para;</a></h3>
-<p>Now any commits you make will only affect this branch. Let's add some content:</p>
-<pre><code class="language-bash">echo &quot;## Backup Procedures&quot; &gt;&gt; notes.md
-echo &quot;Daily: rsync to backup server&quot; &gt;&gt; notes.md
-git add notes.md
-git commit -m &quot;Add backup procedures section&quot;
+<p>To discard changes to all files in the current directory:</p>
+<pre><code class="language-bash">git restore .
 </code></pre>
-<p>Check your history:</p>
-<pre><code class="language-bash">git log --oneline
+<h3 id="unstage-a-file">Unstage a file<a class="headerlink" href="#unstage-a-file" title="Permanent link">&para;</a></h3>
+<p>You ran <code>git add</code> but changed your mind. The file is staged, but you want to remove it from the staging area without losing your changes:</p>
+<pre><code class="language-bash">git restore --staged notes.md
 </code></pre>
-<p>You'll see your new commit at the top. But here's the key insight: this commit only exists on <code>add-backup-notes</code>. Switch back to <code>main</code> and look:</p>
-<pre><code class="language-bash">git checkout main
-git log --oneline
-</code></pre>
-<p>Your "Add backup procedures section" commit isn't there. Check the file:</p>
-<pre><code class="language-bash">cat notes.md
-</code></pre>
-<p>The backup procedures aren't there either. They're safely isolated on your feature branch.</p>
-<h3 id="the-shortcut-git-switch">The shortcut: git switch<a class="headerlink" href="#the-shortcut-git-switch" title="Permanent link">&para;</a></h3>
-<p>Git added <code>git switch</code> as a clearer alternative to <code>git checkout</code> for branch operations:</p>
-<pre><code class="language-bash">git switch add-backup-notes    # switch to existing branch
-git switch -c new-branch       # create and switch (like checkout -b)
-</code></pre>
-<p>Both <code>checkout</code> and <code>switch</code> work. Use whichever you prefer, but know that <code>checkout</code> does other things too (like restoring files), while <code>switch</code> is only for branches.</p>
-<h2 id="merging-branches">Merging Branches<a class="headerlink" href="#merging-branches" title="Permanent link">&para;</a></h2>
-<p>Once your feature is ready, you'll want to merge it back into <code>main</code>.</p>
-<h3 id="fast-forward-merge">Fast-forward merge<a class="headerlink" href="#fast-forward-merge" title="Permanent link">&para;</a></h3>
-<p>The simplest case is when <code>main</code> hasn't changed since you branched. Git can just move <code>main</code> forward to include your new commits.</p>
-<p>Make sure you're on <code>main</code>:</p>
-<pre><code class="language-bash">git checkout main
-</code></pre>
-<p>Now merge your feature branch:</p>
-<pre><code class="language-bash">git merge add-backup-notes
-</code></pre>
-<pre><code>Updating a1b2c3d..f5e6d7c
-Fast-forward
- notes.md | 2 ++
- 1 file changed, 2 insertions(+)
-</code></pre>
-<p>"Fast-forward" means Git just moved the <code>main</code> pointer forward. No merge commit needed.</p>
-<p>Check your log:</p>
-<pre><code class="language-bash">git log --oneline
-</code></pre>
-<p>Your backup procedures commit is now part of <code>main</code>.</p>
-<h3 id="three-way-merge">Three-way merge<a class="headerlink" href="#three-way-merge" title="Permanent link">&para;</a></h3>
-<p>Fast-forward only works when the target branch hasn't changed. When both branches have new commits, Git performs a three-way merge and creates a merge commit.</p>
-<p>Let's set up that scenario. First, create and switch to a new branch:</p>
-<pre><code class="language-bash">git checkout -b add-monitoring-notes
-echo &quot;## Monitoring&quot; &gt;&gt; notes.md
-echo &quot;Check Nagios dashboard hourly&quot; &gt;&gt; notes.md
-git add notes.md
-git commit -m &quot;Add monitoring section&quot;
-</code></pre>
-<p>Now switch back to <code>main</code> and make a different change:</p>
-<pre><code class="language-bash">git checkout main
-echo &quot;## Contact Info&quot; &gt;&gt; notes.md
-echo &quot;On-call: ops@example.com&quot; &gt;&gt; notes.md
-git add notes.md
-git commit -m &quot;Add contact info section&quot;
-</code></pre>
-<p>Now <code>main</code> and <code>add-monitoring-notes</code> have diverged (both have commits the other doesn't). Merge the feature branch:</p>
-<pre><code class="language-bash">git merge add-monitoring-notes
-</code></pre>
-<p>Git opens your editor to write a merge commit message. The default message (usually "Merge branch 'add-monitoring-notes'") is fine. Save and close.</p>
-<p>Check the graph view:</p>
-<pre><code class="language-bash">git log --oneline --graph
-</code></pre>
-<pre><code>*   8c9d0e1 Merge branch 'add-monitoring-notes'
-|\
-| * 4a5b6c7 Add monitoring section
-* | 7d8e9f0 Add contact info section
-|/
-* f5e6d7c Add backup procedures section
-* ...
-</code></pre>
-<p>You can see where the branches diverged and came back together.</p>
-<h3 id="delete-merged-branches">Delete merged branches<a class="headerlink" href="#delete-merged-branches" title="Permanent link">&para;</a></h3>
-<p>After merging, you don't need the feature branch anymore:</p>
-<pre><code class="language-bash">git branch -d add-backup-notes
-git branch -d add-monitoring-notes
-</code></pre>
-<p>The <code>-d</code> flag only works if the branch has been merged. This prevents you from accidentally deleting unmerged work. (Use <code>-D</code> to force-delete an unmerged branch, but be careful.)</p>
-<h2 id="handling-merge-conflicts">Handling Merge Conflicts<a class="headerlink" href="#handling-merge-conflicts" title="Permanent link">&para;</a></h2>
-<p>Merge conflicts happen when both branches changed the same part of the same file. Git can't automatically decide which version to keep, so it asks you to resolve it manually.</p>
-<h3 id="create-a-conflict">Create a conflict<a class="headerlink" href="#create-a-conflict" title="Permanent link">&para;</a></h3>
-<p>Let's intentionally create one. Start a new branch:</p>
-<pre><code class="language-bash">git checkout -b update-contact
-</code></pre>
-<p>Edit the contact info (change it to something different):</p>
-<pre><code class="language-bash"># Using sed to replace the email
-sed -i '' 's/ops@example.com/oncall@example.com/' notes.md
-git add notes.md
-git commit -m &quot;Update contact email to oncall address&quot;
-</code></pre>
-<p>Now switch to <code>main</code> and make a conflicting change to the same line:</p>
-<pre><code class="language-bash">git checkout main
-sed -i '' 's/ops@example.com/support@example.com/' notes.md
-git add notes.md
-git commit -m &quot;Update contact email to support address&quot;
-</code></pre>
-<p>Both branches changed the same line differently. Try to merge:</p>
-<pre><code class="language-bash">git merge update-contact
-</code></pre>
-<pre><code>Auto-merging notes.md
-CONFLICT (content): Merge conflict in notes.md
-Automatic merge failed; fix conflicts and then commit the result.
-</code></pre>
-<h3 id="understand-the-conflict-markers">Understand the conflict markers<a class="headerlink" href="#understand-the-conflict-markers" title="Permanent link">&para;</a></h3>
-<p>Open <code>notes.md</code>. You'll see something like:</p>
-<pre><code>## Contact Info
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-On-call: support@example.com
-=======
-On-call: oncall@example.com
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; update-contact
-</code></pre>
-<p>The markers show:</p>
+<p>This only unstages the file. Your edits are still in the working directory, just no longer queued for the next commit. Run <code>git status</code> and you'll see the file moved from "Changes to be committed" back to "Changes not staged for commit."</p>
+<p>From here you have two options:</p>
 <ul>
-<li><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> to <code>=======</code>: The version on your current branch (main)</li>
-<li><code>=======</code> to <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; update-contact</code>: The version on the branch you're merging</li>
+<li><strong>Re-stage it later</strong> with <code>git add notes.md</code> when you're ready</li>
+<li><strong>Discard the changes entirely</strong> with <code>git restore notes.md</code> (no <code>--staged</code> flag)</li>
 </ul>
-<h3 id="resolve-the-conflict">Resolve the conflict<a class="headerlink" href="#resolve-the-conflict" title="Permanent link">&para;</a></h3>
-<p>Edit the file to keep the version you want (or combine them). Remove the conflict markers entirely. For example, if you decide <code>oncall@example.com</code> is correct:</p>
-<pre><code>## Contact Info
-On-call: oncall@example.com
+<p>The two-step process (unstage, then discard) is intentional. It prevents you from accidentally throwing away work when you just wanted to unstage.</p>
+<p>To unstage everything:</p>
+<pre><code class="language-bash">git restore --staged .
 </code></pre>
-<p>Or maybe you want both:</p>
-<pre><code>## Contact Info
-On-call: oncall@example.com
-Support: support@example.com
+<h3 id="the-old-way-git-checkout-and-git-reset">The old way: git checkout and git reset<a class="headerlink" href="#the-old-way-git-checkout-and-git-reset" title="Permanent link">&para;</a></h3>
+<p>Before <code>git restore</code> existed, people used <code>git checkout -- filename</code> to discard changes and <code>git reset HEAD filename</code> to unstage. You'll see these in older tutorials and Stack Overflow answers. They still work, but <code>git restore</code> is clearer about what it does.</p>
+<h2 id="stashing-changes">Stashing Changes<a class="headerlink" href="#stashing-changes" title="Permanent link">&para;</a></h2>
+<p>Sometimes you need to switch branches but have uncommitted work you're not ready to commit. Stashing saves your changes temporarily.</p>
+<h3 id="save-your-work">Save your work<a class="headerlink" href="#save-your-work" title="Permanent link">&para;</a></h3>
+<pre><code class="language-bash">git stash
 </code></pre>
-<p>After editing, stage and commit:</p>
-<pre><code class="language-bash">git add notes.md
-git commit -m &quot;Merge update-contact, keep oncall email&quot;
+<p>Your working directory is now clean (matching the last commit), and your changes are saved in the stash.</p>
+<h3 id="see-whats-stashed">See what's stashed<a class="headerlink" href="#see-whats-stashed" title="Permanent link">&para;</a></h3>
+<pre><code class="language-bash">git stash list
 </code></pre>
-<p>The merge is complete.</p>
-<h3 id="check-status-during-conflicts">Check status during conflicts<a class="headerlink" href="#check-status-during-conflicts" title="Permanent link">&para;</a></h3>
-<p>If you get lost during a conflict, <code>git status</code> tells you exactly what's happening:</p>
-<pre><code class="language-bash">git status
+<pre><code>stash@{0}: WIP on main: a1b2c3d Add backup procedures
 </code></pre>
-<pre><code>On branch main
-You have unmerged paths.
-  (fix conflicts and run &quot;git commit&quot;)
-  (use &quot;git merge --abort&quot; to abort the merge)
+<h3 id="get-your-changes-back">Get your changes back<a class="headerlink" href="#get-your-changes-back" title="Permanent link">&para;</a></h3>
+<pre><code class="language-bash">git stash pop
+</code></pre>
+<p>This applies the most recent stash and removes it from the stash list. Your changes are back in your working directory.</p>
+<p>If you want to apply the stash but keep it in the list (in case you need it again):</p>
+<pre><code class="language-bash">git stash apply
+</code></pre>
+<h3 id="stash-with-a-message">Stash with a message<a class="headerlink" href="#stash-with-a-message" title="Permanent link">&para;</a></h3>
+<p>The default "WIP on branch" message isn't very descriptive. Add your own:</p>
+<pre><code class="language-bash">git stash push -m &quot;Halfway through refactoring config parsing&quot;
+</code></pre>
+<p>This makes it easier to remember what each stash contains if you have several.</p>
+<h2 id="amending-recent-commits">Amending Recent Commits<a class="headerlink" href="#amending-recent-commits" title="Permanent link">&para;</a></h2>
+<p>Made a commit and immediately realized you made a mistake? These commands fix the most recent commit.</p>
+<h3 id="fix-the-commit-message">Fix the commit message<a class="headerlink" href="#fix-the-commit-message" title="Permanent link">&para;</a></h3>
+<p>You just committed with a typo or unclear message:</p>
+<pre><code class="language-bash">git commit --amend -m &quot;Add backup procedures section&quot;
+</code></pre>
+<p>This replaces the previous commit message. The commit itself (the actual changes) stays the same.</p>
+<h3 id="add-forgotten-files">Add forgotten files<a class="headerlink" href="#add-forgotten-files" title="Permanent link">&para;</a></h3>
+<p>You committed but forgot to include a file:</p>
+<pre><code class="language-bash">git add forgotten-file.md
+git commit --amend --no-edit
+</code></pre>
+<p>The <code>--no-edit</code> flag keeps the existing commit message. Your forgotten file is now part of the commit as if you'd included it originally.</p>
+<h3 id="add-more-changes-to-the-last-commit">Add more changes to the last commit<a class="headerlink" href="#add-more-changes-to-the-last-commit" title="Permanent link">&para;</a></h3>
+<p>Same idea, but for changes to files already in the commit:</p>
+<pre><code class="language-bash"># Make your additional edits
+git add notes.md
+git commit --amend --no-edit
+</code></pre>
+<h3 id="fix-an-older-commit">Fix an older commit<a class="headerlink" href="#fix-an-older-commit" title="Permanent link">&para;</a></h3>
+<p><code>--amend</code> only works on the most recent commit. To fix an older commit, use interactive rebase.</p>
+<p>Say you want to fix the commit message from three commits ago:</p>
+<pre><code class="language-bash">git rebase -i HEAD~3
+</code></pre>
+<p>Git opens your editor with a list of the last three commits:</p>
+<pre><code>pick a1b2c3d Add backup procedures
+pick b2c3d4e Add monitoring section
+pick c3d4e5f Add contact info
+</code></pre>
+<p>Change <code>pick</code> to <code>reword</code> (or just <code>r</code>) on the commit you want to fix:</p>
+<pre><code>reword a1b2c3d Add backup procedures
+pick b2c3d4e Add monitoring section
+pick c3d4e5f Add contact info
+</code></pre>
+<p>Save and close. Git will open another editor for you to write the new commit message. Save that, and the rebase completes.</p>
+<p>To change the contents of an older commit (not just the message), use <code>edit</code> instead of <code>reword</code>. Git will pause at that commit, letting you make changes and run <code>git commit --amend</code>, then <code>git rebase --continue</code> to finish.</p>
+<div class="admonition tip">
+<p class="admonition-title">Rebase options</p>
+<p>The interactive rebase editor shows other options like <code>squash</code> (combine commits), <code>drop</code> (delete a commit), and <code>reorder</code> (change commit order). These are powerful but beyond the scope of this intro.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Don't amend or rebase pushed commits</p>
+<p>Both amending and rebasing rewrite history. If you've already pushed these commits to a shared remote, rewriting them creates problems for anyone who pulled them. Only rewrite commits that exist only on your local machine.</p>
+</div>
+<h2 id="resetting-commits">Resetting Commits<a class="headerlink" href="#resetting-commits" title="Permanent link">&para;</a></h2>
+<p>When you need to undo one or more commits entirely, <code>git reset</code> is the tool. It has three modes that determine what happens to your changes.</p>
+<h3 id="soft-reset-undo-commit-keep-changes-staged">Soft reset: undo commit, keep changes staged<a class="headerlink" href="#soft-reset-undo-commit-keep-changes-staged" title="Permanent link">&para;</a></h3>
+<pre><code class="language-bash">git reset --soft HEAD~1
+</code></pre>
+<p>This undoes the last commit but keeps all changes staged. Useful when you want to re-commit with a different message or combine with other changes.</p>
+<h3 id="mixed-reset-default-undo-commit-keep-changes-unstaged">Mixed reset (default): undo commit, keep changes unstaged<a class="headerlink" href="#mixed-reset-default-undo-commit-keep-changes-unstaged" title="Permanent link">&para;</a></h3>
+<pre><code class="language-bash">git reset HEAD~1
+</code></pre>
+<p>This undoes the last commit and unstages the changes, but keeps them in your working directory. You can review what was in the commit and decide what to do.</p>
+<h3 id="hard-reset-undo-commit-discard-changes">Hard reset: undo commit, discard changes<a class="headerlink" href="#hard-reset-undo-commit-discard-changes" title="Permanent link">&para;</a></h3>
+<pre><code class="language-bash">git reset --hard HEAD~1
+</code></pre>
+<p>This undoes the last commit and throws away all changes. Your working directory matches the commit before the one you reset.</p>
+<div class="admonition danger">
+<p class="admonition-title">Hard reset is destructive</p>
+<p><code>git reset --hard</code> permanently discards commits and changes. Triple-check you're resetting to the right commit. If you reset too far, see "Recovering lost commits" below.</p>
+</div>
+<h3 id="reset-multiple-commits">Reset multiple commits<a class="headerlink" href="#reset-multiple-commits" title="Permanent link">&para;</a></h3>
+<p><code>HEAD~1</code> means "one commit before HEAD." Adjust the number:</p>
+<pre><code class="language-bash">git reset --soft HEAD~3    # Undo last 3 commits, keep changes staged
+</code></pre>
+<p>Or reset to a specific commit by hash:</p>
+<pre><code class="language-bash">git reset --hard a1b2c3d
+</code></pre>
+<h2 id="common-i-messed-up-scenarios">Common "I Messed Up" Scenarios<a class="headerlink" href="#common-i-messed-up-scenarios" title="Permanent link">&para;</a></h2>
+<p>Here are solutions to situations that make people panic.</p>
+<h3 id="i-committed-to-the-wrong-branch">"I committed to the wrong branch"<a class="headerlink" href="#i-committed-to-the-wrong-branch" title="Permanent link">&para;</a></h3>
+<p>You meant to commit to a feature branch but accidentally committed to <code>main</code>.</p>
+<p><strong>Solution:</strong> Move the commit to the right branch.</p>
+<pre><code class="language-bash"># Create a new branch pointing at your current commit
+git branch feature-branch
 
-Unmerged paths:
-  (use &quot;git add &lt;file&gt;...&quot; to mark resolution)
-    both modified:   notes.md
+# Reset main back one commit (keeping changes if you use --soft)
+git reset --hard HEAD~1
+
+# Switch to your feature branch
+git checkout feature-branch
+</code></pre>
+<p>Your commit is now on <code>feature-branch</code>, and <code>main</code> is back where it was.</p>
+<h3 id="i-need-to-undo-a-commit-thats-already-pushed">"I need to undo a commit that's already pushed"<a class="headerlink" href="#i-need-to-undo-a-commit-thats-already-pushed" title="Permanent link">&para;</a></h3>
+<p>You can't rewrite history that others might have pulled. Instead, create a new commit that reverses the changes:</p>
+<pre><code class="language-bash">git revert a1b2c3d
+</code></pre>
+<p>This creates a new commit that undoes everything in commit <code>a1b2c3d</code>. The original commit stays in history (for accountability), but its effects are reversed.</p>
+<p>To revert the most recent commit:</p>
+<pre><code class="language-bash">git revert HEAD
+</code></pre>
+<h3 id="i-accidentally-deleted-a-branch">"I accidentally deleted a branch"<a class="headerlink" href="#i-accidentally-deleted-a-branch" title="Permanent link">&para;</a></h3>
+<p>If you deleted a branch with <code>-d</code> or <code>-D</code>, the commits still exist. Find the commit hash:</p>
+<pre><code class="language-bash">git reflog
+</code></pre>
+<p>The reflog shows recent commits you've visited, even on deleted branches. Find the commit hash and recreate the branch:</p>
+<pre><code class="language-bash">git branch recovered-branch a1b2c3d
+</code></pre>
+<h3 id="i-did-a-hard-reset-and-lost-commits">"I did a hard reset and lost commits"<a class="headerlink" href="#i-did-a-hard-reset-and-lost-commits" title="Permanent link">&para;</a></h3>
+<p>Same solution: use <code>git reflog</code> to find the commit hash, then reset back to it:</p>
+<pre><code class="language-bash">git reflog
+# Find the commit you want to return to
+git reset --hard a1b2c3d
 </code></pre>
 <div class="admonition tip">
-<p class="admonition-title">Abort if needed</p>
-<p>If you get into a messy conflict and want to start over, run <code>git merge --abort</code>. This cancels the merge and returns your branch to its pre-merge state.</p>
+<p class="admonition-title">Reflog is your last resort</p>
+<p>Git keeps reflog entries for about 90 days by default. If you realize you lost something, act soon. The reflog is local only (it doesn't sync with remotes).</p>
 </div>
-<h2 id="when-to-branch">When to Branch<a class="headerlink" href="#when-to-branch" title="Permanent link">&para;</a></h2>
-<p><strong>Branch by default.</strong> In professional workflows, <code>main</code> represents stable, reviewed code. Committing directly to it should be the exception, not the rule.</p>
-<p>Creating a branch takes seconds. Even for small changes, the habit of branching pays off because it builds muscle memory for when it really matters. More importantly, branches enable code review through pull requests, where teammates can catch issues before they reach <code>main</code>.</p>
-<h3 id="when-committing-directly-to-main-is-acceptable">When committing directly to main is acceptable<a class="headerlink" href="#when-committing-directly-to-main-is-acceptable" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Scenario</th>
-<th>Why it's okay</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Fixing a typo you just introduced</td>
-<td>You're immediately correcting your own recent mistake</td>
-</tr>
-<tr>
-<td>True emergencies when you're the only responder</td>
-<td>Speed matters, but document what you did afterward</td>
-</tr>
-</tbody>
-</table>
-<p>For personal projects with no collaborators, the stakes are lower, but branching is still good practice.</p>
-<div class="admonition note">
-<p class="admonition-title">Team policies vary</p>
-<p>Many teams protect <code>main</code> entirely, requiring all changes to go through pull requests. Even if your team doesn't enforce this, treating <code>main</code> as protected builds good habits. For more on how teams structure their branching workflows, see <a href="../07-branching-strategies/">Branching Strategies</a>.</p>
-</div>
-<h3 id="branch-naming-conventions">Branch naming conventions<a class="headerlink" href="#branch-naming-conventions" title="Permanent link">&para;</a></h3>
-<p>Good branch names describe what you're working on:</p>
-<pre><code>add-ssl-rotation
-fix-backup-timeout
-update-nginx-config
+<h3 id="im-in-a-merge-conflict-and-want-to-start-over">"I'm in a merge conflict and want to start over"<a class="headerlink" href="#im-in-a-merge-conflict-and-want-to-start-over" title="Permanent link">&para;</a></h3>
+<pre><code class="language-bash">git merge --abort
 </code></pre>
-<p>Some teams use prefixes to categorize work:</p>
-<pre><code>feature/add-ssl-rotation
-bugfix/backup-timeout
-hotfix/critical-security-patch
+<p>This cancels the merge and returns your branch to its pre-merge state. You can try again or take a different approach.</p>
+<p>Similarly, for a rebase gone wrong:</p>
+<pre><code class="language-bash">git rebase --abort
 </code></pre>
-<p>Pick a convention and stick with it. The name should tell someone what to expect without reading the code.</p>
-<h2 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">&para;</a></h2>
-<p>These exercises use your sandbox repository.</p>
+<h3 id="i-have-uncommitted-changes-and-cant-switch-branches">"I have uncommitted changes and can't switch branches"<a class="headerlink" href="#i-have-uncommitted-changes-and-cant-switch-branches" title="Permanent link">&para;</a></h3>
+<p>Git won't let you switch branches if you have uncommitted changes that would conflict. You have options:</p>
 <ol>
 <li>
-<p><strong>Create and merge a branch:</strong> Create a branch called <code>add-troubleshooting</code>, add a "Troubleshooting" section to <code>notes.md</code> with a few tips, commit it, switch to <code>main</code>, and merge. Verify the content appears on <code>main</code>.</p>
+<p><strong>Commit your work</strong> (even as a work-in-progress):
+   <code>bash
+   git add .
+   git commit -m "WIP: save progress before switching"</code></p>
 </li>
 <li>
-<p><strong>Practice the graph view:</strong> After the merge, run <code>git log --oneline --graph --all</code>. Identify where your branch was created and where it merged back.</p>
+<p><strong>Stash your changes</strong>:
+   <code>bash
+   git stash
+   git checkout other-branch
+   # Later, when you come back:
+   git stash pop</code></p>
 </li>
 <li>
-<p><strong>Create a conflict on purpose:</strong> Create two branches from <code>main</code>. On each branch, edit the same line of the same file differently. Merge one branch to <code>main</code> successfully, then try to merge the second. Resolve the conflict.</p>
+<p><strong>Discard your changes</strong> (if you don't need them):
+   <code>bash
+   git restore .</code></p>
+</li>
+</ol>
+<h3 id="everything-is-broken-and-i-want-to-start-fresh">"Everything is broken and I want to start fresh"<a class="headerlink" href="#everything-is-broken-and-i-want-to-start-fresh" title="Permanent link">&para;</a></h3>
+<p>Nuclear option: reset your branch to match the remote exactly.</p>
+<pre><code class="language-bash">git fetch origin
+git reset --hard origin/main
+</code></pre>
+<p>This throws away all local commits and changes, making your local <code>main</code> identical to the remote. Only do this if you're sure you don't need anything local.</p>
+<h2 id="building-confidence">Building Confidence<a class="headerlink" href="#building-confidence" title="Permanent link">&para;</a></h2>
+<p>The best way to get comfortable with recovery commands is to practice them intentionally in your sandbox repository. Break things on purpose:</p>
+<ol>
+<li>Make commits, then undo them with <code>git reset</code></li>
+<li>Create merge conflicts, then abort with <code>git merge --abort</code></li>
+<li>Delete branches, then recover them with <code>git reflog</code></li>
+<li>Stash changes, switch branches, then pop the stash</li>
+</ol>
+<p>The more you practice recovery, the less scary mistakes become. Git almost always has a way out.</p>
+<h2 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">&para;</a></h2>
+<p>These exercises use your sandbox repository. If something goes wrong, you can always delete the sandbox and start fresh.</p>
+<ol>
+<li>
+<p><strong>Practice restore:</strong> Modify <code>notes.md</code>, then use <code>git restore</code> to discard the changes. Verify the file is back to its committed state.</p>
 </li>
 <li>
-<p><strong>Explore branch cleanup:</strong> Run <code>git branch</code> to see all your branches. Delete any that have been merged using <code>git branch -d</code>.</p>
+<p><strong>Unstage a file:</strong> Stage a change with <code>git add</code>, then unstage it with <code>git restore --staged</code>. Confirm the change is still in your working directory but no longer staged.</p>
 </li>
 <li>
-<p><strong>Try git switch:</strong> If you've been using <code>git checkout</code>, try the equivalent commands with <code>git switch</code>. Switch between branches and create a new one with <code>git switch -c</code>.</p>
+<p><strong>Amend a commit:</strong> Make a commit with a typo in the message. Use <code>git commit --amend</code> to fix the message. Check <code>git log</code> to verify.</p>
+</li>
+<li>
+<p><strong>Use the stash:</strong> Make some changes, stash them, verify your working directory is clean, then pop the stash and verify your changes are back.</p>
+</li>
+<li>
+<p><strong>Reset commits:</strong> Make two commits, then use <code>git reset --soft HEAD~2</code> to undo them while keeping changes staged. Re-commit everything as a single commit.</p>
+</li>
+<li>
+<p><strong>Explore reflog:</strong> Run <code>git reflog</code> and examine the output. Identify commits from branches you've deleted or resets you've done.</p>
 </li>
 </ol>
 

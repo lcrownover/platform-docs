@@ -26,7 +26,9 @@ nav:
           - Understanding History: modules/git/02-understanding-history.md
           - Branching and Merging: modules/git/03-branching-and-merging.md
           - Working with Remotes: modules/git/04-working-with-remotes.md
-          - Recovery and Confidence: modules/git/05-recovery-and-confidence.md
+          - Collaboration: modules/git/05-collaboration.md
+          - Recovery and Confidence: modules/git/06-recovery-and-confidence.md
+          - Branching Strategies: modules/git/07-branching-strategies.md
       - Puppet:
           - Overview: modules/puppet/00-index.md
           - Prerequisites: modules/puppet/00-prerequisites.md

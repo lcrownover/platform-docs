@@ -516,6 +516,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#a-note-on-gits-evolving-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A Note on Git's Evolving Commands
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -672,7 +683,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../05-recovery-and-confidence/" class="md-nav__link">
+      <a href="../05-collaboration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Collaboration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-recovery-and-confidence/" class="md-nav__link">
         
   
   
@@ -680,6 +719,34 @@
     
   
     Recovery and Confidence
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-branching-strategies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Branching Strategies
   
 
     
@@ -1558,6 +1625,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#a-note-on-gits-evolving-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A Note on Git's Evolving Commands
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1577,30 +1655,68 @@
 
 <h1 id="git-101">Git 101<a class="headerlink" href="#git-101" title="Permanent link">&para;</a></h1>
 <p>You've probably been there: a config file that worked yesterday is broken today, and nobody knows what changed. Or you're afraid to touch a script because there's no way to undo it. Or you're emailing files back and forth with <code>-v2-final-FINAL.txt</code> in the name.</p>
-<p>Git solves these problems. It tracks every change you make, who made it, and why—so you can experiment freely, collaborate without stepping on each other, and always get back to a known-good state.</p>
+<p>Git solves these problems. It tracks every change you make, who made it, and why, so you can experiment freely, collaborate without stepping on each other, and always get back to a known-good state.</p>
 <h2 id="why-you-should-care">Why You Should Care<a class="headerlink" href="#why-you-should-care" title="Permanent link">&para;</a></h2>
 <p>If you manage configs, scripts, documentation, or infrastructure-as-code, Git gives you:</p>
 <ul>
 <li><strong>A real undo button.</strong> Made a bad change? Roll back to any previous version in seconds.</li>
 <li><strong>Fearless experimentation.</strong> Try risky changes on a branch. If it works, merge it. If not, delete it. Your main copy stays safe.</li>
-<li><strong>Accountability without blame.</strong> When something breaks at 2 AM, <code>git log</code> and <code>git blame</code> tell you exactly what changed and when—so you can fix it instead of guessing.</li>
+<li><strong>Accountability without blame.</strong> When something breaks at 2 AM, <code>git log</code> and <code>git blame</code> tell you exactly what changed and when, so you can fix it instead of guessing.</li>
 <li><strong>Collaboration that scales.</strong> Multiple people can work on the same files without overwriting each other's work.</li>
 </ul>
 <h2 id="lessons">Lessons<a class="headerlink" href="#lessons" title="Permanent link">&para;</a></h2>
 <p>Work through these in order:</p>
 <ol>
-<li><strong>Local Foundations</strong> — Set up Git, create a repo, make your first commits</li>
-<li><strong>Understanding History</strong> — Read logs, compare changes, ignore files you don't want tracked</li>
-<li><strong>Branching and Merging</strong> — Work on isolated changes and combine them safely</li>
-<li><strong>Working with Remotes</strong> — Sync with shared repositories (push, pull, clone)</li>
-<li><strong>Recovery and Confidence</strong> — Fix mistakes and get unstuck</li>
+<li><strong>Local Foundations</strong>: Set up Git, create a repo, make your first commits, ignore files you don't want tracked</li>
+<li><strong>Understanding History</strong>: Read logs, compare changes, find who changed what</li>
+<li><strong>Branching and Merging</strong>: Work on isolated changes and combine them safely</li>
+<li><strong>Working with Remotes</strong>: Sync with shared repositories (push, pull, clone)</li>
+<li><strong>Collaboration</strong>: Pull requests, code review, and team workflows</li>
+<li><strong>Recovery and Confidence</strong>: Fix mistakes and get unstuck</li>
+<li><strong>Branching Strategies</strong> (advanced): Git Flow, GitHub Flow, and trunk-based development</li>
 </ol>
 <h2 id="tips-for-success">Tips for Success<a class="headerlink" href="#tips-for-success" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Use a scratch repo.</strong> Create a throwaway folder to experiment in. Break things on purpose. Delete it and start over when you get stuck—that's the fastest way to learn.</li>
+<li><strong>Use a scratch repo.</strong> Create a throwaway folder to experiment in. Break things on purpose. Delete it and start over when you get stuck. That's the fastest way to learn.</li>
 <li><strong>Run <code>git status</code> constantly.</strong> Before and after every operation. It tells you exactly what Git sees, and it's the quickest way to stay oriented.</li>
-<li><strong>Don't memorize—understand.</strong> Git has a lot of commands, but they all revolve around a few core concepts. Once those click, the commands make sense.</li>
+<li><strong>Don't memorize, understand.</strong> Git has a lot of commands, but they all revolve around a few core concepts. Once those click, the commands make sense.</li>
 </ul>
+<h2 id="a-note-on-gits-evolving-commands">A Note on Git's Evolving Commands<a class="headerlink" href="#a-note-on-gits-evolving-commands" title="Permanent link">&para;</a></h2>
+<p>Git has been around since 2005, and its command set has evolved over time. Some older commands do multiple unrelated things, while newer commands split those responsibilities apart.</p>
+<p>For example, <code>git checkout</code> historically did two very different jobs: switching branches and restoring files. This was confusing, so Git introduced <code>git switch</code> (for branches) and <code>git restore</code> (for files) to make intentions clearer. Both the old and new commands work, but you'll see different ones in different tutorials.</p>
+<p>Some common examples:</p>
+<table>
+<thead>
+<tr>
+<th>Old way</th>
+<th>New way</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git checkout branch-name</code></td>
+<td><code>git switch branch-name</code></td>
+<td>Switch branches</td>
+</tr>
+<tr>
+<td><code>git checkout -b new-branch</code></td>
+<td><code>git switch -c new-branch</code></td>
+<td>Create and switch to branch</td>
+</tr>
+<tr>
+<td><code>git checkout -- file.txt</code></td>
+<td><code>git restore file.txt</code></td>
+<td>Discard uncommitted changes</td>
+</tr>
+<tr>
+<td><code>git reset HEAD file.txt</code></td>
+<td><code>git restore --staged file.txt</code></td>
+<td>Unstage a file</td>
+</tr>
+</tbody>
+</table>
+<p>When you're reading Stack Overflow answers or older documentation, you'll encounter the older syntax. It still works fine. This guide generally uses the newer commands where they exist, but points out the old way so you recognize it in the wild.</p>
 
 
 

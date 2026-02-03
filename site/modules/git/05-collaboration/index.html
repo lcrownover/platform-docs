@@ -14,7 +14,7 @@
         <link rel="prev" href="../04-working-with-remotes/">
       
       
-        <link rel="next" href="../../puppet/00-index/">
+        <link rel="next" href="../06-recovery-and-confidence/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>Recovery and Confidence - Platform Engineering</title>
+        <title>Collaboration - Platform Engineering</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#recovery-and-confidence" class="md-skip">
+        <a href="#collaboration" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Recovery and Confidence
+              Collaboration
             
           </span>
         </div>
@@ -608,7 +608,7 @@
   <span class="md-ellipsis">
     
   
-    Recovery and Confidence
+    Collaboration
   
 
     
@@ -626,7 +626,7 @@
   <span class="md-ellipsis">
     
   
-    Recovery and Confidence
+    Collaboration
   
 
     
@@ -652,10 +652,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-youll-learn" class="md-nav__link">
+  <a href="#working-on-a-team" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What You'll Learn
+        Working on a Team
       
     </span>
   </a>
@@ -663,35 +663,313 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#undoing-uncommitted-changes" class="md-nav__link">
+  <a href="#daily-habits" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Undoing Uncommitted Changes
+        Daily Habits
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Daily Habits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pull-before-you-start-working" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pull before you start working
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#amending-recent-commits" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#work-on-branches-not-main" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Amending Recent Commits
+        Work on branches, not main
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#common-i-messed-up-scenarios" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#keep-branches-short-lived" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Common "I Messed Up" Scenarios
+        Keep branches short-lived
       
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pull-before-you-push" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pull before you push
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-pull-request-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Pull Request Workflow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Pull Request Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-basic-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The basic flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keeping-your-pr-up-to-date" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Keeping your PR up to date
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#squashing-commits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Squashing Commits
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Squashing Commits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-squash" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why squash?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#squash-when-merging-easiest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Squash when merging (easiest)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#squash-locally-before-pushing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Squash locally before pushing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#push-after-squashing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Push after squashing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-review-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Code Review Best Practices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Code Review Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#as-the-author" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        As the author
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#as-a-reviewer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        As a reviewer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#force-push-safety" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Force Push Safety
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Force Push Safety">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-force-push-is-acceptable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When force push is acceptable
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-force-push-is-dangerous" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When force push is dangerous
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-force-with-lease-instead" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use --force-with-lease instead
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Scenarios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Scenarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#my-pr-has-conflicts-with-main" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "My PR has conflicts with main"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-need-to-update-my-pr-with-more-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "I need to update my PR with more changes"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-want-to-squash-my-commits-before-merging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "I want to squash my commits before merging"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#someone-else-pushed-to-my-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Someone else pushed to my branch"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -710,6 +988,62 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-recovery-and-confidence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recovery and Confidence
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-branching-strategies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Branching Strategies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -1548,10 +1882,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-youll-learn" class="md-nav__link">
+  <a href="#working-on-a-team" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What You'll Learn
+        Working on a Team
       
     </span>
   </a>
@@ -1559,35 +1893,313 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#undoing-uncommitted-changes" class="md-nav__link">
+  <a href="#daily-habits" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Undoing Uncommitted Changes
+        Daily Habits
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Daily Habits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pull-before-you-start-working" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pull before you start working
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#amending-recent-commits" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#work-on-branches-not-main" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Amending Recent Commits
+        Work on branches, not main
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#common-i-messed-up-scenarios" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#keep-branches-short-lived" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Common "I Messed Up" Scenarios
+        Keep branches short-lived
       
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pull-before-you-push" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pull before you push
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-pull-request-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Pull Request Workflow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Pull Request Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-basic-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The basic flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keeping-your-pr-up-to-date" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Keeping your PR up to date
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#squashing-commits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Squashing Commits
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Squashing Commits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-squash" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why squash?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#squash-when-merging-easiest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Squash when merging (easiest)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#squash-locally-before-pushing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Squash locally before pushing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#push-after-squashing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Push after squashing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-review-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Code Review Best Practices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Code Review Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#as-the-author" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        As the author
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#as-a-reviewer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        As a reviewer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#force-push-safety" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Force Push Safety
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Force Push Safety">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-force-push-is-acceptable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When force push is acceptable
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-force-push-is-dangerous" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When force push is dangerous
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-force-with-lease-instead" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use --force-with-lease instead
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Scenarios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Scenarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#my-pr-has-conflicts-with-main" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "My PR has conflicts with main"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-need-to-update-my-pr-with-more-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "I need to update my PR with more changes"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-want-to-squash-my-commits-before-merging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "I want to squash my commits before merging"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#someone-else-pushed-to-my-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Someone else pushed to my branch"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1619,22 +2231,222 @@
 
 
 
-<h1 id="recovery-and-confidence">Recovery and Confidence<a class="headerlink" href="#recovery-and-confidence" title="Permanent link">&para;</a></h1>
-<p>Goal: Fix mistakes and get unstuck without panic.</p>
-<h2 id="what-youll-learn">What You'll Learn<a class="headerlink" href="#what-youll-learn" title="Permanent link">&para;</a></h2>
+<h1 id="collaboration">Collaboration<a class="headerlink" href="#collaboration" title="Permanent link">&para;</a></h1>
+<p>By the end of this section, you'll know how to work effectively with others on a shared repository, including the pull request workflow and best practices for keeping your team's codebase healthy.</p>
+<h2 id="working-on-a-team">Working on a Team<a class="headerlink" href="#working-on-a-team" title="Permanent link">&para;</a></h2>
+<p>When you're working alone, you can commit whenever and however you want. On a team, your habits affect everyone. Good collaboration practices prevent conflicts, keep history readable, and make code review effective.</p>
+<h2 id="daily-habits">Daily Habits<a class="headerlink" href="#daily-habits" title="Permanent link">&para;</a></h2>
+<p>These habits prevent most collaboration problems before they start.</p>
+<h3 id="pull-before-you-start-working">Pull before you start working<a class="headerlink" href="#pull-before-you-start-working" title="Permanent link">&para;</a></h3>
+<p>At the beginning of each work session:</p>
+<pre><code class="language-bash">git checkout main
+git pull
+</code></pre>
+<p>This ensures you're starting from the latest code. Many merge conflicts happen because someone started work on an outdated branch.</p>
+<h3 id="work-on-branches-not-main">Work on branches, not main<a class="headerlink" href="#work-on-branches-not-main" title="Permanent link">&para;</a></h3>
+<p>Even for small changes, create a branch:</p>
+<pre><code class="language-bash">git checkout -b fix-config-typo
+</code></pre>
+<p>This keeps <code>main</code> clean and makes code review possible. See <a href="../03-branching-and-merging/">Branching and Merging</a> for details.</p>
+<h3 id="keep-branches-short-lived">Keep branches short-lived<a class="headerlink" href="#keep-branches-short-lived" title="Permanent link">&para;</a></h3>
+<p>The longer your branch lives, the more it diverges from <code>main</code>, and the harder it becomes to merge. Aim to merge branches within a few days.</p>
+<p>If you're working on something larger, regularly merge <code>main</code> into your branch to stay current:</p>
+<pre><code class="language-bash">git checkout my-feature
+git merge main
+</code></pre>
+<h3 id="pull-before-you-push">Pull before you push<a class="headerlink" href="#pull-before-you-push" title="Permanent link">&para;</a></h3>
+<p>Before pushing, pull to get any changes others have made:</p>
+<pre><code class="language-bash">git pull
+git push
+</code></pre>
+<p>If there are conflicts, resolve them locally rather than forcing your changes over others'.</p>
+<h2 id="the-pull-request-workflow">The Pull Request Workflow<a class="headerlink" href="#the-pull-request-workflow" title="Permanent link">&para;</a></h2>
+<p>Pull requests (PRs) are how most teams review and merge code. Instead of pushing directly to <code>main</code>, you push a branch and ask others to review it.</p>
+<h3 id="the-basic-flow">The basic flow<a class="headerlink" href="#the-basic-flow" title="Permanent link">&para;</a></h3>
+<p><strong>Step 1: Create a branch and make your changes</strong></p>
+<pre><code class="language-bash">git checkout -b add-logging
+# ... make commits ...
+</code></pre>
+<p><strong>Step 2: Push your branch to the remote</strong></p>
+<pre><code class="language-bash">git push -u origin add-logging
+</code></pre>
+<p><strong>Step 3: Open a pull request</strong></p>
+<p>On GitHub, GitLab, or Bitbucket, navigate to your repository and click "New Pull Request" (or similar). Select your branch and the target branch (usually <code>main</code>).</p>
+<p><strong>Step 4: Write a good PR description</strong></p>
 <ul>
-<li>Undo uncommitted changes</li>
-<li>Amend recent commits</li>
-<li>Safe ways to recover when things go wrong</li>
+<li>Summarize what the change does and why</li>
+<li>Link to any related issues or tickets</li>
+<li>Note anything reviewers should pay attention to</li>
+<li>Include testing instructions if applicable</li>
 </ul>
-<h2 id="undoing-uncommitted-changes">Undoing Uncommitted Changes<a class="headerlink" href="#undoing-uncommitted-changes" title="Permanent link">&para;</a></h2>
-<p>TODO</p>
-<h2 id="amending-recent-commits">Amending Recent Commits<a class="headerlink" href="#amending-recent-commits" title="Permanent link">&para;</a></h2>
-<p>TODO</p>
-<h2 id="common-i-messed-up-scenarios">Common "I Messed Up" Scenarios<a class="headerlink" href="#common-i-messed-up-scenarios" title="Permanent link">&para;</a></h2>
-<p>TODO</p>
+<p><strong>Step 5: Address review feedback</strong></p>
+<p>Reviewers may request changes. Make additional commits on your branch and push them:</p>
+<pre><code class="language-bash"># Make requested changes
+git add .
+git commit -m &quot;Address review feedback&quot;
+git push
+</code></pre>
+<p>The PR updates automatically.</p>
+<p><strong>Step 6: Merge when approved</strong></p>
+<p>Once reviewers approve, merge the PR (usually via the web interface). Most teams delete the branch after merging.</p>
+<h3 id="keeping-your-pr-up-to-date">Keeping your PR up to date<a class="headerlink" href="#keeping-your-pr-up-to-date" title="Permanent link">&para;</a></h3>
+<p>If <code>main</code> changes while your PR is open, you may need to update your branch:</p>
+<pre><code class="language-bash">git checkout my-feature
+git fetch origin
+git merge origin/main
+# Resolve any conflicts
+git push
+</code></pre>
+<p>Some teams prefer rebasing:</p>
+<pre><code class="language-bash">git checkout my-feature
+git fetch origin
+git rebase origin/main
+# Resolve any conflicts
+git push --force-with-lease
+</code></pre>
+<p>The <code>--force-with-lease</code> flag is safer than <code>--force</code> because it fails if someone else pushed to your branch.</p>
+<h2 id="squashing-commits">Squashing Commits<a class="headerlink" href="#squashing-commits" title="Permanent link">&para;</a></h2>
+<p>When you're working on a feature, you might make many small commits: "WIP", "fix typo", "actually fix it this time". These are useful while working but clutter the history when merged.</p>
+<p>Squashing combines multiple commits into one clean commit.</p>
+<h3 id="why-squash">Why squash?<a class="headerlink" href="#why-squash" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Cleaner history.</strong> <code>main</code> shows one commit per feature, not dozens of work-in-progress commits.</li>
+<li><strong>Easier reverts.</strong> If something breaks, you can revert one commit instead of hunting through many.</li>
+<li><strong>Better blame.</strong> <code>git blame</code> shows meaningful commits, not "fix typo".</li>
+</ul>
+<h3 id="squash-when-merging-easiest">Squash when merging (easiest)<a class="headerlink" href="#squash-when-merging-easiest" title="Permanent link">&para;</a></h3>
+<p>Most Git hosts offer a "Squash and merge" button when merging PRs. This combines all commits in your branch into one commit on <code>main</code>. You write a new commit message summarizing the change.</p>
+<p>This is the easiest approach and doesn't require any local Git commands.</p>
+<h3 id="squash-locally-before-pushing">Squash locally before pushing<a class="headerlink" href="#squash-locally-before-pushing" title="Permanent link">&para;</a></h3>
+<p>If you want to squash before opening the PR (or if your team requires it), use interactive rebase.</p>
+<p>Say you have four commits on your branch:</p>
+<pre><code class="language-bash">git log --oneline -4
+</code></pre>
+<pre><code>d4e5f6g Fix typo in error message
+c3d4e5f Add error handling
+b2c3d4e Add logging function
+a1b2c3d Initial implementation
+</code></pre>
+<p>To squash these into one commit:</p>
+<pre><code class="language-bash">git rebase -i HEAD~4
+</code></pre>
+<p>Git opens your editor:</p>
+<pre><code>pick a1b2c3d Initial implementation
+pick b2c3d4e Add logging function
+pick c3d4e5f Add error handling
+pick d4e5f6g Fix typo in error message
+</code></pre>
+<p>Change <code>pick</code> to <code>squash</code> (or <code>s</code>) for all commits except the first:</p>
+<pre><code>pick a1b2c3d Initial implementation
+squash b2c3d4e Add logging function
+squash c3d4e5f Add error handling
+squash d4e5f6g Fix typo in error message
+</code></pre>
+<p>Save and close. Git opens another editor for you to write the combined commit message. Write something descriptive:</p>
+<pre><code>Add logging with error handling
+
+- Implement logging function
+- Add error handling for edge cases
+- Include meaningful error messages
+</code></pre>
+<p>Save, and your four commits are now one.</p>
+<h3 id="push-after-squashing">Push after squashing<a class="headerlink" href="#push-after-squashing" title="Permanent link">&para;</a></h3>
+<p>If you've already pushed the branch, you'll need to force push after squashing:</p>
+<pre><code class="language-bash">git push --force-with-lease
+</code></pre>
+<div class="admonition warning">
+<p class="admonition-title">Only squash your own branches</p>
+<p>Squashing rewrites history. Only do this on branches that are exclusively yours. Never squash commits that others have based work on.</p>
+</div>
+<h2 id="code-review-best-practices">Code Review Best Practices<a class="headerlink" href="#code-review-best-practices" title="Permanent link">&para;</a></h2>
+<h3 id="as-the-author">As the author<a class="headerlink" href="#as-the-author" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Keep PRs small.</strong> Smaller changes are easier to review and less likely to have bugs. If a feature is large, break it into smaller PRs.</li>
+<li><strong>Write a clear description.</strong> Explain what and why, not just what files changed.</li>
+<li><strong>Respond to feedback gracefully.</strong> Reviewers are trying to help. If you disagree, discuss it.</li>
+<li><strong>Test before requesting review.</strong> Don't waste reviewers' time on broken code.</li>
+</ul>
+<h3 id="as-a-reviewer">As a reviewer<a class="headerlink" href="#as-a-reviewer" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Be constructive.</strong> Suggest improvements, don't just criticize.</li>
+<li><strong>Explain your reasoning.</strong> "This could cause a race condition because..." is more helpful than "This is wrong."</li>
+<li><strong>Approve when it's good enough.</strong> Perfect is the enemy of good. If it works and is maintainable, approve it.</li>
+<li><strong>Review promptly.</strong> Slow reviews block others' work.</li>
+</ul>
+<h2 id="force-push-safety">Force Push Safety<a class="headerlink" href="#force-push-safety" title="Permanent link">&para;</a></h2>
+<p><code>git push --force</code> overwrites the remote branch with your local version, destroying any commits that aren't in your local copy.</p>
+<pre><code class="language-bash"># Dangerous on shared branches!
+git push --force
+</code></pre>
+<h3 id="when-force-push-is-acceptable">When force push is acceptable<a class="headerlink" href="#when-force-push-is-acceptable" title="Permanent link">&para;</a></h3>
+<ul>
+<li>On your own feature branch that no one else is using</li>
+<li>After squashing commits before merge</li>
+<li>After rebasing to update your branch</li>
+</ul>
+<h3 id="when-force-push-is-dangerous">When force push is dangerous<a class="headerlink" href="#when-force-push-is-dangerous" title="Permanent link">&para;</a></h3>
+<ul>
+<li>On <code>main</code> or any shared branch</li>
+<li>On any branch someone else might have pulled</li>
+</ul>
+<h3 id="use-force-with-lease-instead">Use --force-with-lease instead<a class="headerlink" href="#use-force-with-lease-instead" title="Permanent link">&para;</a></h3>
+<pre><code class="language-bash">git push --force-with-lease
+</code></pre>
+<p>This fails if the remote branch has commits you don't have locally (meaning someone else pushed). It's not foolproof, but it catches the most common mistakes.</p>
+<div class="admonition danger">
+<p class="admonition-title">Never force push to main</p>
+<p>Force pushing to <code>main</code> can delete others' work and break everyone's local repositories. Many teams protect <code>main</code> to prevent this entirely.</p>
+</div>
+<h2 id="common-scenarios">Common Scenarios<a class="headerlink" href="#common-scenarios" title="Permanent link">&para;</a></h2>
+<h3 id="my-pr-has-conflicts-with-main">"My PR has conflicts with main"<a class="headerlink" href="#my-pr-has-conflicts-with-main" title="Permanent link">&para;</a></h3>
+<pre><code class="language-bash">git checkout my-feature
+git fetch origin
+git merge origin/main
+# Resolve conflicts in your editor
+git add .
+git commit -m &quot;Merge main into my-feature&quot;
+git push
+</code></pre>
+<h3 id="i-need-to-update-my-pr-with-more-changes">"I need to update my PR with more changes"<a class="headerlink" href="#i-need-to-update-my-pr-with-more-changes" title="Permanent link">&para;</a></h3>
+<p>Just commit and push to the same branch:</p>
+<pre><code class="language-bash">git checkout my-feature
+# Make changes
+git add .
+git commit -m &quot;Add requested error handling&quot;
+git push
+</code></pre>
+<p>The PR updates automatically.</p>
+<h3 id="i-want-to-squash-my-commits-before-merging">"I want to squash my commits before merging"<a class="headerlink" href="#i-want-to-squash-my-commits-before-merging" title="Permanent link">&para;</a></h3>
+<pre><code class="language-bash">git checkout my-feature
+git rebase -i HEAD~n  # n = number of commits to squash
+# Change 'pick' to 'squash' for all but the first
+# Write a new commit message
+git push --force-with-lease
+</code></pre>
+<h3 id="someone-else-pushed-to-my-branch">"Someone else pushed to my branch"<a class="headerlink" href="#someone-else-pushed-to-my-branch" title="Permanent link">&para;</a></h3>
+<p>Pull their changes before continuing:</p>
+<pre><code class="language-bash">git checkout my-feature
+git pull
+</code></pre>
+<p>If you've already made local commits, this creates a merge commit. That's fine.</p>
 <h2 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">&para;</a></h2>
-<p>TODO</p>
+<ol>
+<li>
+<p><strong>Practice the PR workflow:</strong> Create a branch, make a few commits, push it, and open a PR (even if you're the only reviewer). Merge it using the web interface.</p>
+</li>
+<li>
+<p><strong>Try squash and merge:</strong> Open a PR with multiple commits. When merging, use the "Squash and merge" option. Check the history on <code>main</code> to see the single combined commit.</p>
+</li>
+<li>
+<p><strong>Squash locally:</strong> Create a branch with 3-4 small commits. Use <code>git rebase -i</code> to squash them into one. Push with <code>--force-with-lease</code>.</p>
+</li>
+<li>
+<p><strong>Resolve a conflict:</strong> Create two branches from <code>main</code>. On each, edit the same line differently. Merge one to <code>main</code>. On the other branch, merge <code>main</code> in and resolve the conflict. Push and complete the PR.</p>
+</li>
+<li>
+<p><strong>Review a PR:</strong> If you're working with others, review someone else's PR. Practice leaving constructive feedback.</p>
+</li>
+</ol>
 
 
 
