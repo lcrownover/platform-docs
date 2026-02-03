@@ -21,38 +21,110 @@ uv run mkdocs build --strict         # production build (run before PRs)
 
 ## Content Structure
 
-- Pages live in `docs/` under module folders: `docs/puppet-101/`, `docs/git-101/`, `docs/puppet-201/`
-- Each module has `index.md` (landing page) and a `prerequisites.md`
-- Navigation is defined in `mkdocs.yml`—keep modules ordered logically (Puppet 101 → Git 101 → Puppet 201)
+- Module folders live in `docs/modules/` (e.g., `docs/modules/git/`, `docs/modules/puppet/`)
+- Each module has:
+  - `00-index.md` (landing page with overview and lesson list)
+  - `00-prerequisites.md` (required/recommended tools in table format)
+  - Numbered lessons: `01-local-foundations.md`, `02-understanding-history.md`, etc.
+- Navigation is defined in `mkdocs.yml` (keep modules ordered logically)
 - Shared assets go in `docs/assets/`
 
 ## Writing Style
 
 **Audience**: IT professionals at a university. They're technical but may be new to the specific tool. Don't over-explain fundamentals, but do explain _why_ things work the way they do.
 
-**Tone**: Encouraging but direct. Treat readers as capable colleagues learning a new skill.
+**Tone**: Second person ("you", "your"), encouraging but direct. Treat readers as capable colleagues. Use "Let's" for guided activities. Acknowledge real-world scenarios ("When something breaks at 2 AM...").
 
-**Structure**:
+### Page Structure
 
-- One H1 per page (the title)
-- Task-first sections: "Do X", then "Why it matters"
-- Fenced code blocks with language hints (`bash`, `yaml`, `powershell`)
-- Use mkdocs-material features: admonitions (`!!! note`, `!!! warning`), tabs for OS-specific commands, callouts
+**Module index page (`00-index.md`)**:
 
-**Content quality**:
+- H1: Module title only (e.g., "Git 101")
+- Opening paragraph: Relatable problem statement, then how this tool solves it
+- "Why You Should Care" section with bullet points
+- "Lessons" section: numbered list with bold lesson names and brief descriptions
+- "Tips for Success" section with practical advice
+- Optional notes about the tool's context or history
+
+**Lesson pages**:
+
+- H1: Lesson title only
+- Opening line: "By the end of this section, you'll..." (sets expectations)
+- H2 for major sections, H3 for subsections (avoid H4+)
+- End with "## Exercises" section (numbered list, bold task names, imperative verbs)
+
+### Content Patterns
+
+**Code examples**:
+
+```markdown
+Run the command:
+
+\`\`\`bash
+git status
+\`\`\`
+
+You'll see:
+
+\`\`\`
+On branch main
+nothing to commit
+\`\`\`
+
+This tells you three things: ...
+```
+
+Show command first, expected output in a separate block, then explain what happened.
+
+**Comparisons and reference info**: Use tables, not bullet lists.
+
+| Instead of... | Write... |
+|--------------|----------|
+| `Update config` | `Increase nginx worker connections to 4096` |
+
+**Admonitions**: Use sparingly but effectively:
+
+- `!!! tip` for helpful shortcuts or best practices
+- `!!! note` for context or clarifications
+- `!!! warning` for common mistakes or gotchas
+- `!!! danger` for destructive commands or serious risks
+
+**Troubleshooting sections**: Use quoted H3 headers for problem descriptions:
+
+```markdown
+### "I committed to the wrong branch"
+
+**Solution:** Move the commit to the right branch.
+```
+
+**Cross-references**: Use relative paths with descriptive link text:
+
+```markdown
+See [Branching and Merging](03-branching-and-merging.md#handling-merge-conflicts) for details.
+```
+
+### Formatting
+
+- **Bold** for key terms and emphasis
+- `inline code` for commands, flags, filenames, and config values
+- Parentheses for asides (not emdashes)
+- Numbered lists for sequential steps or ordered lessons
+- Bullet lists for conceptual points or unordered items
+
+### Content Quality
 
 - Long-form explanations are welcome when they add useful context, rationale, or real-world examples
 - Include terminal examples that readers can copy and run
 - Explain tradeoffs and edge cases that working IT staff actually encounter
-- Avoid filler text and generic advice—be specific and practical
-- Don't use emdashes, instead use parenthesis to surround the inner explaination
+- Avoid filler text and generic advice (be specific and practical)
+- Use concrete analogies to explain abstract concepts
 
-**Naming**:
+### Naming
 
-- Kebab-case filenames: `getting-started.md`
-- Title-case headings
-- Imperative commit messages: `Add Puppet 101 setup page`
+- Kebab-case filenames: `01-local-foundations.md`
+- Title-case headings: "Understanding History"
+- Imperative commit messages: `Add Git recovery section`
 
 ## Before Committing
 
-Always run `uv run mkdocs build --strict` before PRs—it fails on broken links and warnings.
+Always run `uv run mkdocs build --strict` before PRs (it fails on broken links and warnings).
