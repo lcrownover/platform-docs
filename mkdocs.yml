@@ -32,6 +32,13 @@ nav:
       - Puppet:
           - Overview: modules/puppet/00-index.md
           - Prerequisites: modules/puppet/00-prerequisites.md
+          - Puppet Fundamentals: modules/puppet/01-puppet-fundamentals.md
+          - Writing Manifests: modules/puppet/02-writing-manifests.md
+          - Classes and Modules: modules/puppet/03-classes-and-modules.md
+          - Hiera and Data Separation: modules/puppet/04-hiera-and-data-separation.md
+          - Roles and Profiles: modules/puppet/05-roles-and-profiles.md
+          - Testing and Development: modules/puppet/06-testing-and-development.md
+          - Custom Facts: modules/puppet/07-custom-facts.md
       - Puppet - Advanced:
           - Overview: modules/puppet-advanced/00-index.md
           - Prerequisites: modules/puppet-advanced/00-prerequisites.md

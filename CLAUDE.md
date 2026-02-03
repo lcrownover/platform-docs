@@ -125,6 +125,13 @@ See [Branching and Merging](03-branching-and-merging.md#handling-merge-conflicts
 - Title-case headings: "Understanding History"
 - Imperative commit messages: `Add Git recovery section`
 
+## Puppet Content Guidelines
+
+When writing Puppet documentation, follow these principles:
+
+- **Prefer plain Puppet code over Forge modules.** Only recommend Forge modules when they provide significant value. Keep things simple and understandable.
+- **Teach the "Package → File → Service" pattern.** This is the mental model: install packages as needed, write configuration files, and notify services when those files change. Most Puppet work follows this pattern.
+
 ## Before Committing
 
 Always run `uv run mkdocs build --strict` before PRs (it fails on broken links and warnings).
