@@ -20,7 +20,7 @@ markdown_extensions:
       anchor_linenums: true
   - pymdownx.superfences
 nav:
-  - Modules:
+  - Training:
       - Overview: modules/index.md
       - Git:
           - Overview: modules/git/00-index.md
@@ -63,11 +63,13 @@ nav:
       - Overview: concepts/index.md
       - Infrastructure as Code: concepts/infrastructure-as-code.md
       - Version Control: concepts/version-control.md
-  - Lab Guides:
+  - Labs:
       - Overview: lab-guides/index.md
       - Puppet 101: lab-guides/puppet-101.md
       - Git 101: lab-guides/git-101.md
       - Puppet 201: lab-guides/puppet-201.md
+  - Handbook:
+      - Overview: handbook/index.md
 extra:
   social:
     - icon: material/robot-outline
