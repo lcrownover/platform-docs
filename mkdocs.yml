@@ -49,6 +49,7 @@ nav:
           - Exported Resources: modules/puppet-advanced/02-exported-resources.md
           - Defined Types: modules/puppet-advanced/03-defined-types.md
           - Writing Modules: modules/puppet-advanced/04-writing-modules.md
+          - Fileserver Repos: modules/puppet-advanced/05-fileserver-repos.md
   - Tools:
       - Overview: tools/index.md
       - Homebrew (macOS): tools/homebrew.md
@@ -70,6 +71,7 @@ nav:
       - Puppet 201: lab-guides/puppet-201.md
   - Handbook:
       - Overview: handbook/index.md
+      - Puppet: handbook/puppet.md
 extra:
   social:
     - icon: material/robot-outline
