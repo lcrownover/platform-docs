@@ -140,6 +140,19 @@ puppet agent -t
 
 The `-t` flag (short for `--test`) runs the agent in the foreground with verbose output, which is useful for testing and debugging.
 
+### Applying Manifests Locally with puppet apply
+
+You don't always need a Puppet server. The `puppet apply` command compiles and applies a manifest directly on the local machine:
+
+```bash
+puppet apply manifest.pp
+```
+
+This skips the agent-server communication entirely. Puppet compiles the manifest locally, builds a catalog, and applies it right there.
+
+!!! note
+    `puppet apply` is useful for development and learning, but it has limitations. Features that depend on a Puppet server (like exported resources, PuppetDB queries, and centralized reporting) won't work. In production, you'll use the agent-server model. But for experimenting with manifests and learning the language, `puppet apply` is a great way to get fast feedback without setting up infrastructure.
+
 ## Facts and Facter
 
 In step 1 above, the agent "gathers facts." But where do these facts come from?

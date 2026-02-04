@@ -16,6 +16,9 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
 nav:
   - Modules:
       - Overview: modules/index.md
@@ -42,6 +45,10 @@ nav:
       - Puppet - Advanced:
           - Overview: modules/puppet-advanced/00-index.md
           - Prerequisites: modules/puppet-advanced/00-prerequisites.md
+          - Virtual Resources and Collectors: modules/puppet-advanced/01-virtual-resources.md
+          - Exported Resources: modules/puppet-advanced/02-exported-resources.md
+          - Defined Types: modules/puppet-advanced/03-defined-types.md
+          - Writing Modules: modules/puppet-advanced/04-writing-modules.md
   - Tools:
       - Overview: tools/index.md
       - Homebrew (macOS): tools/homebrew.md
@@ -49,7 +56,9 @@ nav:
       - WSL (Windows): tools/wsl.md
       - Visual Studio Code: tools/vscode.md
       - Git: tools/git.md
-      - Puppet Development Kit (PDK): tools/pdk.md
+      - Puppet:
+          - Puppet Development Kit (PDK): tools/pdk.md
+          - eyaml: tools/eyaml.md
   - Concepts:
       - Overview: concepts/index.md
       - Infrastructure as Code: concepts/infrastructure-as-code.md
