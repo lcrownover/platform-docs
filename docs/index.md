@@ -15,7 +15,8 @@ Welcome to the University of Oregon's platform engineering reference site. Here 
 | [Learn](learn/index.md) | Structured training: Git fundamentals, Puppet basics, advanced Puppet topics |
 | [Tools](tools/index.md) | Installation and configuration guides for development tools |
 | [Concepts](concepts/index.md) | Background on infrastructure-as-code, version control, and related ideas |
-| [Lab Guides](lab-guides/index.md) | Step-by-step instructions for hands-on exercises |
+| [Labs](lab-guides/index.md) | Companion guides for instructor-led lab sessions |
+| [Handbook](handbook/index.md) | UO-specific conventions, workflows, and expectations |
 
 ## Questions?
 

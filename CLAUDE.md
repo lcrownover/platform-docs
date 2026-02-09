@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a mkdocs-material documentation site providing technical training guides for IT staff at University of Oregon. The current focus is platform-engineering topics: Puppet 101 → Git 101 → Puppet 201.
+This is a mkdocs-material documentation site providing technical training guides for IT staff at University of Oregon. The current focus is platform-engineering topics: Puppet 101 → Git 101 → Puppet 102 → Git 102.
 
 ## Build & Preview Commands
 

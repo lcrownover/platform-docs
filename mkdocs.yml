@@ -18,7 +18,11 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight:
       anchor_linenums: true
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 nav:
   - Learn:
       - Overview: learn/index.md
@@ -67,9 +71,14 @@ nav:
       - Version Control: concepts/version-control.md
   - Labs:
       - Overview: lab-guides/index.md
-      - Puppet 101: lab-guides/puppet-101.md
-      - Git 101: lab-guides/git-101.md
-      - Puppet 201: lab-guides/puppet-201.md
+      - Git:
+          - Overview: lab-guides/git-overview.md
+          - Git 101: lab-guides/git-101.md
+          - Git 102: lab-guides/git-102.md
+      - Puppet:
+          - Overview: lab-guides/puppet-overview.md
+          - Puppet 101: lab-guides/puppet-101.md
+          - Puppet 102: lab-guides/puppet-102.md
   - Handbook:
       - Overview: handbook/index.md
       - Puppet: handbook/puppet.md
