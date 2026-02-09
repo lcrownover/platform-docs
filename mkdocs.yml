@@ -57,6 +57,7 @@ nav:
       - WSL (Windows): tools/wsl.md
       - Visual Studio Code: tools/vscode.md
       - Git: tools/git.md
+      - Command-Line Editors: tools/cli-editors.md
       - Puppet:
           - Puppet Development Kit (PDK): tools/pdk.md
           - eyaml: tools/eyaml.md

@@ -125,6 +125,35 @@ See [Branching and Merging](03-branching-and-merging.md#handling-merge-conflicts
 - Title-case headings: "Understanding History"
 - Imperative commit messages: `Add Git recovery section`
 
+## Lab Guides
+
+Lab guides live in `docs/lab-guides/` and serve as cliff-notes companions to the learning modules. They are **not** full lessons; they're concise checklists for an in-person lab session.
+
+**Format**:
+
+- H1: Lab title (e.g., "Puppet 101 Lab")
+- `## Prerequisites` section: table of required tools linking to the corresponding tools docs (same format as learning module prerequisites)
+- `## Setup` section: connection info and environment confirmation
+- Numbered `## Part N: Title` sections: each covers one focused activity
+- Each part: brief numbered steps with bold action names, code blocks for commands/snippets, and "apply and verify" checkpoints
+- `## Recap` section: short bullet list of key takeaways
+- Keep prose minimal; let the code blocks do the heavy lifting
+
+## Lab Participant Conventions
+
+Participants are numbered 1-40. All derived values use zero-padded two-digit numbers (e.g., participant 5 → `05`).
+
+| Property | Pattern | Example (participant 5) |
+|----------|---------|------------------------|
+| Username | `participantXX` | `participant05` |
+| Password | `UOISLabNumber@XX` | `UOISLabNumber@05` |
+| User repository | `participantXX/myrepo` | `participant05/myrepo` |
+| Group repository | `groupN/ourrepo` | `group1/ourrepo` |
+
+**Groups**: participants 1-5 = group1, 6-10 = group2, 11-15 = group3, ..., 36-40 = group8.
+
+Use these conventions consistently across all lab guides. Not every lab uses every property (e.g., Puppet 101 doesn't use repositories).
+
 ## Puppet Content Guidelines
 
 When writing Puppet documentation, follow these principles:
