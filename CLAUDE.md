@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a mkdocs-material documentation site providing technical training modules for IT staff at University of Oregon. The current focus is platform-engineering topics: Puppet 101 → Git 101 → Puppet 201.
+This is a mkdocs-material documentation site providing technical training guides for IT staff at University of Oregon. The current focus is platform-engineering topics: Puppet 101 → Git 101 → Puppet 201.
 
 ## Build & Preview Commands
 
@@ -21,7 +21,7 @@ uv run mkdocs build --strict         # production build (run before PRs)
 
 ## Content Structure
 
-- Module folders live in `docs/modules/` (e.g., `docs/modules/git/`, `docs/modules/puppet/`)
+- Learning module folders live in `docs/learn/` (e.g., `docs/learn/git/`, `docs/learn/puppet/`)
 - Each module has:
   - `00-index.md` (landing page with overview and lesson list)
   - `00-prerequisites.md` (required/recommended tools in table format)
@@ -37,7 +37,7 @@ uv run mkdocs build --strict         # production build (run before PRs)
 
 ### Page Structure
 
-**Module index page (`00-index.md`)**:
+**Learn index page (`00-index.md`)**:
 
 - H1: Module title only (e.g., "Git 101")
 - Opening paragraph: Relatable problem statement, then how this tool solves it

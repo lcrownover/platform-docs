@@ -4,7 +4,7 @@ Welcome to the University of Oregon's platform engineering reference site. Here 
 
 ## Getting Started
 
-**New here?** Start with [Modules](modules/index.md) and work through them in order. Each module includes hands-on exercises designed to run on your own machine.
+**New here?** Start with [Learning Modules](learn/index.md) and work through them in order. Each module includes hands-on exercises designed to run on your own machine.
 
 **Need to set up your environment?** The [Tools](tools/index.md) section has installation guides for Git, PDK, VS Code, and platform-specific setup like Homebrew (macOS) and WSL (Windows).
 
@@ -12,7 +12,7 @@ Welcome to the University of Oregon's platform engineering reference site. Here 
 
 | Section | What You'll Find |
 |---------|------------------|
-| [Modules](modules/index.md) | Structured training: Git fundamentals, Puppet basics, advanced Puppet topics |
+| [Learn](learn/index.md) | Structured training: Git fundamentals, Puppet basics, advanced Puppet topics |
 | [Tools](tools/index.md) | Installation and configuration guides for development tools |
 | [Concepts](concepts/index.md) | Background on infrastructure-as-code, version control, and related ideas |
 | [Lab Guides](lab-guides/index.md) | Step-by-step instructions for hands-on exercises |

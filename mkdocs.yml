@@ -1,6 +1,6 @@
 ---
 site_name: Platform Engineering
-site_description: Training modules and guides for platform engineering topics at University
+site_description: Learning modules and guides for platform engineering topics at University
   of Oregon
 theme:
   name: material
@@ -20,36 +20,36 @@ markdown_extensions:
       anchor_linenums: true
   - pymdownx.superfences
 nav:
-  - Training:
-      - Overview: modules/index.md
+  - Learn:
+      - Overview: learn/index.md
       - Git:
-          - Overview: modules/git/00-index.md
-          - Prerequisites: modules/git/00-prerequisites.md
-          - Local Foundations: modules/git/01-local-foundations.md
-          - Understanding History: modules/git/02-understanding-history.md
-          - Branching and Merging: modules/git/03-branching-and-merging.md
-          - Working with Remotes: modules/git/04-working-with-remotes.md
-          - Collaboration: modules/git/05-collaboration.md
-          - Recovery and Confidence: modules/git/06-recovery-and-confidence.md
-          - Branching Strategies: modules/git/07-branching-strategies.md
+          - Overview: learn/git/00-index.md
+          - Prerequisites: learn/git/00-prerequisites.md
+          - Local Foundations: learn/git/01-local-foundations.md
+          - Understanding History: learn/git/02-understanding-history.md
+          - Branching and Merging: learn/git/03-branching-and-merging.md
+          - Working with Remotes: learn/git/04-working-with-remotes.md
+          - Collaboration: learn/git/05-collaboration.md
+          - Recovery and Confidence: learn/git/06-recovery-and-confidence.md
+          - Branching Strategies: learn/git/07-branching-strategies.md
       - Puppet:
-          - Overview: modules/puppet/00-index.md
-          - Prerequisites: modules/puppet/00-prerequisites.md
-          - Puppet Fundamentals: modules/puppet/01-puppet-fundamentals.md
-          - Writing Manifests: modules/puppet/02-writing-manifests.md
-          - Classes and Modules: modules/puppet/03-classes-and-modules.md
-          - Hiera and Data Separation: modules/puppet/04-hiera-and-data-separation.md
-          - Roles and Profiles: modules/puppet/05-roles-and-profiles.md
-          - Testing and Development: modules/puppet/06-testing-and-development.md
-          - Custom Facts: modules/puppet/07-custom-facts.md
+          - Overview: learn/puppet/00-index.md
+          - Prerequisites: learn/puppet/00-prerequisites.md
+          - Puppet Fundamentals: learn/puppet/01-puppet-fundamentals.md
+          - Writing Manifests: learn/puppet/02-writing-manifests.md
+          - Classes and Modules: learn/puppet/03-classes-and-modules.md
+          - Hiera and Data Separation: learn/puppet/04-hiera-and-data-separation.md
+          - Roles and Profiles: learn/puppet/05-roles-and-profiles.md
+          - Testing and Development: learn/puppet/06-testing-and-development.md
+          - Custom Facts: learn/puppet/07-custom-facts.md
       - Puppet - Advanced:
-          - Overview: modules/puppet-advanced/00-index.md
-          - Prerequisites: modules/puppet-advanced/00-prerequisites.md
-          - Virtual Resources and Collectors: modules/puppet-advanced/01-virtual-resources.md
-          - Exported Resources: modules/puppet-advanced/02-exported-resources.md
-          - Defined Types: modules/puppet-advanced/03-defined-types.md
-          - Writing Modules: modules/puppet-advanced/04-writing-modules.md
-          - Fileserver Repos: modules/puppet-advanced/05-fileserver-repos.md
+          - Overview: learn/puppet-advanced/00-index.md
+          - Prerequisites: learn/puppet-advanced/00-prerequisites.md
+          - Virtual Resources and Collectors: learn/puppet-advanced/01-virtual-resources.md
+          - Exported Resources: learn/puppet-advanced/02-exported-resources.md
+          - Defined Types: learn/puppet-advanced/03-defined-types.md
+          - Writing Modules: learn/puppet-advanced/04-writing-modules.md
+          - Fileserver Repos: learn/puppet-advanced/05-fileserver-repos.md
   - Tools:
       - Overview: tools/index.md
       - Homebrew (macOS): tools/homebrew.md

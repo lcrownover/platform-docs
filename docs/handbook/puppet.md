@@ -1,6 +1,6 @@
 # Puppet
 
-This document covers how Puppet is organized and used at UO. Read the [Puppet training modules](../modules/puppet/00-index.md) first to understand the fundamentals.
+This document covers how Puppet is organized and used at UO. Read the [Puppet training modules](../learn/puppet/00-index.md) first to understand the fundamentals.
 
 This handbook covers:
 
@@ -248,7 +248,7 @@ oracle::memory_target: '8G'  # This server has more RAM
 
 ### Encrypted Data
 
-For secrets like passwords and API keys, use eyaml to encrypt values in your Hiera data. See the [Hiera training module](../modules/puppet/04-hiera-and-data-separation.md#encrypted-data-with-eyaml) and [eyaml tool documentation](../tools/eyaml.md) for details.
+For secrets like passwords and API keys, use eyaml to encrypt values in your Hiera data. See the [Hiera training module](../learn/puppet/04-hiera-and-data-separation.md#encrypted-data-with-eyaml) and [eyaml tool documentation](../tools/eyaml.md) for details.
 
 ## The pp_role, pp_group, and pp_cluster Facts
 
