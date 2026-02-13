@@ -62,8 +62,10 @@ nav:
       - Visual Studio Code: tools/vscode.md
       - Git: tools/git.md
       - Command-Line Editors: tools/cli-editors.md
+      - Ruby: tools/ruby.md
       - Puppet:
-          - Puppet Development Kit (PDK): tools/pdk.md
+          - puppet-lint: tools/puppet-lint.md
+          - puppet-editor-services: tools/puppet-editor-services.md
           - eyaml: tools/eyaml.md
   - Concepts:
       - Overview: concepts/index.md

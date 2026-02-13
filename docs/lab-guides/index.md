@@ -8,7 +8,7 @@ Instructor-led lab sessions for platform engineering topics. These are hands-on 
 |-----|-------------|----------|
 | [Puppet 101](puppet-101.md) | Install packages, manage files, use templates, and explore facts with `puppet apply` | Half day |
 | [Git 101](git-101.md) | Clone, edit, stage, commit, push, pull, and resolve merge conflicts | 2 hours |
-| [Puppet 102](puppet-102.md) | Advanced Puppet topics (coming soon) | Half day |
+| [Puppet 102](puppet-102.md) | Team modules, roles and profiles, Hiera data layers, and cluster-level configuration | Half day |
 | [Git 102](git-102.md) | Branching, merging, reverting, stashing, and pull requests | 3 hours |
 
 ## Recommended Learning Path
