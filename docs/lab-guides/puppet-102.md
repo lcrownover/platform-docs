@@ -5,8 +5,12 @@
 | Tool | Why You Need It |
 |------|-----------------|
 | Terminal with SSH | You'll connect to a remote lab server over SSH. macOS/Linux: use the built-in terminal. Windows: use [WSL](../tools/wsl.md) or [Windows Terminal](../tools/windows-terminal.md). |
+| [Visual Studio Code](../tools/vscode.md) | You'll edit Puppet manifests, templates, and Hiera data. Any editor works, but VS Code is recommended. |
+| [Puppet VS Code Extension](../tools/puppet-vscode.md) | Adds syntax highlighting and language support for Puppet files |
 | [Git](../tools/git.md) | You'll clone and push changes to a shared Puppet team module |
-| [Command-line editor](../tools/cli-editors.md) | You'll edit manifests, templates, and Hiera data on your local machine. [Nano](../tools/cli-editors.md#nano) is the easiest option. |
+| [Command-line editor](../tools/cli-editors.md) | You'll edit files directly on the remote server. [Nano](../tools/cli-editors.md#nano) is the easiest option. |
+| [puppet-lint](../tools/puppet-lint.md) | Checks your Puppet code against the style guide before you commit |
+| [eyaml](../tools/eyaml.md) | Encrypts sensitive values in Hiera data |
 
 | Lab | Why |
 |------------------|-----|
