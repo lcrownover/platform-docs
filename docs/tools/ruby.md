@@ -1,6 +1,6 @@
 # Ruby
 
-Ruby is required for several Puppet ecosystem tools including puppet-lint and puppet-editor-services (LSP). You don't need to write Ruby code, but you need a working Ruby installation where `gem install` works and installed gems are in your `PATH`.
+Ruby is required for several Puppet ecosystem tools including [puppet-lint](puppet-lint.md). You don't need to write Ruby code, but you need a working Ruby installation where `gem install` works and installed gems are in your `PATH`.
 
 ## Installation
 
@@ -18,7 +18,6 @@ Open a new terminal window, and run
 
 ```bash
 which ruby
-which gem
 ```
 
 If the displayed path does not include `homebrew`, or you receive any errors, you'll need to add the Homebrew Ruby and its gem binaries to your `PATH`. 
@@ -71,10 +70,10 @@ sudo apt update && sudo apt install -y ruby ruby-dev
 
 Ubuntu's packaged Ruby installs gems to a user directory by default, but you need to make sure that directory is in your `PATH`. 
 
-Add this to your `~/.bashrc`, replacing `3.x.x` with the proper version that you installed (discoverable with `ruby -v`):
+Add this to your `~/.bashrc`, replacing `4.x.x` with the proper version that you installed (discoverable with `ruby -v`):
 
 ```bash
-export PATH="$HOME/.local/share/gem/ruby/3.x.x/bin:$PATH"
+export PATH="$HOME/.local/share/gem/ruby/4.x.x/bin:$PATH"
 ```
 
 Reload your shell:

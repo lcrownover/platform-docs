@@ -64,9 +64,10 @@ nav:
       - Command-Line Editors: tools/cli-editors.md
       - Ruby: tools/ruby.md
       - Puppet:
+          - Puppet VS Code Extension: tools/puppet-vscode.md
           - puppet-lint: tools/puppet-lint.md
-          - puppet-editor-services: tools/puppet-editor-services.md
           - eyaml: tools/eyaml.md
+          - Puppet Development Kit (PDK): tools/pdk.md
   - Concepts:
       - Overview: concepts/index.md
       - Infrastructure as Code: concepts/infrastructure-as-code.md

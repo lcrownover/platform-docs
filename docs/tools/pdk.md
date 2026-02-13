@@ -1,5 +1,8 @@
 # Puppet Development Kit (PDK)
 
+!!! warning
+    PDK versions available for download may be outdated or unavailable for some platforms, especially macOS. Unfortunately, there is not currently a workaround.
+
 PDK is Puppet's official toolkit for developing and testing Puppet modules. It provides a consistent environment for creating modules, writing unit tests, validating syntax, and packaging modules for publication. PDK also includes a language server that integrates with editors like VS Code, giving you autocompletion, real-time validation, and inline documentation as you write Puppet code. If you're writing Puppet code, PDK standardizes your workflow and catches errors before they hit production.
 
 ## Puppet Forge Account
