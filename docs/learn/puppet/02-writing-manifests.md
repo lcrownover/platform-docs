@@ -519,9 +519,34 @@ file {
 
 Each resource title is followed by a colon, its attributes, and a semicolon (except the last one, where the semicolon is optional). This is equivalent to writing three separate `file { }` blocks but keeps related resources visually grouped.
 
-### Resource Defaults
+### Per-Block Defaults
 
-When you're declaring many similar resources, you can set defaults to avoid repetition:
+You can combine the multi-resource block syntax with a `default:` entry to set shared attributes for all resources in the block:
+
+```puppet
+file {
+  default:
+    ensure => file,
+    owner  => 'root',
+    group  => 'wheel',
+    mode   => '0600',
+  ;
+  ['/etc/ssh/ssh_host_dsa_key', '/etc/ssh/ssh_host_key', '/etc/ssh/ssh_host_rsa_key']:
+    # use all defaults
+  ;
+  ['/etc/ssh/ssh_config', '/etc/ssh/ssh_host_dsa_key.pub', '/etc/ssh/ssh_host_rsa_key.pub', '/etc/ssh/sshd_config']:
+    mode => '0644',  # override the default mode
+  ;
+}
+```
+
+The `default:` entry applies to every resource in the block. Individual entries can override specific attributes. This keeps the shared values visible right next to the resources they apply to, which is an advantage over scope-level defaults (below).
+
+That said, this syntax is dense and can be hard to scan quickly. For a handful of resources, separate declarations are usually clearer.
+
+### Scope-Level Resource Defaults
+
+When you're declaring many similar resources across a manifest, you can set defaults that apply to all resources of a type in the current scope:
 
 ```puppet
 File {
@@ -543,7 +568,7 @@ file { '/etc/app/secrets.yml':
 
 Notice the capitalized `File` for the defaults block. Defaults apply to all resources of that type in the current scope. Individual resources can override any default.
 
-Resource defaults can make code harder to follow because the actual values aren't visible at the resource declaration. If you use them, put them at the top of a manifest where they're easy to spot.
+Scope-level defaults can make code harder to follow because the actual values aren't visible at the resource declaration. If you use them, put them at the top of a manifest where they're easy to spot.
 
 ### Chaining Arrows
 

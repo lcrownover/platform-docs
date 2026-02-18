@@ -147,6 +147,21 @@ The staging area lets you craft clean, logical commits even when your working di
 
 Clean commits make history easier to read and problems easier to diagnose. When something breaks, you want to find "Add SSL config" in your history, not "Various changes and fixes."
 
+### The shortcut: git commit -am
+
+Once you're comfortable with the two-step workflow, there's a shortcut for committing changes to files Git is already tracking:
+
+```bash
+git commit -am "Update nginx config for production"
+```
+
+The `-a` flag automatically stages all modified tracked files before committing. Combined with `-m`, it collapses `git add` + `git commit` into one command.
+
+!!! warning
+    `-a` only stages changes to **tracked** files (files that have been `git add`ed at least once before). It does **not** stage new, untracked files. If you create a new file and run `git commit -am`, that file won't be included. You still need `git add` for new files.
+
+This is a convenient shortcut for quick edits, but the explicit `git add` + `git commit` workflow gives you more control when you have multiple changes and want to commit them separately.
+
 ## Writing Good Commit Messages
 
 Commit messages are for your future self and your teammates. Write them like you'll be the one debugging this at 2 AM six months from now.

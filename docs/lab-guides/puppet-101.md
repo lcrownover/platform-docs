@@ -98,8 +98,10 @@
 
 !!! note "Talk about: The Package, File, Service pattern and relationships"
     - **Package → File → Service** -- the pattern behind most real-world Puppet work
+    - **`require`** -- the relationship that tells Puppet "don't apply this resource until that one is done"
     - **`notify`** -- the relationship that tells Puppet "if this file changes, restart that service"
-    - What happens without `notify` -- config updates silently, service keeps running the old version
+    - **`subscribe`** -- the inverse of `notify`; the service says "watch that file" instead of the file saying "tell the service"
+    - What happens without `notify`/`subscribe` -- config updates silently, service keeps running the old version
     - **Manifest variables** -- keep tuneable values (`$nginx_worker_connections`) at the top of the file instead of buried in templates
 
 1. **Copy the running nginx config** to your templates directory:
@@ -128,12 +130,14 @@
     file { '/etc/nginx/nginx.conf':
       ensure  => file,
       content => template('templates/nginx.conf.erb'),
+      require => Package['nginx'],
       notify  => Service['nginx'],
     }
 
     service { 'nginx':
-      ensure => running,
-      enable => true,
+      ensure  => running,
+      enable  => true,
+      require => Package['nginx'],
     }
     ```
 
@@ -209,7 +213,8 @@
 - ERB templates pull in facts (like `@hostname`) and manifest variables (like `@nginx_worker_connections`)
 - `facter` discovers system information (CPUs, memory, OS, networking) available in templates and in manifests via `$facts`
 - `if`/`else` conditionals let the same manifest behave differently based on facts
-- `notify` triggers a service restart when a config file changes
+- `require` ensures a resource is applied before another (e.g., package before service)
+- `notify` (or its inverse, `subscribe`) triggers a service restart when a config file changes
 - The **Package, File, Service** pattern is the foundation of most Puppet work
 
 ---
@@ -334,8 +339,9 @@ package { 'nginx':
 }
 
 service { 'nginx':
-  ensure => running,
-  enable => true,
+  ensure  => running,
+  enable  => true,
+  require => Package['nginx'],
 }
 
 file { '/var/www/html/index.html':
@@ -346,6 +352,7 @@ file { '/var/www/html/index.html':
 file { '/etc/nginx/nginx.conf':
   ensure  => file,
   content => template('templates/nginx.conf.erb'),
+  require => Package['nginx'],
   notify  => Service['nginx'],
 }
 ```
@@ -410,8 +417,9 @@ package { 'nginx':
 }
 
 service { 'nginx':
-  ensure => running,
-  enable => true,
+  ensure  => running,
+  enable  => true,
+  require => Package['nginx'],
 }
 
 file { '/var/www/html/index.html':
@@ -422,6 +430,7 @@ file { '/var/www/html/index.html':
 file { '/etc/nginx/nginx.conf':
   ensure  => file,
   content => template('templates/nginx.conf.erb'),
+  require => Package['nginx'],
   notify  => Service['nginx'],
 }
 ```

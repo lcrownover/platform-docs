@@ -75,6 +75,17 @@ file { '/etc/nginx/nginx.conf':
 
 When a file notifies a service, Puppet restarts the service whenever the file's contents change. This is how you get configuration changes to take effect.
 
+**subscribe** is the inverse of `notify`. Instead of the file saying "tell the service when I change," the service says "watch that file for changes":
+
+```puppet
+service { 'nginx':
+  ensure    => running,
+  subscribe => File['/etc/nginx/nginx.conf'],
+}
+```
+
+Both achieve the same result. `notify` is more common because it keeps the relationship visible on the file resource (where the change originates), but `subscribe` is useful when you want the dependent resource to own the relationship instead.
+
 !!! note
     Notice the capitalization difference. When you *declare* a resource, the type is lowercase: `package { 'nginx': }`. When you *reference* an existing resource, the type is capitalized: `Package['nginx']`.
 
@@ -268,6 +279,41 @@ Puppet has dozens of built-in resource types. Here are the ones you'll use most 
 
 !!! warning
     The `exec` resource type runs arbitrary commands, which can seem like an escape hatch when you don't know how to do something the "Puppet way." Use it sparingly. Commands aren't inherently idempotent, so you need to use guards like `creates`, `unless`, or `onlyif` to prevent them from running every time. If you find yourself using `exec` frequently, there's probably a better approach.
+
+### Resource Types from Modules
+
+Beyond the built-in types, some widely used resource types come from Puppet modules. We include non-core modules sparingly and only install ones that are widely supported and maintained. That said, you'll encounter these frequently in production code:
+
+| Type | Module | What It Does |
+|------|--------|--------------|
+| `vcsrepo` | [puppetlabs/vcsrepo](https://forge.puppet.com/modules/puppetlabs/vcsrepo) | Clones and manages Git (or SVN/Hg) repositories on a server |
+| `file_line` | [puppetlabs/stdlib](https://forge.puppet.com/modules/puppetlabs/stdlib) | Adds, removes, or modifies a single line in a file without managing the entire file |
+| `ini_setting` | [puppetlabs/inifile](https://forge.puppet.com/modules/puppetlabs/inifile) | Manages individual settings in INI-style config files |
+| `archive` | [puppet/archive](https://forge.puppet.com/modules/puppet/archive) | Downloads and extracts tarballs, zip files, and other archives |
+
+These work just like built-in resources. For example, `vcsrepo` clones a Git repo to a specific path and keeps it at a particular revision:
+
+```puppet
+vcsrepo { '/opt/myapp':
+  ensure   => present,
+  provider => git,
+  source   => 'https://github.com/example/myapp.git',
+  revision => 'main',
+}
+```
+
+And `file_line` lets you manage a single line in a config file you don't fully own:
+
+```puppet
+file_line { 'enable forwarding':
+  path  => '/etc/sysctl.conf',
+  line  => 'net.ipv4.ip_forward = 1',
+  match => '^net\.ipv4\.ip_forward',
+}
+```
+
+!!! tip
+    `file_line` is useful when you need to tweak one setting in a file managed by a package (like `/etc/sysctl.conf` or `/etc/ssh/sshd_config`) without taking over the entire file with a `file` resource or template.
 
 ## Exercises
 
