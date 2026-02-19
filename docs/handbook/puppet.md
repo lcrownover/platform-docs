@@ -189,11 +189,12 @@ When you find yourself copying the same configuration into multiple server profi
 class puppet_yourteam::profile::nginx {
   include nginx
 
-  # Team-specific firewall rules, monitoring, etc.
-  firewall { '100 allow http':
-    dport  => 80,
-    proto  => 'tcp',
-    action => 'accept',
+  # Team-specific config, monitoring, etc.
+  file { '/etc/nginx/conf.d/default.conf':
+    ensure  => file,
+    source  => "puppet:///modules/puppet_yourteam/nginx/default.conf",
+    require => Package['nginx'],
+    notify  => Service['nginx'],
   }
 }
 ```

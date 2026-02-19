@@ -12,7 +12,7 @@ Consider a web server. It needs:
 - PHP for the application
 - Monitoring agent for observability
 - SSH configuration for access
-- Firewall rules for security
+- Log rotation for housekeeping
 - NTP for time sync
 
 You could put all of this directly in a node definition:
@@ -23,7 +23,7 @@ node 'web01.example.com' {
   include php
   include monitoring::agent
   include ssh
-  include firewall
+  include logrotate
   include ntp
 }
 ```
@@ -64,21 +64,16 @@ Here's a simple profile for a web server:
 class profile::nginx {
   include nginx
 
-  firewall { '100 allow http':
-    dport  => 80,
-    proto  => 'tcp',
-    action => 'accept',
-  }
-
-  firewall { '100 allow https':
-    dport  => 443,
-    proto  => 'tcp',
-    action => 'accept',
+  file { '/etc/nginx/conf.d/default.conf':
+    ensure  => file,
+    source  => 'puppet:///modules/profile/nginx/default.conf',
+    require => Package['nginx'],
+    notify  => Service['nginx'],
   }
 }
 ```
 
-This profile does two things: includes the nginx module and opens the firewall. Every server that needs nginx gets both.
+This profile does two things: includes the nginx module and manages a site-specific config file. Every server that needs nginx gets both.
 
 ### Profiles and Hiera
 
@@ -149,10 +144,11 @@ class profile::mysql {
   include mysql::server
   include mysql::backup
 
-  firewall { '100 allow mysql':
-    dport  => 3306,
-    proto  => 'tcp',
-    action => 'accept',
+  file { '/etc/my.cnf.d/tuning.cnf':
+    ensure  => file,
+    source  => 'puppet:///modules/profile/mysql/tuning.cnf',
+    require => Package['mysql-server'],
+    notify  => Service['mysqld'],
   }
 }
 ```
@@ -294,7 +290,7 @@ Here's how the layers connect for a web server named `web01.example.com`:
 
 1. **Node** `web01.example.com` is assigned `role::webserver`
 2. **Role** `role::webserver` includes `profile::base`, `profile::nginx`, `profile::php`
-3. **Profile** `profile::nginx` includes the `nginx` module and opens firewall ports
+3. **Profile** `profile::nginx` includes the `nginx` module and manages site-specific config
 4. **Module** `nginx` manages the package, config, and service
 5. **Hiera** provides parameters like `nginx::worker_processes` based on the role
 

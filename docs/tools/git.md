@@ -12,14 +12,18 @@ Git is a version control system that tracks changes to files over time. You save
 brew install git
 ```
 
+### Windows
+
+Download the installer from [git-scm.com](https://git-scm.com/download/win) and run it. There are many options during installation -- accept all the defaults. You will need to open a new terminal window after the install is complete.
+
+!!! tip
+    If you're using [WSL](wsl.md), you'll also want to install Git inside WSL separately using the Linux instructions below.
+
 ### Linux (Ubuntu) / WSL
 
 ```bash
 sudo apt update && sudo apt install -y git
 ```
-
-!!! note "Windows users"
-    Install Git inside [WSL](wsl.md), not on Windows itself. This keeps your tooling consistent with the Linux environments you'll deploy to.
 
 ## Verify Installation
 
