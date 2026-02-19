@@ -24,6 +24,7 @@ Work through these in order:
 5. **Collaboration**: Pull requests, code review, and team workflows
 6. **Recovery and Confidence**: Fix mistakes and get unstuck
 7. **Branching Strategies** (advanced): Git Flow, GitHub Flow, and trunk-based development
+8. **CI/CD Pipelines**: Automate testing and deployment with GitHub Actions
 
 ## Tips for Success
 

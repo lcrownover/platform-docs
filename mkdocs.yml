@@ -36,6 +36,7 @@ nav:
           - Collaboration: learn/git/05-collaboration.md
           - Recovery and Confidence: learn/git/06-recovery-and-confidence.md
           - Branching Strategies: learn/git/07-branching-strategies.md
+          - CI/CD Pipelines: learn/git/08-ci-cd-pipelines.md
       - Puppet:
           - Overview: learn/puppet/00-index.md
           - Prerequisites: learn/puppet/00-prerequisites.md
