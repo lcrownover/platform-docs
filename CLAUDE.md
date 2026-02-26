@@ -149,6 +149,7 @@ Participants are numbered 1-40. All derived values use zero-padded two-digit num
 | Password | `UOISLabNumber@XX` | `UOISLabNumber@05` |
 | User repository | `participantXX/myrepo` | `participant05/myrepo` |
 | Group repository | `groupN/ourrepo` | `group1/ourrepo` |
+| root password | `UOISLabRoot@2026` | `UOISLabRoot@2026` |
 
 **Groups**: participants 1-5 = group1, 6-10 = group2, 11-15 = group3, ..., 36-40 = group8.
 

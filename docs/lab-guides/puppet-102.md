@@ -10,6 +10,7 @@
 | [Git](../tools/git.md) | You'll clone and push changes to a shared Puppet team module |
 | [puppet-lint](../tools/puppet-lint.md) | Checks your Puppet code against the style guide before you commit |
 | [eyaml](../tools/eyaml.md) | Encrypts sensitive values in Hiera data |
+| [PDK](../tools/pdk.md) *(optional)* | Enables in-editor diagnostics for Puppet code via the VS Code extension |
 
 | Lab | Why |
 |------------------|-----|
@@ -26,13 +27,13 @@
     ssh participantXX@is-puppetlabXX.uoregon.edu
     ```
 
-    Password: `UOISLabNumber@XX`
+    Password: `UOISLabRoot@2026`
 
-- Clone your group's team module:
+- Clone your group's team module to your workstation:
 
     ```bash
-    git clone URL/groupN/puppet_groupN.git
-    cd puppet_groupN
+    git clone URL/puppet/puppet_labgroupN.git
+    cd puppet_labgroupN
     ```
 
 - Nginx is already installed and running from Puppet; visit `http://is-puppetlabXX.uoregon.edu` in your browser to confirm

@@ -16,7 +16,7 @@
     ssh participantXX@is-puppetlabXX.uoregon.edu
     ```
 
-    Password: `UOISLabNumber@XX`
+    Password: `UOISLabRoot@2026`
 
 ## Part 1: Installing a Package
 
