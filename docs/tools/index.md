@@ -2,7 +2,7 @@
 
 Reference guides for installing and configuring the tools used across our training modules.
 
-Each guide covers installation, basic setup, and tips for getting the most out of the tool. You don't need to install everything upfront—check the prerequisites for each module to see what's required.
+Each guide covers installation, basic setup, and tips for getting the most out of the tool. **You don't need to install everything upfront**, check the prerequisites for each module to see what's required.
 
 ## Available Tools
 
