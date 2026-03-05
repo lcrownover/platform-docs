@@ -27,12 +27,39 @@ If you're doing infrastructure work, writing scripts, or working with containers
 Open PowerShell as Administrator and run:
 
 ```powershell
-wsl --install
+wsl --install --no-distribution
 ```
 
-This installs WSL 2 with Ubuntu as the default distribution. Restart when prompted.
+This installs the WSL 2 engine and kernel without a default distribution. Restart when prompted.
 
-After restart, Ubuntu will launch automatically to complete setup. Create a username and password—this is your Linux user, separate from your Windows account.
+### Install a Distribution
+
+After restarting, open PowerShell and check what distributions are available:
+
+```powershell
+wsl --list --online
+```
+
+You'll see output similar to:
+
+```
+NAME                            FRIENDLY NAME
+Ubuntu                          Ubuntu
+Ubuntu-22.04                    Ubuntu 22.04 LTS
+Ubuntu-24.04                    Ubuntu 24.04 LTS
+...
+```
+
+Install the latest Ubuntu LTS:
+
+```powershell
+wsl --install -d Ubuntu-24.04
+```
+
+!!! tip
+    Always choose the latest LTS (Long Term Support) release. LTS versions get 5 years of security updates and match what you're most likely to find on production Linux servers. If you see a newer LTS than 24.04 in the list, install that one instead.
+
+Ubuntu will launch and prompt you to create a username and password. This is your Linux user—separate from your Windows account and doesn't need to match it.
 
 ### Verify Installation
 
