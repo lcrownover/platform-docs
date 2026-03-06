@@ -18,6 +18,12 @@
 
     Password: `UOISLabNumber@XX`
 
+- Puppet runs as root, so we're going to emulate that behavior. Once you've logged in as the participant user, elevate your permissions to root:
+
+    ```bash
+    sudo su -
+    ```
+
 ## Part 1: Installing a Package
 
 !!! note "Talk about: What is Puppet and why do we use it?"
@@ -26,11 +32,11 @@
     - **Idempotency** -- run the same manifest repeatedly, Puppet only changes what doesn't match
     - Benefits over manual work -- repeatable, version-controllable, self-documenting
 
-1. **Create a working directory** for your manifests: `mkdir ~/manifests`
+1. **Create a working directory** for your manifests: `mkdir -p /root/puppet/manifests`
 2. **Write a manifest** that installs nginx and ensures the service is running and enabled at boot:
 
     ```puppet
-    # ~/manifests/server.pp
+    # /root/puppet/manifests/server.pp
     package { 'nginx':
       ensure => installed,
     }
@@ -41,7 +47,7 @@
     }
     ```
 
-3. **Apply it:** `sudo puppet apply ~/manifests/server.pp`
+3. **Apply it:** `puppet apply /root/puppet/manifests/server.pp`
 4. **Visit** `http://is-puppetlabXX.uoregon.edu` in your browser to confirm nginx is serving the default page
 
 ## Part 2: Managing File Content
@@ -55,14 +61,14 @@
 1. **Add a file resource** to your manifest that creates a file in the nginx docroot using the `content` property:
 
     ```puppet
-    # ~/manifests/server.pp
-    file { '/var/www/html/index.html':
+    # /root/puppet/manifests/server.pp
+    file { '/usr/share/nginx/html/index.html':
       ensure  => file,
       content => "<h1>Hello from server XX</h1>\n",
     }
     ```
 
-3. **Apply it:** `sudo puppet apply ~/manifests/server.pp`
+3. **Apply it:** `puppet apply /root/puppet/manifests/server.pp`
 4. **Check your browser** to see the change
 
 ## Part 3: ERB Templates
@@ -73,26 +79,30 @@
     - **Facts** -- system information Puppet discovers automatically (`hostname`, `os`, `ipaddress`)
     - One template serves every server -- from 1 to 400
 
-1. **Create a templates directory:** `mkdir -p ~/manifests/templates`
+1. **Create a templates directory:** `mkdir -p /root/puppet/templates`
 2. **Move the content into an ERB template:**
 
     ```erb
-    <%# ~/manifests/templates/index.html.erb %>
-    <h1>Hello from <%= @hostname %></h1>
+    <%# /root/puppet/templates/index.html.erb %>
+    <h1>Hello from <%= @facts['networking']['hostname'] %></h1>
     <p>Managed by Puppet</p>
     ```
 
 3. **Update your manifest** to use the template instead of `content`:
 
     ```puppet
-    # ~/manifests/server.pp
-    file { '/var/www/html/index.html':
+    # /root/puppet/manifests/server.pp
+    file { '/usr/share/nginx/html/index.html':
       ensure  => file,
-      content => template('templates/index.html.erb'),
+      content => template('/root/puppet/templates/index.html.erb'),
     }
     ```
 
 4. **Apply and verify** in your browser; notice the hostname is filled in automatically from the fact
+
+!!! note "Talk about: What if changes need to happen after changing files?"
+    - The files up until now don't need a service restart to pick up changes
+    - Let's now look at changing a files that requires a service restart when it changes
 
 ## Part 4: Templating Config Files
 
@@ -103,11 +113,12 @@
     - **`subscribe`** -- the inverse of `notify`; the service says "watch that file" instead of the file saying "tell the service"
     - What happens without `notify`/`subscribe` -- config updates silently, service keeps running the old version
     - **Manifest variables** -- keep tuneable values (`$nginx_worker_connections`) at the top of the file instead of buried in templates
+    - Files/Templates should be a collection of all the important stuff that configures your boxes, manifest glue them together
 
 1. **Copy the running nginx config** to your templates directory:
 
     ```bash
-    cp /etc/nginx/nginx.conf ~/manifests/templates/nginx.conf.erb
+    cp /etc/nginx/nginx.conf /root/puppet/templates/nginx.conf.erb
     ```
 
 2. **Edit the template** to replace the hardcoded `nginx_worker_connections` value with an ERB variable:
@@ -119,17 +130,17 @@
 3. **Update your manifest** to define the variable and manage the nginx config with a service restart on change:
 
     ```puppet
-    # ~/manifests/server.pp
+    # /root/puppet/manifests/server.pp
     $nginx_worker_connections = 512
 
-    file { '/var/www/html/index.html':
+    file { '/usr/share/nginx/html/index.html':
       ensure  => file,
-      content => template('templates/index.html.erb'),
+      content => template('root/puppet/templates/index.html.erb'),
     }
 
     file { '/etc/nginx/nginx.conf':
       ensure  => file,
-      content => template('templates/nginx.conf.erb'),
+      content => template('root/puppet/templates/nginx.conf.erb'),
       require => Package['nginx'],
       notify  => Service['nginx'],
     }
@@ -141,23 +152,23 @@
     }
     ```
 
-4. **Apply and verify:** `sudo puppet apply ~/manifests/server.pp`
+4. **Apply and verify:** `puppet apply /root/puppet/manifests/server.pp`
 5. **Check the rendered config:** `cat /etc/nginx/nginx.conf` and confirm `nginx_worker_connections` is set to `512`
 6. **Change the variable** in your manifest to a different value (e.g., `2048`), re-apply, and confirm the config updated and the service restarted
 
 ## Part 5: Exploring Facts with Facter
 
 !!! note "Talk about: Where do facts come from?"
-    - **Facter** -- a tool bundled with Puppet that discovers system information
-    - What facts cover -- hardware (CPUs, memory), networking (IP, hostname), OS details
-    - Where facts are available -- in templates (`@hostname`) and in manifests (`$facts`)
-    - The `facter` command -- query facts from the command line to see what's available
+    - **Facter**: a tool bundled with Puppet that discovers system information
+    - What facts cover: hardware (CPUs, memory), networking (IP, hostname), OS details
+    - Where facts are available: in templates (`@facts`) and in manifests (`$facts`)
+    - The `facter` command: query facts from the command line to see what's available
 
 1. **See all available facts:** `facter`
 2. **Query specific facts:**
 
     ```bash
-    facter hostname
+    facter networking.hostname
     facter processors.count
     facter memory.system.total
     ```
@@ -165,8 +176,8 @@
 3. **Update your index template** to display system info:
 
     ```erb
-    <%# ~/manifests/templates/index.html.erb %>
-    <h1>Hello from <%= @hostname %></h1>
+    <%# /root/puppet/templates/index.html.erb %>
+    <h1>Hello from <%= @facts['networking']['hostname'] %></h1>
     <p>Managed by Puppet</p>
     <h2>System Info</h2>
     <ul>
@@ -175,8 +186,11 @@
     </ul>
     ```
 
-4. **Apply and check your browser:** `sudo puppet apply ~/manifests/server.pp`
+4. **Apply and check your browser:** `puppet apply /root/puppet/manifests/server.pp`
 5. **Compare with your neighbor** -- everyone's page should show different values (or the same, depending on the lab VMs)
+
+!!! note "Talk about: Facts should be mostly static values"
+    - We want to keep puppet pulls clean, don't try to build metrics out of facts
 
 ## Part 6: Conditional Logic with Facts
 
@@ -198,7 +212,7 @@
 2. **Apply and check the result:**
 
     ```bash
-    sudo puppet apply ~/manifests/server.pp
+    puppet apply /root/puppet/manifests/server.pp
     grep worker_connections /etc/nginx/nginx.conf
     ```
 
@@ -229,51 +243,16 @@ Each lab server (`is-puppetlabXX`) needs the following before the session:
 |-------------|---------|
 | Puppet installed | `puppet` agent package available on the system |
 | User accounts | `participantXX` created and allowed to log in |
-| Sudo access | `participantXX` must be able to run `sudo puppet apply` and `sudo cp` without restriction |
+| Sudo access | `participantXX` must be able to sudo into a root session `sudo su -` without restriction |
 | Firewall | Port 22 (SSH) and port 80 (HTTP) open |
 | DNS | `is-puppetlabXX.uoregon.edu` resolves to the correct server |
 | Nginx package available | `nginx` must be in the apt/yum repos but **not** pre-installed (participants install it in Part 1) |
-
-### Lab Server nginx.conf
-
-This is the nginx config that should be deployed to each lab server before participants arrive. It serves a simple docroot on port 80.
-
-```nginx
-# /etc/nginx/nginx.conf
-user www-data;
-worker_processes auto;
-error_log /var/log/nginx/error.log;
-pid /run/nginx.pid;
-
-events {
-    worker_connections 1024;
-}
-
-http {
-    include       /etc/nginx/mime.types;
-    default_type  application/octet-stream;
-    sendfile      on;
-    keepalive_timeout 65;
-
-    server {
-        listen 80;
-        server_name _;
-
-        root /var/www/html;
-        index index.html;
-
-        location / {
-            try_files $uri $uri/ =404;
-        }
-    }
-}
-```
 
 ### Finished Files
 
 These are the completed files participants should have at the end of each part (useful for catching people up or verifying work).
 
-**After Part 1** -- `~/manifests/server.pp`:
+**After Part 1** -- `/root/puppet/manifests/server.pp`:
 
 ```puppet
 package { 'nginx':
@@ -286,7 +265,7 @@ service { 'nginx':
 }
 ```
 
-**After Part 2** -- `~/manifests/server.pp`:
+**After Part 2** -- `/root/puppet/manifests/server.pp`:
 
 ```puppet
 package { 'nginx':
@@ -298,13 +277,13 @@ service { 'nginx':
   enable => true,
 }
 
-file { '/var/www/html/index.html':
+file { '/usr/share/nginx/html/index.html':
   ensure  => file,
   content => "<h1>Hello from server XX</h1>\n",
 }
 ```
 
-**After Part 3** -- `~/manifests/server.pp`:
+**After Part 3** -- `/root/puppet/manifests/server.pp`:
 
 ```puppet
 package { 'nginx':
@@ -316,20 +295,20 @@ service { 'nginx':
   enable => true,
 }
 
-file { '/var/www/html/index.html':
+file { '/usr/share/nginx/html/index.html':
   ensure  => file,
-  content => template('templates/index.html.erb'),
+  content => template('root/puppet/templates/index.html.erb'),
 }
 ```
 
-`~/manifests/templates/index.html.erb`:
+`/root/puppet/templates/index.html.erb`:
 
 ```erb
-<h1>Hello from <%= @hostname %></h1>
+<h1>Hello from <%= @facts['networking']['hostname'] %></h1>
 <p>Managed by Puppet</p>
 ```
 
-**After Part 4** -- `~/manifests/server.pp`:
+**After Part 4** -- `/root/puppet/manifests/server.pp`:
 
 ```puppet
 $nginx_worker_connections = 512
@@ -344,20 +323,20 @@ service { 'nginx':
   require => Package['nginx'],
 }
 
-file { '/var/www/html/index.html':
+file { '/usr/share/nginx/html/index.html':
   ensure  => file,
-  content => template('templates/index.html.erb'),
+  content => template('/root/puppet/templates/index.html.erb'),
 }
 
 file { '/etc/nginx/nginx.conf':
   ensure  => file,
-  content => template('templates/nginx.conf.erb'),
+  content => template('/root/puppet/templates/nginx.conf.erb'),
   require => Package['nginx'],
   notify  => Service['nginx'],
 }
 ```
 
-`~/manifests/templates/nginx.conf.erb`:
+`/root/puppet/templates/nginx.conf.erb`:
 
 ```erb
 user www-data;
@@ -379,7 +358,7 @@ http {
         listen 80;
         server_name _;
 
-        root /var/www/html;
+        root /usr/share/nginx/html;
         index index.html;
 
         location / {
@@ -391,10 +370,10 @@ http {
 
 **After Part 5** -- manifest unchanged, only the template is updated.
 
-`~/manifests/templates/index.html.erb`:
+`/root/puppet/templates/index.html.erb`:
 
 ```erb
-<h1>Hello from <%= @hostname %></h1>
+<h1>Hello from <%= @facts['networking']['hostname'] %></h1>
 <p>Managed by Puppet</p>
 <h2>System Info</h2>
 <ul>
@@ -403,7 +382,7 @@ http {
 </ul>
 ```
 
-**After Part 6** -- `~/manifests/server.pp`:
+**After Part 6** -- `/root/puppet/manifests/server.pp`:
 
 ```puppet
 if $facts['processors']['count'] > 2 {
@@ -422,17 +401,17 @@ service { 'nginx':
   require => Package['nginx'],
 }
 
-file { '/var/www/html/index.html':
+file { '/usr/share/nginx/html/index.html':
   ensure  => file,
-  content => template('templates/index.html.erb'),
+  content => template('root/puppet/templates/index.html.erb'),
 }
 
 file { '/etc/nginx/nginx.conf':
   ensure  => file,
-  content => template('templates/nginx.conf.erb'),
+  content => template('root/puppet/templates/nginx.conf.erb'),
   require => Package['nginx'],
   notify  => Service['nginx'],
 }
 ```
 
-`~/manifests/templates/nginx.conf.erb` -- unchanged from Part 4.
+`/root/puppet/templates/nginx.conf.erb` -- unchanged from Part 4.
