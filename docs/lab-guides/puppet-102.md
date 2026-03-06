@@ -27,16 +27,14 @@
     ssh participantXX@is-puppetlabXX.uoregon.edu
     ```
 
-    Password: `UOISLabRoot@2026`
+    Password: `UOISLabNumber@XX`
 
 - Clone your group's team module to your workstation:
 
     ```bash
-    git clone URL/puppet/puppet_labgroupN.git
+    git clone https://gitlab.puppetlab.uoregon.edu/groupN/puppet_labgroupN.git
     cd puppet_labgroupN
     ```
-
-- Nginx is already installed and running from Puppet; visit `http://is-puppetlabXX.uoregon.edu` in your browser to confirm
 
 ## Part 1: Understanding the Team Module
 
@@ -55,26 +53,53 @@
     Use the file tree in the sidebar to explore the structure. You should see something like:
 
     ```
-    puppet_groupN/
-    ├── data/
-    │   ├── nodes/
-    │   │   └── is-puppetlabXX.yaml   # (one per group member)
-    │   ├── clusters/
-    │   │   └── groupN/
-    │   │       └── ...
-    │   └── groupN_common.yaml
-    ├── files/
-    ├── templates/
-    └── manifests/
-        ├── profile/
-        │   ├── base.pp
-        │   ├── nginx.pp
-        │   └── webserver.pp
-        └── role/
-            └── webserver.pp
+    puppet_labgroup8
+    ├── data
+    │   ├── clusters
+    │   │   └── labgroup8
+    │   │       └── puppetlab.yaml
+    │   ├── labgroup8_common.yaml
+    │   └── nodes
+    │       ├── is-puppetlab36.yaml
+    │       ├── is-puppetlab37.yaml
+    │       ├── is-puppetlab38.yaml
+    │       ├── is-puppetlab39.yaml
+    │       └── is-puppetlab40.yaml
+    ├── files
+    │   └── webserver
+    │       └── puppetlab
+    │           ├── nginx
+    │           │   └── nginx.conf
+    │           └── static
+    │               └── lab.html
+    ├── Gemfile
+    ├── manifests
+    │   ├── profile
+    │   │   ├── base.pp
+    │   │   └── lab
+    │   │       ├── common.pp
+    │   │       ├── lab36.pp
+    │   │       ├── lab37.pp
+    │   │       ├── lab38.pp
+    │   │       ├── lab39.pp
+    │   │       └── lab40.pp
+    │   └── role
+    │       ├── base.pp
+    │       ├── lab36.pp
+    │       ├── lab37.pp
+    │       ├── lab38.pp
+    │       ├── lab39.pp
+    │       └── lab40.pp
+    ├── pdk.yaml
+    ├── pe_pub_key.pem
+    ├── Rakefile
+    ├── spec
+    │   └── spec_helper.rb
+    └── templates
+        └── motd.erb
     ```
 
-2. **Read the role file** (`manifests/role/webserver.pp`) and identify the includes
+2. **Read the role file** (`manifests/role/labXX.pp`) and identify the includes
 3. **Read the profiles** that the role includes and understand what each one does
 4. **Read the Hiera data** in `data/groupN_common.yaml` to see what defaults are set
 
@@ -95,7 +120,7 @@
     - Roles stay clean and readable; all configuration logic lives in profiles
 
 1. **Open the role file** and trace each `include` to its profile
-2. **Open the server profile** (`manifests/profile/webserver.pp`) and note how it differs from the reusable profiles
+2. **Open the server profile** (`manifests/profile/lab/labXX.pp`) and note how it differs from the reusable profiles
 3. **Discuss with your group:** Which profiles are reusable? Which are server-specific?
 
 !!! tip "Review: What we learned"
@@ -118,25 +143,25 @@
 
     ```erb
     <%# templates/info.html.erb %>
-    <h1><%= @hostname %></h1>
+    <h1><%= @facts['networking']['hostname'] %></h1>
     <p>Welcome message: <%= @welcome_message %></p>
     ```
 
 3. **Add the Hiera key** to your node data file (`data/nodes/is-puppetlabXX.yaml`):
 
     ```yaml
-    puppet_groupN::profile::webserver::welcome_message: "Hello from participantXX"
+    puppet_groupN::profile::lab::labXX::welcome_message: "Hello from participantXX"
     ```
 
-4. **Update the server profile** (`manifests/profile/webserver.pp`) to use the Hiera value and serve the template:
+4. **Update the server profile** (`manifests/profile/lab/labXX.pp`) to use the Hiera value and serve the template:
 
     ```puppet
-    class puppet_groupN::profile::webserver (
+    class puppet_labgroupN::profile::lab::labXX (
       String $welcome_message = 'Default welcome',
     ) {
-      file { '/var/www/html/index.html':
+      file { '/usr/share/nginx/html/index.html':
         ensure  => file,
-        content => template('puppet_groupN/info.html.erb'),
+        content => template('puppet_labgroupN/index.html.erb'),
       }
     }
     ```
@@ -160,19 +185,24 @@
     - Node-level data in `data/nodes/<hostname>.yaml` applies to one specific server
     - The same profile code serves every server -- only the data differs
     - The workflow is: edit code/data → commit → push → run Puppet
+    
+!!! warning "Warning: Code examples below are almost certainly bad"
+
+    The content of this lab has not been tested. During the training sessions, I mostly plan to walk folks through the team repository, explain how it all connects, and perhaps make a single change in a server profile. 
+
 
 ## Part 4: Common Data and Shared Profiles
 
 !!! note "Talk about: Common Hiera data and team-wide profiles"
-    - **Common data** (`data/groupN_common.yaml`) -- defaults that apply to all servers in your team module
+    - **Common data** (`data/labgroupN_common.yaml`) -- defaults that apply to all servers in your team module
     - A value in a node file overrides the same key in common (Hiera lookup order)
     - **Shared profiles** -- a profile included in every role so all servers get the same configuration
     - Adding a profile to all roles via the team base profile
 
-1. **Add a Hiera key to your common data** (`data/groupN_common.yaml`):
+1. **Add a Hiera key to your common data** (`data/labgroupN_common.yaml`):
 
     ```yaml
-    puppet_groupN::profile::motd::motd_message: "Managed by groupN"
+    puppet_labgroupN::profile::motd::motd_message: "Managed by groupN"
     ```
 
 2. **Create a new shared profile** (`manifests/profile/motd.pp`):
