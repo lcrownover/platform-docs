@@ -16,7 +16,7 @@
     ssh participantXX@is-puppetlabXX.uoregon.edu
     ```
 
-    Password: `UOISLabRoot@2026`
+    Password: `UOISLabNumber@XX`
 
 ## Part 1: Installing a Package
 
@@ -26,11 +26,11 @@
     - **Idempotency** -- run the same manifest repeatedly, Puppet only changes what doesn't match
     - Benefits over manual work -- repeatable, version-controllable, self-documenting
 
-1. **Create a working directory** for your manifests: `mkdir -p ~/manifests`
+1. **Create a working directory** for your manifests: `mkdir ~/manifests`
 2. **Write a manifest** that installs nginx and ensures the service is running and enabled at boot:
 
     ```puppet
-    # ~/manifests/site.pp
+    # ~/manifests/server.pp
     package { 'nginx':
       ensure => installed,
     }
@@ -41,7 +41,7 @@
     }
     ```
 
-3. **Apply it:** `sudo puppet apply ~/manifests/site.pp`
+3. **Apply it:** `sudo puppet apply ~/manifests/server.pp`
 4. **Visit** `http://is-puppetlabXX.uoregon.edu` in your browser to confirm nginx is serving the default page
 
 ## Part 2: Managing File Content
@@ -55,14 +55,14 @@
 1. **Add a file resource** to your manifest that creates a file in the nginx docroot using the `content` property:
 
     ```puppet
-    # ~/manifests/site.pp
+    # ~/manifests/server.pp
     file { '/var/www/html/index.html':
       ensure  => file,
       content => "<h1>Hello from server XX</h1>\n",
     }
     ```
 
-3. **Apply it:** `sudo puppet apply ~/manifests/site.pp`
+3. **Apply it:** `sudo puppet apply ~/manifests/server.pp`
 4. **Check your browser** to see the change
 
 ## Part 3: ERB Templates
@@ -85,7 +85,7 @@
 3. **Update your manifest** to use the template instead of `content`:
 
     ```puppet
-    # ~/manifests/site.pp
+    # ~/manifests/server.pp
     file { '/var/www/html/index.html':
       ensure  => file,
       content => template('templates/index.html.erb'),
@@ -119,7 +119,7 @@
 3. **Update your manifest** to define the variable and manage the nginx config with a service restart on change:
 
     ```puppet
-    # ~/manifests/site.pp
+    # ~/manifests/server.pp
     $nginx_worker_connections = 512
 
     file { '/var/www/html/index.html':
@@ -141,7 +141,7 @@
     }
     ```
 
-4. **Apply and verify:** `sudo puppet apply ~/manifests/site.pp`
+4. **Apply and verify:** `sudo puppet apply ~/manifests/server.pp`
 5. **Check the rendered config:** `cat /etc/nginx/nginx.conf` and confirm `nginx_worker_connections` is set to `512`
 6. **Change the variable** in your manifest to a different value (e.g., `2048`), re-apply, and confirm the config updated and the service restarted
 
@@ -175,7 +175,7 @@
     </ul>
     ```
 
-4. **Apply and check your browser:** `sudo puppet apply ~/manifests/site.pp`
+4. **Apply and check your browser:** `sudo puppet apply ~/manifests/server.pp`
 5. **Compare with your neighbor** -- everyone's page should show different values (or the same, depending on the lab VMs)
 
 ## Part 6: Conditional Logic with Facts
@@ -198,7 +198,7 @@
 2. **Apply and check the result:**
 
     ```bash
-    sudo puppet apply ~/manifests/site.pp
+    sudo puppet apply ~/manifests/server.pp
     grep worker_connections /etc/nginx/nginx.conf
     ```
 
@@ -273,7 +273,7 @@ http {
 
 These are the completed files participants should have at the end of each part (useful for catching people up or verifying work).
 
-**After Part 1** -- `~/manifests/site.pp`:
+**After Part 1** -- `~/manifests/server.pp`:
 
 ```puppet
 package { 'nginx':
@@ -286,7 +286,7 @@ service { 'nginx':
 }
 ```
 
-**After Part 2** -- `~/manifests/site.pp`:
+**After Part 2** -- `~/manifests/server.pp`:
 
 ```puppet
 package { 'nginx':
@@ -304,7 +304,7 @@ file { '/var/www/html/index.html':
 }
 ```
 
-**After Part 3** -- `~/manifests/site.pp`:
+**After Part 3** -- `~/manifests/server.pp`:
 
 ```puppet
 package { 'nginx':
@@ -329,7 +329,7 @@ file { '/var/www/html/index.html':
 <p>Managed by Puppet</p>
 ```
 
-**After Part 4** -- `~/manifests/site.pp`:
+**After Part 4** -- `~/manifests/server.pp`:
 
 ```puppet
 $nginx_worker_connections = 512
@@ -403,7 +403,7 @@ http {
 </ul>
 ```
 
-**After Part 6** -- `~/manifests/site.pp`:
+**After Part 6** -- `~/manifests/server.pp`:
 
 ```puppet
 if $facts['processors']['count'] > 2 {

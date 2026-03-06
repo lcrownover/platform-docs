@@ -39,6 +39,7 @@ nav:
           - CI/CD Pipelines: learn/git/08-ci-cd-pipelines.md
       - Puppet:
           - Overview: learn/puppet/00-index.md
+          - Why Puppet?: learn/puppet/00-why-puppet.md
           - Prerequisites: learn/puppet/00-prerequisites.md
           - Puppet Fundamentals: learn/puppet/01-puppet-fundamentals.md
           - Writing Manifests: learn/puppet/02-writing-manifests.md
