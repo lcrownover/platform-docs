@@ -115,9 +115,11 @@
     - **Roles** define *what* a server is -- they only contain `include` statements
     - **Profiles** define *how* something is configured -- they contain the actual Puppet code
     - **Server profiles** -- a profile with the same name as the role, for configuration specific to that server
-    - **Reusable profiles** -- shared configuration that multiple roles can include (e.g., `profile::nginx`)
+    - **Reusable profiles** -- shared configuration that multiple roles can include (e.g., `puppet_labgroup1::profile::webserver`)
     - The layering: **Server → Role → Profiles → Modules**
     - Roles stay clean and readable; all configuration logic lives in profiles
+    
+![Server → Role → Profile relationships](../assets/puppet/puppet-roles-profiles.drawio.png)
 
 1. **Open the role file** and trace each `include` to its profile
 2. **Open the server profile** (`manifests/profile/lab/labXX.pp`) and note how it differs from the reusable profiles

@@ -24,6 +24,38 @@
     sudo su -
     ```
 
+## Part 0: Why Configuration Management?
+
+!!! note "Talk about: How do you keep servers configured today?"
+    - Ask the audience: **How do you make sure a server is configured the way you expect?**
+    - Common answers: Confluence docs, wiki pages, runbooks, "I just remember," "I SSH in and check"
+    - Follow-up: **How confident are you that the docs match what's actually on the server right now?**
+    - The fundamental problem: documentation describes *steps someone took*, not *what the system looks like today*
+
+!!! note "Talk about: Configuration drift"
+    - Two servers built from the same runbook will slowly diverge — different patch timing, one-off fixes, troubleshooting tweaks that never got documented
+    - Ask: **Has anyone ever SSH'd into a server and found it different from what the docs said?** (Everyone has.)
+    - This is **configuration drift**: systems that started identical become unique over time
+    - The longer a server runs without automation enforcing its state, the more it drifts
+    - When something breaks at 2 AM, you're debugging the actual server state, not the documented one
+
+!!! note "Talk about: The scripting approach and where it breaks down"
+    - Scripts were the first answer: at least changes are repeatable and shareable
+    - But scripts describe *steps*, not *goals* — run a script on an already-configured server and you may get unexpected results
+    - Open the [Why Puppet?](../learn/puppet/00-why-puppet.md) page and walk through the bash comparison:
+        - The first version is 8 lines and works fine
+        - Add OS support, idempotency checks, checksum comparisons, and service reload logic — now it's 50 lines
+        - It still has gaps (wrong permissions from a previous admin, service manually stopped between runs)
+    - Ask: **At what point does maintaining the script become harder than just doing it manually?**
+    - The deeper problem: bash is designed for *doing things*, not for *describing what things should look like*
+
+!!! note "Talk about: What configuration management actually gives you"
+    - You write code that describes the desired state of a system — what's installed, what files contain, what services are running
+    - The tool handles the "how": detecting what needs to change, making only those changes, handling platform differences
+    - Key properties: **idempotency** (run it 100 times, same result) and **convergence** (if someone manually breaks something, the next run fixes it)
+    - **RHEL version migrations** are a good concrete example: when you need to move from RHEL 8 to RHEL 9, you don't rebuild from memory or a stale Confluence doc — you build the new server and apply the same Puppet code. The new server comes up in the right state automatically.
+    - Ask: **What servers in your environment would be hardest to rebuild from scratch right now?** Those are the ones that need this most.
+
 ## Part 1: Installing a Package
 
 !!! note "Talk about: What is Puppet and why do we use it?"

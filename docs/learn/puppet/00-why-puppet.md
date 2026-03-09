@@ -72,12 +72,13 @@ fi
 But that creates a new problem: the script will never update the config even when you need to push a new standard config out. You switch to a checksum comparison, and since you're touching the file, you also have to explicitly set ownership and permissions:
 
 ```bash
-DESIRED_CHECKSUM="a3f1c9b2..."
+FILES_SOURCE="/var/files-source"
+DESIRED_CHECKSUM=$(sha256sum "$FILES_SOURCE/nginx.conf" | cut -d' ' -f1)
 CURRENT_CHECKSUM=$(sha256sum /etc/nginx/nginx.conf 2>/dev/null | cut -d' ' -f1)
 RELOAD_NEEDED=false
 
 if [ "$CURRENT_CHECKSUM" != "$DESIRED_CHECKSUM" ]; then
-    cp /path/to/standard-nginx.conf /etc/nginx/nginx.conf
+    cp "$FILES_SOURCE/nginx.conf" /etc/nginx/nginx.conf
     chown root:root /etc/nginx/nginx.conf
     chmod 644 /etc/nginx/nginx.conf
     RELOAD_NEEDED=true
@@ -106,7 +107,7 @@ Step back and look at the full script:
 #!/bin/bash
 set -euo pipefail
 
-DESIRED_CHECKSUM="a3f1c9b2..."
+FILES_SOURCE="/var/files-source"
 RELOAD_NEEDED=false
 
 if [ -f /etc/debian_version ]; then
@@ -121,9 +122,10 @@ else
     echo "Unsupported OS" >&2; exit 1
 fi
 
+DESIRED_CHECKSUM=$(sha256sum "$FILES_SOURCE/nginx.conf" | cut -d' ' -f1)
 CURRENT_CHECKSUM=$(sha256sum /etc/nginx/nginx.conf 2>/dev/null | cut -d' ' -f1)
 if [ "$CURRENT_CHECKSUM" != "$DESIRED_CHECKSUM" ]; then
-    cp /path/to/standard-nginx.conf /etc/nginx/nginx.conf
+    cp "$FILES_SOURCE/nginx.conf" /etc/nginx/nginx.conf
     chown root:root /etc/nginx/nginx.conf
     chmod 644 /etc/nginx/nginx.conf
     RELOAD_NEEDED=true

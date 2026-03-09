@@ -80,6 +80,8 @@ puppet_yourteam/manifests/profile/
 
 ## Writing Roles
 
+![Server → Role → Profile relationships](../assets/puppet/puppet-roles-profiles.drawio.png)
+
 A role defines what a server is. At UO, roles typically represent a cluster of servers that should be configured identically, or a single unique server.
 
 Here's the anatomy of a role:
