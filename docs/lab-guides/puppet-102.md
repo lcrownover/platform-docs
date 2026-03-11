@@ -36,6 +36,12 @@
     cd puppet_labgroupN
     ```
 
+## Part 0: Your repos, our repo, and you
+
+!!! note "Talk about: How do you keep servers configured today?"
+    - Team repos: **How team repos work with the control repo, CI/CD, touch on feature branches**
+    - Failure modes: **Catalog compilation errors, resource errors**
+
 ## Part 1: Understanding the Team Module
 
 !!! note "Talk about: Delegated administration and team modules"
