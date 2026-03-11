@@ -164,6 +164,10 @@
     ```puppet
     # /root/puppet/manifests/server.pp
     $nginx_worker_connections = 512
+    
+    package { 'nginx':
+      ensure => installed,
+    }
 
     file { '/usr/share/nginx/html/index.html':
       ensure  => file,
