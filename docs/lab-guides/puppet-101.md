@@ -260,7 +260,7 @@
 - `puppet apply` runs a manifest locally
 - The `package` resource installs software, the `service` resource manages daemons
 - The `file` resource manages file content (with `content` or `template()`)
-- ERB templates pull in facts (like `@hostname`) and manifest variables (like `@nginx_worker_connections`)
+- ERB templates pull in facts (like `@facts['networking']['hostname']`) and manifest variables (like `@nginx_worker_connections`)
 - `facter` discovers system information (CPUs, memory, OS, networking) available in templates and in manifests via `$facts`
 - `if`/`else` conditionals let the same manifest behave differently based on facts
 - `require` ensures a resource is applied before another (e.g., package before service)
