@@ -217,8 +217,8 @@
     <p>Managed by Puppet</p>
     <h2>System Info</h2>
     <ul>
-      <li>CPUs: <%= @processors['count'] %></li>
-      <li>Memory: <%= @memory['system']['total'] %></li>
+      <li>CPUs: <%= @facts['processors']['count'] %></li>
+      <li>Memory: <%= @facts['memory']['system']['total'] %></li>
     </ul>
     ```
 
@@ -413,8 +413,8 @@ http {
 <p>Managed by Puppet</p>
 <h2>System Info</h2>
 <ul>
-  <li>CPUs: <%= @processors['count'] %></li>
-  <li>Memory: <%= @memory['system']['total'] %></li>
+  <li>CPUs: <%= @facts['processors']['count'] %></li>
+  <li>Memory: <%= @facts['memory']['system']['total'] %></li>
 </ul>
 ```
 
