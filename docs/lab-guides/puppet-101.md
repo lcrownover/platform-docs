@@ -171,12 +171,12 @@
 
     file { '/usr/share/nginx/html/index.html':
       ensure  => file,
-      content => template('root/puppet/templates/index.html.erb'),
+      content => template('/root/puppet/templates/index.html.erb'),
     }
 
     file { '/etc/nginx/nginx.conf':
       ensure  => file,
-      content => template('root/puppet/templates/nginx.conf.erb'),
+      content => template('/root/puppet/templates/nginx.conf.erb'),
       require => Package['nginx'],
       notify  => Service['nginx'],
     }
@@ -333,7 +333,7 @@ service { 'nginx':
 
 file { '/usr/share/nginx/html/index.html':
   ensure  => file,
-  content => template('root/puppet/templates/index.html.erb'),
+  content => template('/root/puppet/templates/index.html.erb'),
 }
 ```
 
